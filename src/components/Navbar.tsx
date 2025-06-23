@@ -14,11 +14,11 @@ export function Navbar() {
         priority
       />
       <div className="navbar-links">
-        <a href="/">Home</a>
-        <a href="/projects">Projects</a>
-        <a href="/sponsors">Sponsors</a>
-        <a href="/team">Team</a>
-        <a href="/apply">Apply</a>
+        <Link href="/">Home</Link>
+        <Link href="/projects">Projects</Link>
+        <Link href="/sponsors">Sponsors</Link>
+        <Link href="/team">Team</Link>
+        <Link href="/apply">Apply</Link>
       </div>
     </nav>
   );
