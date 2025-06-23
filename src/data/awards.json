@@ -1,0 +1,29 @@
+[
+  {
+    "year": 2014,
+    "title": "Communication Award",
+    "competition": "Shell Eco-Marathon Asia",
+    "location": "Philippines",
+    "position": "1st",
+    "prize": "$2,000",
+    "image": "/images/awards/2014.jpg"
+  },
+  {
+    "year": 2017,
+    "title": "Communication Award",
+    "competition": "Shell Eco-Marathon Asia",
+    "location": "Singapore",
+    "position": "1st",
+    "prize": "$3,000",
+    "image": "/images/awards/2017.jpg"
+  },
+  {
+    "year": 2022,
+    "title": "Communication Award",
+    "competition": "Shell Eco-Marathon Asia",
+    "location": "Virtual",
+    "position": "2nd",
+    "prize": "$750",
+    "image": "/images/awards/2022.jpg"
+  }
+]

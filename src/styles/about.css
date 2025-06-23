@@ -1,0 +1,112 @@
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Text block */
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* Vertical divider */
+.vertical-divider {
+  width: 2px;
+  background-color: #444;
+  height: 100%;
+}
+
+/* Image section */
+.about-images {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrapper {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  background-color: #222;
+}
+
+/* 👇 Each image frame must match wrapper width exactly */
+.image-slider {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.image-frame {
+  flex-shrink: 0;
+  width: 100%;      /* ← Force frame to match wrapper width */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vertical-divider {
+    display: none;
+  }
+
+  .about-text,
+  .about-images {
+    width: 100%;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-frame {
+    width: 100%;
+    height: auto;
+  }
+
+  .carousel-image {
+    width: 100%;
+    height: auto;
+  }
+}
+

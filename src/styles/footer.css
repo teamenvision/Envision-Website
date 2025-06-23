@@ -1,0 +1,30 @@
+.footer {
+  background-color: #1e1e1e;
+  color: #ccc;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  font-weight: 400;
+  padding-left: 1rem;
+}
+
+.footer-right {
+  display: flex;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+.footer-right a {
+  color: #ccc;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+  color: #ffffff;
+}

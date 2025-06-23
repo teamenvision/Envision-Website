@@ -1,0 +1,17 @@
+/* Navbar/Header */
+.navbar {
+  background-color: #2e2e2e; /* lighter than body */
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+  background-color: #2e2e2e;
+  color: #aaa;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+}
