@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "../styles/awards.css";
 import awardsData from "../data/awards.json";
 import achievementsData from "../data/achievements.json";

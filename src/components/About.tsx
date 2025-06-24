@@ -42,7 +42,7 @@ export function About() {
       <div className="about-text">
         <h2>About Us</h2>
         <p>
-          Team Envision was founded in 2009 at NUST-PNEC. We design ultra-efficient and electric vehicles for global competitions like Shell Eco-Marathon. Over the years, we've built a legacy of innovation, winning multiple international awards and representing Pakistan with pride.
+          Team Envision was founded in 2009 at NUST-PNEC. We design ultra-efficient and electric vehicles for global competitions like Shell Eco-Marathon. Over the years, we&apos;ve built a legacy of innovation, winning multiple international awards and representing Pakistan with pride.
         </p>
       </div>
 
