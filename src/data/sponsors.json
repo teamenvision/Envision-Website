@@ -1,0 +1,23 @@
+{
+  "platinum": [
+    { "name": "Platinum Sponsor 1", "image": "/images/sponsors/pic1.jpg" },
+    { "name": "Platinum Sponsor 2", "image": "/images/sponsors/pic2.jpg" },
+    { "name": "Platinum Sponsor 1", "image": "/images/sponsors/pic1.jpg" },
+    { "name": "Platinum Sponsor 2", "image": "/images/sponsors/pic2.jpg" },
+    { "name": "Platinum Sponsor 1", "image": "/images/sponsors/pic1.jpg" },
+    { "name": "Platinum Sponsor 2", "image": "/images/sponsors/pic2.jpg" }
+
+  ],
+  "gold": [
+    { "name": "Gold Sponsor 1", "image": "/images/sponsors/pic1.jpg" },
+    { "name": "Gold Sponsor 2", "image": "/images/sponsors/pic2.jpg" }
+  ],
+  "silver": [
+    { "name": "Silver Sponsor 1", "image": "/images/sponsors/pic1.jpg" },
+    { "name": "Silver Sponsor 2", "image": "/images/sponsors/pic2.jpg" }
+  ],
+  "previous": [
+    { "name": "Previous Sponsor 1", "image": "/images/sponsors/pic1.jpg" },
+    { "name": "Previous Sponsor 2", "image": "/images/sponsors/pic2.jpg" }
+  ]
+}

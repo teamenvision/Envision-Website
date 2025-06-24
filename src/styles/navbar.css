@@ -1,25 +1,44 @@
 .navbar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  background-color: #2d2d2d; /* neutral-800 equivalent */
+  background-color: #2d2d2d;
   color: white;
+  padding: 1rem;
+  width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  position: relative;
+  z-index: 100;
 }
 
-.navbar h1 {
-  font-family: sans-serif;
-  font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-logo-container {
+  flex: 1;
+  display: inline-block;
+  justify-content: center;
+  transition: filter 0.3s ease;
+}
+
+.navbar-logo-container a:hover {
+  filter: drop-shadow(0 0 8px #15fa34);
+}
+
+.navbar-logo {
+  object-fit: contain;
+  height: auto;
 }
 
 .navbar-links {
   display: flex;
+  justify-content: center;
   gap: 1.5rem;
   font-size: 18px;
   font-weight: 500;
+  width: 100%;
 }
 
 .navbar-links a {
@@ -29,13 +48,112 @@
   transform: scale(1);
   display: inline-block;
 }
-
 .navbar-links a:hover {
   color: #15fa34;
-  transform: scale(1.1); /* slight enlargement */
+  transform: scale(1.1);
 }
 
-.navbar-logo {
-  margin-bottom: 1rem;
-  object-fit: contain;
+/* === Mobile menu toggle button */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* === Mobile fullscreen overlay === */
+.navbar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #121212;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 2rem;
+  animation: fadeInOverlay 0.3s ease forwards;
+  overflow-y: auto;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Close button in overlay - same size and position as hamburger */
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.8rem;
+  color: #15fa34;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #a0ffa0;
+}
+
+/* Mobile menu links */
+.navbar-links-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+}
+
+.navbar-links-mobile a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.navbar-links-mobile a:hover {
+  color: #15fa34;
+}
+
+/* === Responsive tweaks === */
+@media (max-width: 768px) {
+  .navbar-links.desktop-only {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar-logo-container {
+    justify-content: flex-start;
+  }
+
+  .navbar-logo {
+    width: 180px;
+  }
 }

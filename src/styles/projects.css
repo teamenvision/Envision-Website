@@ -1,8 +1,10 @@
+/* === Projects Section Base === */
 .projects-section {
   padding: 3rem 2rem;
   text-align: center;
 }
 
+/* === Project Grid Layout === */
 .project-grid {
   display: flex;
   flex-wrap: wrap;
@@ -10,6 +12,7 @@
   gap: 3rem;
 }
 
+/* === Individual Project Card === */
 .project-card {
   position: relative;
   width: 300px;
@@ -17,9 +20,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: var(--font-primary, 'Orbitron', sans-serif);
 }
 
-/* === Image Card (rounded rectangle) === */
+/* === Image Card (Rounded Rectangle) === */
 .car-image-wrapper {
   position: relative;
   width: 300px;
@@ -30,19 +34,22 @@
   transition: transform 0.3s ease;
   margin-bottom: 1rem;
 }
+
 .car-image-wrapper:hover {
   transform: scale(1.05);
 }
+
 .car-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .darkened {
   filter: brightness(0.4);
 }
 
-/* Short text overlay adjustments */
+/* === Overlay Description Box === */
 .overlay-description {
   display: flex;
   flex-direction: column;
@@ -59,12 +66,13 @@
   top: 0;
   left: 0;
   animation: fadeIn 0.3s ease;
+  padding: 1rem;
 }
 
-/* Read more button */
+/* === Read More Button === */
 .read-more-btn {
-  float: right; /* ⬅️ Move to right */
-  color: #ffcb00;
+  float: right;
+  color: #15fa34;
   background: none;
   border: none;
   cursor: pointer;
@@ -72,9 +80,19 @@
   font-size: 0.9rem;
   padding: 0.2rem 0.5rem;
   margin-top: 0.5rem;
+  font-family: var(--font-primary, 'Orbitron', sans-serif);
+  text-shadow: 0 0 6px rgba(21, 250, 52, 0.7);
+  transition: all 0.3s ease;
 }
 
-/* Slide panel */
+.read-more-btn:hover {
+  color: #00ff66;
+  text-shadow:
+    0 0 8px rgba(0, 255, 102, 0.85),
+    0 0 12px rgba(0, 255, 102, 0.5);
+}
+
+/* === Slide Panel for Detailed View === */
 .slide-panel {
   text-align: center;
   align-items: center;
@@ -91,9 +109,10 @@
   z-index: 999;
   animation: slideIn 0.3s ease-out;
   overflow-y: auto;
-  overflow-x: hidden; /* ✅ no horizontal scroll */
-  white-space: normal; /* ✅ wrap text */
-  word-wrap: break-word; /* ✅ break long words */
+  overflow-x: hidden;
+  white-space: normal;
+  word-wrap: break-word;
+  font-family: var(--font-primary, 'Orbitron', sans-serif);
 }
 
 @media (max-width: 768px) {
@@ -101,7 +120,7 @@
     top: auto;
     bottom: 0;
     height: 50vh;
-    width: 90vw; /* force full viewport width */
+    width: 100vw;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
   }
 }
@@ -126,8 +145,7 @@
   cursor: pointer;
 }
 
-
-/* === Number Plate === */
+/* === SVG-Styled Number Plate === */
 .number-plate {
   background-color: #222;
   color: #eee;
@@ -138,32 +156,56 @@
   width: 100%;
   border-radius: 10px;
   border: 2px solid #555;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: var(--font-primary, 'Orbitron', sans-serif);
   box-shadow: inset 0 0 5px #000;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
+
 .number-plate:hover {
   transform: scale(1.05);
-  border-color: #ffcb00;
+  border-color: #15fa34;
+  box-shadow: 0 0 8px rgba(21, 250, 52, 0.6);
 }
-.year-left, .year-right {
+
+.number-plate:hover .car-name,
+.number-plate:hover .car-location {
+  color: #15fa34;
+  text-shadow: 0 0 6px rgba(21, 250, 52, 0.6);
+}
+
+.year-left,
+.year-right {
   font-size: 1.2rem;
   font-weight: bold;
   width: 30px;
   text-align: center;
   color: #ffcb00;
 }
+
 .plate-center {
   flex-grow: 1;
   text-align: center;
 }
+
 .car-name {
   font-size: 1.3rem;
   font-weight: 700;
   color: #fff;
+  margin-bottom: 0.2rem;
 }
+
 .car-location {
   font-size: 1rem;
   color: #ccc;
+}
+
+/* === FadeIn Animation for Overlay === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

@@ -25,5 +25,14 @@
     "position": "2nd",
     "prize": "$750",
     "image": "/images/awards/2022.jpg"
+  },
+  {
+    "year": 2025,
+    "title": "Communication Award",
+    "competition": "Shell Eco-Marathon Asia",
+    "location": "Qatar",
+    "position": "1st",
+    "prize": "$3,000",
+    "image": "/images/awards/2022.jpg"
   }
 ]
