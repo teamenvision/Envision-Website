@@ -1,87 +1,98 @@
-"use client";
-import React from "react";
+import sponsorData from "../../data/sponsors.json";
 import Image from "next/image";
-import sponsorsData from "../../data/sponsors.json";
 import "../../styles/sponsors.css";
 
-type Sponsor = {
-  name: string;
-  image: string;
-};
-
-type SponsorsSectionProps = {
-  title: string;
-  sponsors: Sponsor[];
-  tierColor: string;
-  isPrevious?: boolean;
-};
-
-const SponsorsSection: React.FC<SponsorsSectionProps> = ({
-  title,
-  sponsors,
-  tierColor,
-  isPrevious = false,
-}) => {
+export default function Sponsors() {
   return (
-    <section className={`sponsors-section ${isPrevious ? "previous-section" : ""}`}>
-      <h2 style={{ color: tierColor }} className="sponsors-title">
-        {title}
-      </h2>
-      <div
-        className={`sponsors-grid ${isPrevious ? "previous-grid" : "active-grid"}`}
-        style={!isPrevious ? { borderColor: tierColor } : undefined}
-      >
-        {sponsors.map(({ name, image }, idx) => (
-          <div
-            key={idx}
-            className={`sponsor-card ${isPrevious ? "previous-card" : "active-card"}`}
-            style={!isPrevious ? { borderColor: tierColor } : undefined}
-            aria-label={name}
-            title={name}
-          >
-            <Image
-              src={image}
-              alt={name}
-              width={150}
-              height={80}
-              objectFit="contain"
-              className="sponsor-logo"
-              priority={true}
-            />
-            {!isPrevious && <div className="sponsor-overlay">{name}</div>}
+    <section className="sponsors-page">
+      {/* PLATINUM */}
+      <div className="tier-platinum">
+        <h2 className="tier-title">Platinum Sponsors</h2>
+        <div className="sponsors-grid">
+          {sponsorData.platinum.map((sponsor, idx) => (
+            <div className="sponsor-card" key={idx}>
+              <Image
+                src={sponsor.image}
+                alt={sponsor.name}
+                width={200}
+                height={120}
+                className="sponsor-logo"
+              />
+              <div className="sponsor-overlay">{sponsor.name}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* GOLD */}
+      <div className="tier-gold">
+        <h2 className="tier-title">Gold Sponsors</h2>
+        <div className="sponsors-grid">
+          {sponsorData.gold.map((sponsor, idx) => (
+            <div className="sponsor-card" key={idx}>
+              <Image
+                src={sponsor.image}
+                alt={sponsor.name}
+                width={200}
+                height={120}
+                className="sponsor-logo"
+              />
+              <div className="sponsor-overlay">{sponsor.name}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* SILVER */}
+      <div className="tier-silver">
+        <h2 className="tier-title">Silver Sponsors</h2>
+        <div className="sponsors-grid">
+          {sponsorData.silver.map((sponsor, idx) => (
+            <div className="sponsor-card" key={idx}>
+              <Image
+                src={sponsor.image}
+                alt={sponsor.name}
+                width={200}
+                height={120}
+                className="sponsor-logo"
+              />
+              <div className="sponsor-overlay">{sponsor.name}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* PREVIOUS Sponsors (MARQUEE) */}
+      <div className="previous-section">
+        <h2 className="tier-title">Previous Sponsors</h2>
+        <div className="marquee-container">
+          <div className="marquee-track">
+            {sponsorData.previous.map((sponsor, idx) => (
+              <div className="previous-card" key={idx}>
+                <Image
+                  src={sponsor.image}
+                  alt={sponsor.name}
+                  width={120}
+                  height={60}
+                  className="sponsor-logo"
+                />
+              </div>
+            ))}
+            {/* duplicate for smooth marquee loop */}
+            {sponsorData.previous.map((sponsor, idx) => (
+              <div className="previous-card" key={`dup-${idx}`}>
+                <Image
+                  src={sponsor.image}
+                  alt={sponsor.name}
+                  width={120}
+                  height={60}
+                  className="sponsor-logo"
+                />
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </section>
-  );
-};
-
-export default function SponsorsPage() {
-  return (
-    <main className="sponsors-page">
-      <SponsorsSection
-        title="Platinum Sponsors"
-        sponsors={sponsorsData.platinum}
-        tierColor="#00FFFF"
-      />
-      <SponsorsSection
-        title="Gold Sponsors"
-        sponsors={sponsorsData.gold}
-        tierColor="#FFD700"
-      />
-      <SponsorsSection
-        title="Silver Sponsors"
-        sponsors={sponsorsData.silver}
-        tierColor="#C0C0C0"
-      />
-      {sponsorsData.previous && sponsorsData.previous.length > 0 && (
-        <SponsorsSection
-          title="Previous Sponsors"
-          sponsors={sponsorsData.previous}
-          tierColor="#888"
-          isPrevious
-        />
-      )}
-    </main>
   );
 }
