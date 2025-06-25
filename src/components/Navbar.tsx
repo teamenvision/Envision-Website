@@ -15,7 +15,7 @@ export function Navbar() {
           <div className="navbar-logo-container">
             <Link href="/">
               <Image
-                src="/images/Team Envision Logo.png"
+                src="/images/Team-Envision-Logo.png"
                 alt="Team Envision Logo"
                 width={300}
                 height={100}
