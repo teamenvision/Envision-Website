@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import latestProjectsData from "../data/latestprojects.json";
-import "../styles/latestProjects.css";
+import "../styles/latestprojects.css";
 
 type CompetitionInfo = {
   participated: boolean;
