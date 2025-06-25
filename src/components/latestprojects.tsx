@@ -91,12 +91,12 @@ export default function LatestProjects() {
                   : proj.description}
               </p>
 
-              {/* <button
+              <button
                 className="toggle-details-btn"
                 onClick={() => toggleExpand(idx)}
               >
                 {expandedIndex === idx ? "Show Less" : "Learn More"}
-              </button> */}
+              </button>
             </div>
           </div>
         ))}
