@@ -100,5 +100,12 @@
     "location": "Pakistan",
     "image": "/images/projects/2021 - Prototype - Qaswa.png",
     "description": "Our most advanced electric prototype featuring a lightweight carbon fiber shell, custom-built BLDC motor, and an energy management system optimized for ultra-efficiency."
+  },
+  {
+    "name": "Evo-X",
+    "year": 2022,
+    "location": "Virtual",
+    "image": "/images/projects/2022 - Prototype - EVO-X.jpg",
+    "description": "Our most advanced electric prototype featuring a lightweight carbon fiber shell, custom-built BLDC motor, and an energy management system optimized for ultra-efficiency."
   }
 ]

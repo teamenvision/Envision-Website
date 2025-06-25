@@ -3,6 +3,8 @@ import { useState } from "react";
 import Image from "next/image";
 import projectData from "../../data/projects.json";
 import "../../styles/projects.css";
+import LatestProjects from "../../components/latestprojects"
+
 
 export default function Projects() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -23,8 +25,11 @@ export default function Projects() {
   };
 
   return (
+    
     <section className="projects-section">
-      <h2>Our Vehicles</h2>
+      <LatestProjects />
+
+      <h2>Previous Vehicles</h2>
       <div className="project-grid">
         {projectData.map((car, index) => {
           const yearStr = car.year.toString();

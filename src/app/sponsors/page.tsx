@@ -1,98 +1,105 @@
-import sponsorData from "../../data/sponsors.json";
+"use client";
+
+import sponsorsData from '../../data/sponsors.json' assert { type: "json" };
+const sponsors = sponsorsData as SponsorsByTier;
+
 import Image from "next/image";
+import { useState } from "react";
 import "../../styles/sponsors.css";
 
-export default function Sponsors() {
+type Sponsor = {
+  name: string;
+  tier: string;
+  image: string;
+};
+
+type SponsorsByTier = {
+  [key: string]: Sponsor[];
+};
+
+const TIER_ORDER = ["platinum", "diamond", "gold", "silver", "bronze"];
+
+export default function SponsorsPage() {
+  const [currentIndex, setCurrentIndex] = useState<Record<string, number>>({
+    gold: 0,
+    silver: 0,
+    bronze: 0,
+  });
+
+  const handleScroll = (tier: string, e: React.UIEvent<HTMLDivElement>) => {
+    const container = e.currentTarget;
+    const cardWidth = container.firstElementChild?.clientWidth || 1;
+    const newIndex = Math.round(container.scrollLeft / (cardWidth + 24)); // 24px = gap
+    setCurrentIndex((prev) => ({ ...prev, [tier]: newIndex }));
+  };
+
+  const scrollTo = (tier: string, index: number) => {
+    const container = document.querySelector(`.${tier}-scroll`) as HTMLElement;
+    const card = container?.children[index] as HTMLElement;
+    if (card) {
+      card.scrollIntoView({ behavior: "smooth", inline: "center" });
+      setCurrentIndex((prev) => ({ ...prev, [tier]: index }));
+    }
+  };
+  console.log(sponsors.previous);
   return (
-    <section className="sponsors-page">
-      {/* PLATINUM */}
-      <div className="tier-platinum">
-        <h2 className="tier-title">Platinum Sponsors</h2>
-        <div className="sponsors-grid">
-          {sponsorData.platinum.map((sponsor, idx) => (
-            <div className="sponsor-card" key={idx}>
-              <Image
-                src={sponsor.image}
-                alt={sponsor.name}
-                width={200}
-                height={120}
-                className="sponsor-logo"
-              />
-              <div className="sponsor-overlay">{sponsor.name}</div>
-            </div>
-          ))}
-        </div>
-      </div>
+    <main className="sponsors-page">
+      {TIER_ORDER.map((tier) => (
+        sponsors[tier]?.length ? (
+          <section key={tier} className={`tier-section tier-${tier}`}>
+            <h2 className="sponsors-title">{tier.toUpperCase()} Sponsors</h2>
 
-      {/* GOLD */}
-      <div className="tier-gold">
-        <h2 className="tier-title">Gold Sponsors</h2>
-        <div className="sponsors-grid">
-          {sponsorData.gold.map((sponsor, idx) => (
-            <div className="sponsor-card" key={idx}>
-              <Image
-                src={sponsor.image}
-                alt={sponsor.name}
-                width={200}
-                height={120}
-                className="sponsor-logo"
-              />
-              <div className="sponsor-overlay">{sponsor.name}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* SILVER */}
-      <div className="tier-silver">
-        <h2 className="tier-title">Silver Sponsors</h2>
-        <div className="sponsors-grid">
-          {sponsorData.silver.map((sponsor, idx) => (
-            <div className="sponsor-card" key={idx}>
-              <Image
-                src={sponsor.image}
-                alt={sponsor.name}
-                width={200}
-                height={120}
-                className="sponsor-logo"
-              />
-              <div className="sponsor-overlay">{sponsor.name}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* PREVIOUS Sponsors (MARQUEE) */}
-      <div className="previous-section">
-        <h2 className="tier-title">Previous Sponsors</h2>
-        <div className="marquee-container">
-          <div className="marquee-track">
-            {sponsorData.previous.map((sponsor, idx) => (
-              <div className="previous-card" key={idx}>
-                <Image
-                  src={sponsor.image}
-                  alt={sponsor.name}
-                  width={120}
-                  height={60}
-                  className="sponsor-logo"
-                />
+            {(tier === "gold" || tier === "silver" || tier === "bronze") ? (
+              <>
+                <div
+                  className={`sponsors-grid ${tier}-scroll`}
+                  onScroll={(e) => handleScroll(tier, e)}
+                >
+                  {sponsors[tier].map((s, idx) => (
+                    <div className={`sponsor-card ${tier}`} key={idx}>
+                      <Image src={s.image} alt={s.name} fill className="sponsor-logo" />
+                      <div className="sponsor-overlay">{s.name}</div>
+                    </div>
+                  ))}
+                </div>
+                <div>
+                  {sponsors[tier].map((_, idx) => (
+                    <span
+                      key={idx}
+                      className={`dot ${idx === currentIndex[tier] ? `active ${tier}` : ""}`}
+                      onClick={() => scrollTo(tier, idx)}
+                    />
+                  ))}
+                </div>
+              </>
+            ) : (
+              <div className="sponsors-grid stacked">
+                {sponsors[tier].map((s, idx) => (
+                  <div className={`sponsor-card ${tier}`} key={idx}>
+                    <Image src={s.image} alt={s.name} fill className="sponsor-logo" />
+                    <div className="sponsor-overlay">{s.name}</div>
+                  </div>
+                ))}
               </div>
-            ))}
-            {/* duplicate for smooth marquee loop */}
-            {sponsorData.previous.map((sponsor, idx) => (
-              <div className="previous-card" key={`dup-${idx}`}>
-                <Image
-                  src={sponsor.image}
-                  alt={sponsor.name}
-                  width={120}
-                  height={60}
-                  className="sponsor-logo"
-                />
-              </div>
-            ))}
+            )}
+          </section>
+        ) : null
+      ))}
+      {sponsors.previous && sponsors.previous.length > 0 && (
+        <section className="tier-section tier-previous">
+          <h2 className="sponsors-title">Previous Sponsors</h2>
+          <div className="previous-marquee">
+            <div className="previous-track">
+              {[...sponsors.previous, ...sponsors.previous].map((s, idx) => (
+                <div className="previous-card" key={`${s.name}-${idx}`}>
+                  <Image src={s.image} alt={s.name} fill className="sponsor-logo" />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
+      )}
+
+    </main>
   );
 }

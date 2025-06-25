@@ -1,0 +1,197 @@
+.latest-projects-section {
+  background-color: #121212;
+  color: #ddd;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #15fa34;
+  text-shadow: 0 0 10px #15fa34;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.latest-projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.latest-project-card {
+  background-color: #1a1a1a;
+  border: 2px solid #15fa34;
+  border-radius: 16px;
+  width: 400px;
+  box-shadow:
+    0 0 10px #15fa34,
+    inset 0 0 8px #0f8c29;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.latest-project-card:hover {
+  transform: scale(1.04);
+  box-shadow:
+    0 0 15px #00ff66,
+    inset 0 0 12px #0fae39;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  transition: filter 0.3s ease;
+}
+
+.year-location {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  font-size: 0.9rem;
+  color: #bcffb8;
+  text-shadow: 0 0 6px #0f8c29;
+  background: rgba(0,0,0,0.5);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+.project-info {
+  padding: 1rem 1.5rem;
+  text-align: left;
+}
+
+.project-name {
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+  color: #15fa34;
+  text-shadow: 0 0 6px #0fae39;
+  user-select: none;
+}
+
+.competition-badge {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.competition-badge .competed {
+  color: #ffcb00;
+  text-shadow: 0 0 8px #ffcb00;
+}
+
+.competition-badge .not-competed {
+  color: #888;
+  font-style: italic;
+}
+
+.tech-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+  color: #b4ff9e;
+}
+
+.tech-specs li {
+  margin-bottom: 0.3rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+  min-height: 48px; /* avoid jump */
+}
+
+.toggle-details-btn {
+  background-color: transparent;
+  border: 2px solid #15fa34;
+  color: #15fa34;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  user-select: none;
+  align-self: flex-start;
+}
+
+.toggle-details-btn:hover {
+  background-color: #15fa34;
+  color: #121212;
+  box-shadow: 0 0 8px #00ff66;
+}
+
+/* Expanded card adjusts */
+.latest-project-card.expanded .project-description {
+  white-space: normal;
+  min-height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .latest-projects-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .latest-project-card {
+    width: 90vw;
+    max-width: 100%;
+    padding: 0;
+    box-shadow: 0 0 6px #15fa34, inset 0 0 4px #0f8c29;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .project-info {
+    padding: 1rem;
+  }
+
+  .project-name {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .competition-badge {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .tech-specs {
+    font-size: 0.85rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .toggle-details-btn {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+
+  .year-location {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.4rem;
+  }
+}

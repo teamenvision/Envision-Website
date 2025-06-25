@@ -1,23 +1,259 @@
 {
   "platinum": [
-    { "name": "Platinum Sponsor 1", "image": "/images/sponsors/pic1.jpg" },
-    { "name": "Platinum Sponsor 2", "image": "/images/sponsors/pic2.jpg" },
-    { "name": "Platinum Sponsor 1", "image": "/images/sponsors/pic1.jpg" },
-    { "name": "Platinum Sponsor 2", "image": "/images/sponsors/pic2.jpg" },
-    { "name": "Platinum Sponsor 1", "image": "/images/sponsors/pic1.jpg" },
-    { "name": "Platinum Sponsor 2", "image": "/images/sponsors/pic2.jpg" }
-
+    {
+      "name": "PSO",
+      "tier": "platinum",
+      "image": "/images/sponsors/platinum/PSO.png"
+    }
+  ],
+  "diamond": [
+    {
+      "name": "FCI",
+      "tier": "diamond",
+      "image": "/images/sponsors/diamond/FCI.png"
+    }
   ],
   "gold": [
-    { "name": "Gold Sponsor 1", "image": "/images/sponsors/pic1.jpg" },
-    { "name": "Gold Sponsor 2", "image": "/images/sponsors/pic2.jpg" }
+    {
+      "name": "14th Street Pizza",
+      "tier": "gold",
+      "image": "/images/sponsors/gold/14th Street Pizza.png"
+    },
+    {
+      "name": "Atco",
+      "tier": "gold",
+      "image": "/images/sponsors/gold/Atco.png"
+    },
+    {
+      "name": "Hyundai Power Tools",
+      "tier": "gold",
+      "image": "/images/sponsors/gold/Hyundai Power Tools.png"
+    },
+    {
+      "name": "Nixor College ",
+      "tier": "gold",
+      "image": "/images/sponsors/gold/Nixor College .png"
+    },
+    {
+      "name": "The Jacket Maker",
+      "tier": "gold",
+      "image": "/images/sponsors/gold/The Jacket Maker.PNG"
+    }
   ],
   "silver": [
-    { "name": "Silver Sponsor 1", "image": "/images/sponsors/pic1.jpg" },
-    { "name": "Silver Sponsor 2", "image": "/images/sponsors/pic2.jpg" }
+    {
+      "name": "Broadpeak",
+      "tier": "silver",
+      "image": "/images/sponsors/silver/Broadpeak.png"
+    },
+    {
+      "name": "Descon",
+      "tier": "silver",
+      "image": "/images/sponsors/silver/Descon.png"
+    },
+    {
+      "name": "EIE",
+      "tier": "silver",
+      "image": "/images/sponsors/silver/EIE.png"
+    },
+    {
+      "name": "Meri Gaari",
+      "tier": "silver",
+      "image": "/images/sponsors/silver/Meri Gaari.png"
+    }
+  ],
+  "bronze": [
+    {
+      "name": "Fabric8 3d",
+      "tier": "bronze",
+      "image": "/images/sponsors/bronze/Fabric8 3d.png"
+    },
+    {
+      "name": "MATS Towing",
+      "tier": "bronze",
+      "image": "/images/sponsors/bronze/MATS Towing.png"
+    },
+    {
+      "name": "propakistani",
+      "tier": "bronze",
+      "image": "/images/sponsors/bronze/propakistani.png"
+    },
+    {
+      "name": "sac",
+      "tier": "bronze",
+      "image": "/images/sponsors/bronze/sac.png"
+    },
+    {
+      "name": "simapro",
+      "tier": "bronze",
+      "image": "/images/sponsors/bronze/simapro.png"
+    }
   ],
   "previous": [
-    { "name": "Previous Sponsor 1", "image": "/images/sponsors/pic1.jpg" },
-    { "name": "Previous Sponsor 2", "image": "/images/sponsors/pic2.jpg" }
+    {
+      "name": "Adamjee",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Adamjee.png"
+    },
+    {
+      "name": "ARA Wraps",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/ARA Wraps.png"
+    },
+    {
+      "name": "Arena",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Arena.png"
+    },
+    {
+      "name": "BlueEX",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/BlueEX.png"
+    },
+    {
+      "name": "Britlite",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Britlite.png"
+    },
+    {
+      "name": "Chartech",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Chartech.png"
+    },
+    {
+      "name": "City FM",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/City FM.png"
+    },
+    {
+      "name": "Cocacola",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Cocacola.png"
+    },
+    {
+      "name": "DAWN",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/DAWN.png"
+    },
+    {
+      "name": "Fasilite",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Fasilite.png"
+    },
+    {
+      "name": "Fauji Foods",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Fauji Foods.png"
+    },
+    {
+      "name": "FFC",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/FFC.png"
+    },
+    {
+      "name": "Global Pharm",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Global Pharm.png"
+    },
+    {
+      "name": "Grit 3D",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Grit 3D.png"
+    },
+    {
+      "name": "IAK",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/IAK.png"
+    },
+    {
+      "name": "Mc Donalds",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Mc Donalds.png"
+    },
+    {
+      "name": "MG Engineering",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/MG Engineering.png"
+    },
+    {
+      "name": "Pakola",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Pakola.png"
+    },
+    {
+      "name": "PMTF",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/PMTF.png"
+    },
+    {
+      "name": "Portgrand",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Portgrand.png"
+    },
+    {
+      "name": "Searle",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Searle.png"
+    },
+    {
+      "name": "SGL",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/SGL.png"
+    },
+    {
+      "name": "Shell",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Shell.png"
+    },
+    {
+      "name": "Siddiq Sons",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Siddiq Sons.png"
+    },
+    {
+      "name": "Sindh Bank",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Sindh Bank.png"
+    },
+    {
+      "name": "Stevta",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Stevta.png"
+    },
+    {
+      "name": "Telemart",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Telemart.png"
+    },
+    {
+      "name": "TGI Fridays",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/TGI Fridays.png"
+    },
+    {
+      "name": "The Pit Shop",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/The Pit Shop.png"
+    },
+    {
+      "name": "Toyota",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Toyota.png"
+    },
+    {
+      "name": "UHU",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/UHU.png"
+    },
+    {
+      "name": "UMA",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/UMA.png"
+    },
+    {
+      "name": "Universal Cables",
+      "tier": "previous sponsors",
+      "image": "/images/sponsors/previous/Universal Cables.png"
+    }
   ]
 }

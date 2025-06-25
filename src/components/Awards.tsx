@@ -50,7 +50,7 @@ export function Awards() {
                   alt={award.title}
                   width={200}
                   height={120}
-                  objectFit="cover"
+                  style={{ objectFit: "cover" }}
                 />
               </div>
             )}

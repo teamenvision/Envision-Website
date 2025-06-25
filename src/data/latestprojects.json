@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Azaade",
+    "year": 0,
+    "location": "Pakistan",
+    "image": "/images/latest/azaade.jpg",
+    "competition": {
+      "participated": false,
+      "results": "Cleared Progress and Technical Reports in Teknofest."
+    },
+    "technicalSpecs": {
+      "motor": "5.5 kW DC",
+      "battery": "72V, 32Ah Li-ion pack",
+      "chassis": "Lightweight tubular steel-aluminium frame",
+      "aerodynamics": "Cd 0.28",
+      "weight": "270 kg",
+      "topSpeed": "70 km/h",
+      "range": "170 km"
+    },
+    "description": "Azaade is our flagship electric vehicle featuring a high-efficiency motor and lightweight design optimized for maximum range and competition performance."
+  },
+  {
+    "name": "Doc Hudson",
+    "year": 2025,
+    "location": "Qatar",
+    "image": "/images/latest/doc_hudson.jpg",
+    "competition": {
+      "participated": true,
+      "results": "10th Place, Shell Eco Marathon Asia Pacific and Middle East 2025"
+    },
+    "technicalSpecs": {
+      "motor": "2.8 kW DC",
+      "battery": "60V, 25Ah Li-ion",
+      "chassis": "Aluminum spaceframe",
+      "aerodynamics": "Cd 0.31",
+      "weight": "290 kg",
+      "topSpeed": "45 km/h",
+      "range": "196 km"
+    },
+    "description": "Doc Hudson emphasizes balanced performance and durability, designed for SEMA 2025."
+  },
+  {
+    "name": "Yasoob",
+    "year": 2025,
+    "location": "Qatar",
+    "image": "/images/latest/yasoob.jpg",
+    "competition": {
+      "participated": true,
+      "results": "Cleared Technical and Safety Inspections in Shell Eco Marathon Asia Pacific and Middle East"
+    },
+    "technicalSpecs": {
+      "motor": "3.5 kW BLDC motor",
+      "battery": "48V, 30Ah Li-ion",
+      "chassis": "Carbon fiber semi monocouqe",
+      "aerodynamics": "Cd 0.17, CFD optimized",
+      "weight": "100 kg",
+      "topSpeed": "50 km/h",
+      "range": "250 km"
+    },
+    "description": "Yasoob is our latest prototype focusing on innovation in materials and aerodynamics for future competitions."
+  }
+]

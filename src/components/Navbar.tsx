@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../styles/navbar.css";
@@ -14,13 +13,12 @@ export function Navbar() {
         <div className="navbar-header">
           <div className="navbar-logo-container">
             <Link href="/">
-              <Image
-                src="/images/logo.png"
+              <img
+                src="/images/Team Envision Logo.png"
                 alt="Team Envision Logo"
                 width={300}
                 height={100}
                 className="navbar-logo"
-                priority
               />
             </Link>
           </div>

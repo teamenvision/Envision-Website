@@ -1,99 +1,124 @@
-/* === Base Styles === */
 .sponsors-page {
-  padding: 3rem 2rem;
+  padding: 2rem;
   background-color: #121212;
   color: white;
-  max-width: 1200px;
-  margin: 0 auto;
-  font-family: 'Orbitron', 'Courier New', monospace;
-  user-select: none;
+  font-family: 'Orbitron', sans-serif;
 }
 
-/* === Tier Section Titles with Glow === */
-.tier-title {
+.sponsors-title {
   font-size: 2rem;
-  font-weight: 700;
   margin-bottom: 1rem;
   text-align: center;
+  text-shadow: 0 0 10px currentColor;
   text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
-.tier-platinum .tier-title {
-  color: #00ffff;
-  text-shadow: 0 0 15px #00ffff;
-}
-
-.tier-gold .tier-title {
-  color: #ffcc00;
-  text-shadow: 0 0 15px #ffcc00;
-}
-
-.tier-silver .tier-title {
-  color: #aaaaff;
-  text-shadow: 0 0 15px #aaaaff;
-}
-
-/* === Sponsors Grid === */
 .sponsors-grid {
   display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1.5rem;
-  border-radius: 16px;
-  position: relative;
-  box-shadow: 0 0 15px currentColor;
-  transition: box-shadow 0.3s ease;
 }
 
-.tier-platinum .sponsors-grid {
-  border: 2px solid #00ffff;
-}
-
-.tier-gold .sponsors-grid {
-  border: 2px solid #ffcc00;
-}
-
-.tier-silver .sponsors-grid {
-  border: 2px solid #aaaaff;
-}
-
-.sponsor-card {
-  background-color: #222;
-  border-radius: 12px;
-  border: 2px solid currentColor;
-  width: 22vw;
-  height: 220px;
-  display: flex;
+.stacked {
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  filter: drop-shadow(0 0 6px currentColor);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.sponsor-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px currentColor;
+/* Sponsor cards per tier */
+.sponsor-card {
+  position: relative;
+  border-radius: 12px;
+  border: 2px solid;
+  overflow: hidden;
+  box-shadow: 0 0 12px currentColor;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sponsor-logo {
-  max-width: 100%;
-  max-height: 100%;
   object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 
-/* === Sponsor Overlay on hover === */
+.tier-platinum .sponsor-card {
+  width: 280px;
+  height: 280px;
+  border-color: #bc13fe;
+}
+.tier-platinum .sponsors-title {
+  color: #bc13fe;
+  text-shadow: 0 0 15px #bc13fe;
+}
+.tier-platinum .sponsor-overlay {
+  background: rgba(188, 19, 254, 0.85);
+}
+
+.tier-diamond .sponsor-card {
+  width: 240px;
+  height: 240px;
+  border-color: #00ffff;
+}
+.tier-diamond .sponsors-title {
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff;
+}
+.tier-diamond .sponsor-overlay {
+  background: rgba(0, 255, 255, 0.85);
+}
+
+.tier-gold .sponsor-card {
+  width: 200px;
+  height: 200px;
+  border-color: #ffd700;
+}
+.tier-gold .sponsors-title {
+  color: #ffd700;
+  text-shadow: 0 0 15px #ffd700;
+}
+.tier-gold .sponsor-overlay {
+  background: rgba(255, 215, 0, 0.85);
+}
+
+.tier-silver .sponsor-card {
+  width: 160px;
+  height: 160px;
+  border-color: #ccc;
+}
+.tier-silver .sponsors-title {
+  color: #ccc;
+  text-shadow: 0 0 15px #ccc;
+}
+.tier-silver .sponsor-overlay {
+  background: rgba(204, 204, 204, 0.85);
+}
+
+.tier-bronze .sponsor-card {
+  width: 120px;
+  height: 120px;
+  border-color: #cd7f32;
+}
+.tier-bronze .sponsors-title {
+  color: #cd7f32;
+  text-shadow: 0 0 15px #cd7f32;
+}
+.tier-bronze .sponsor-overlay {
+  background: rgba(205, 127, 50, 0.85);
+}
+
+/* Common overlay styles */
 .sponsor-overlay {
   position: absolute;
   bottom: 0;
-  background: rgba(0, 255, 255, 0.85);
-  color: #121212;
-  font-weight: 700;
   width: 100%;
+  color: black;
   text-align: center;
-  padding: 0.4rem 0;
+  padding: 0.4rem;
+  font-weight: bold;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -102,81 +127,99 @@
   opacity: 1;
 }
 
-/* === Previous Sponsors (Marquee) === */
-.previous-section {
-  margin-top: 4rem;
-}
-
-.marquee-container {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.marquee-track {
-  display: flex;
-  gap: 1rem;
-  animation: scroll-left 20s linear infinite;
-  width: max-content;
-}
-
-.previous-card {
-  background-color: #111;
-  filter: grayscale(70%) brightness(0.8);
-  width: 10vw;
-  height: 100px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* === Mobile View === */
+/* Mobile view adjustments */
 @media (max-width: 768px) {
-  .sponsors-grid {
-    padding-left: 0;
-    padding-right: 0;
-    gap: 1rem;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .sponsor-card {
-    box-sizing: border-box;
-  }
-
-  .tier-platinum .sponsors-grid {
+  .tier-platinum .sponsors-grid,
+  .tier-diamond .sponsors-grid {
     flex-direction: column;
+    align-items: center;
     overflow-x: hidden;
-    gap: 1.5rem;
   }
 
-  .tier-platinum .sponsor-card {
-    width: 90vw;
-    height: 250px;
-    flex-shrink: 0;
-    scroll-snap-align: center;
+  .tier-gold .sponsors-grid,
+  .tier-silver .sponsors-grid,
+  .tier-bronze .sponsors-grid {
+    padding: 1rem 0;
+    gap: 1rem;
   }
 
   .tier-gold .sponsor-card,
-  .tier-silver .sponsor-card {
-    width: calc(100vw - 1rem); /* ensure full card fits */
-    height: 200px; /* adjust height per tier if needed */
+  .tier-silver .sponsor-card,
+  .tier-bronze .sponsor-card {
     flex-shrink: 0;
     scroll-snap-align: center;
+    margin: 0 auto;
   }
+}
 
-  .previous-card {
-    width: 50vw;
+
+/* === Previous Sponsors Marquee === */
+.tier-previous .sponsors-title {
+  color: #888;
+  text-shadow: 0 0 12px #888;
+  margin-top: 2rem;
+}
+
+.previous-marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+
+.previous-track {
+  display: flex;
+  width: max-content;
+  gap: 1.5rem;
+  animation: scroll-left 120s linear infinite;
+  will-change: transform;
+}
+
+.previous-marquee:hover .previous-track {
+  animation-play-state: paused;
+}
+
+.previous-card {
+  position: relative;
+  width: 120px;
+  height: 100px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #444;
+  box-shadow: 0 0 8px #333;
+  background-color: #1e1e1e;
+  flex-shrink: 0;
+}
+
+.previous-card .sponsor-logo {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+/* Animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .previous-marquee {
     height: 80px;
   }
 
-  /* dots styles as before */
+  .previous-card {
+    width: 90px;
+    height: 80px;
+  }
+
+  .tier-previous .sponsors-title {
+    font-size: 1.5rem;
+  }
 }
+
