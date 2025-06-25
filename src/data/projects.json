@@ -3,7 +3,7 @@
     "name": "Subuk",
     "year": 2009,
     "location": "Germany",
-    "image": "/images/projects/2009 - Urban - Subuq.jpg",
+    "image": "/images/projects/2009-Urban-Subuq.jpg",
     "description": "Our most advanced electric prototype featuring a lightweight carbon fiber shell, custom-built BLDC motor, and an energy management system optimized for ultra-efficiency.mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
 
   },
@@ -11,7 +11,7 @@
     "name": "Burraq",
     "year": 2010,
     "location": "Malaysia",
-    "image": "/images/projects/2010 - Urban - Burraq.jpg",
+    "image": "/images/projects/2010-Urban-Burraq.jpg",
     "description": "Our most advanced electric prototype featuring a lightweight carbon fiber shell, custom-built BLDC motor, and an energy management system optimized for ultra-efficiency."
 
   },
@@ -19,14 +19,14 @@
     "name": "Ballista",
     "year": 2011,
     "location": "Malaysia",
-    "image": "/images/projects/2011 - Prototype - Ballista.jpg",
+    "image": "/images/projects/2011-Prototype-Ballista.jpg",
     "description": "Our most advanced electric prototype featuring a lightweight carbon fiber shell, custom-built BLDC motor, and an energy management system optimized for ultra-efficiency."
   },
   {
     "name": "Burraq 2.0",
     "year": 2011,
     "location": "Malaysia",
-    "image": "/images/projects/2011 - Urban - Burraq 2.0.jpg",
+    "image": "/images/projects/2011-Urban-Burraq-2.0.jpg",
     "description": "Our most advanced electric prototype featuring a lightweight carbon fiber shell, custom-built BLDC motor, and an energy management system optimized for ultra-efficiency."
 
   },
@@ -34,7 +34,7 @@
     "name": "Ballista 2.0",
     "year": 2012,
     "location": "Malaysia",
-    "image": "/images/projects/2012 - Prototype - Ballista 2.0.jpg",
+    "image": "/images/projects/2012-Prototype-Ballista-2.0.jpg",
     "description": "Our most advanced electric prototype featuring a lightweight carbon fiber shell, custom-built BLDC motor, and an energy management system optimized for ultra-efficiency."
 
   },
@@ -42,70 +42,70 @@
     "name": "Burraq 3.0",
     "year": 2012,
     "location": "Malaysia",
-    "image": "/images/projects/2012 - Urban - Burraq 3.0.jpg",
+    "image": "/images/projects/2012-Urban-Burraq-3.0.jpg",
     "description": "Our most advanced electric prototype featuring a lightweight carbon fiber shell, custom-built BLDC motor, and an energy management system optimized for ultra-efficiency."
   },
   {
     "name": "Ballista 3.0",
     "year": 2014,
     "location": "Philippines",
-    "image": "/images/projects/2014 - Prototype - Ballista 3.0.jpg",
+    "image": "/images/projects/2014-Prototype-Ballista-3.0.jpg",
     "description": "Our most advanced electric prototype featuring a lightweight carbon fiber shell, custom-built BLDC motor, and an energy management system optimized for ultra-efficiency."
   },
   {
     "name": "Bolt",
     "year": 2014,
     "location": "Philippines",
-    "image": "/images/projects/2014 - Urban - Bolt.jpg",
+    "image": "/images/projects/2014-Urban-Bolt.jpg",
     "description": "Our most advanced electric prototype featuring a lightweight carbon fiber shell, custom-built BLDC motor, and an energy management system optimized for ultra-efficiency."
   },
   {
     "name": "Ballista Revotron",
     "year": 2015,
     "location": "Philippines",
-    "image": "/images/projects/2015 - Prototype - Ballista Revotron.jpg",
+    "image": "/images/projects/2015-Prototype-Ballista-Revotron.jpg",
     "description": "Our most advanced electric prototype featuring a lightweight carbon fiber shell, custom-built BLDC motor, and an energy management system optimized for ultra-efficiency."
   },
     {
     "name": "Rebolt",
     "year": 2015,
     "location": "Philippines",
-    "image": "/images/projects/2015 - Urban - Rebolt.jpg",
+    "image": "/images/projects/2015-Urban-Rebolt.jpg",
     "description": "Our most advanced electric prototype featuring a lightweight carbon fiber shell, custom-built BLDC motor, and an energy management system optimized for ultra-efficiency."
   },
     {
     "name": "Rebolt 2.0",
     "year": 2017,
     "location": "Singapore",
-    "image": "/images/projects/2017 - Urban - Rebolt 2.0.jpg",
+    "image": "/images/projects/2017-Urban-Rebolt-2.0.jpg",
     "description": "Our most advanced electric prototype featuring a lightweight carbon fiber shell, custom-built BLDC motor, and an energy management system optimized for ultra-efficiency."
   },
   {
     "name": "Gallant",
     "year": 2018,
     "location": "Singapore",
-    "image": "/images/projects/2018 - Prototype - Gallant.jpg",
+    "image": "/images/projects/2018-Prototype-Gallant.jpg",
     "description": "Our most advanced electric prototype featuring a lightweight carbon fiber shell, custom-built BLDC motor, and an energy management system optimized for ultra-efficiency."
   },
     {
     "name": "Mile-X",
     "year": 2019,
     "location": "Malaysia",
-    "image": "/images/projects/2019 - Urban - Mile-X.jpg",
+    "image": "/images/projects/2019-Urban-Mile-X.jpg",
     "description": "Our most advanced electric prototype featuring a lightweight carbon fiber shell, custom-built BLDC motor, and an energy management system optimized for ultra-efficiency."
   },
     {
     "name": "Qaswa",
     "year": 2021,
     "location": "Pakistan",
-    "image": "/images/projects/2021 - Prototype - Qaswa.png",
+    "image": "/images/projects/2021-Prototype-Qaswa.jpg",
     "description": "Our most advanced electric prototype featuring a lightweight carbon fiber shell, custom-built BLDC motor, and an energy management system optimized for ultra-efficiency."
   },
   {
     "name": "Evo-X",
     "year": 2022,
     "location": "Virtual",
-    "image": "/images/projects/2022 - Prototype - EVO-X.jpg",
+    "image": "/images/projects/2022-Prototype-EVO-X.jpg",
     "description": "Our most advanced electric prototype featuring a lightweight carbon fiber shell, custom-built BLDC motor, and an energy management system optimized for ultra-efficiency."
   }
 ]
