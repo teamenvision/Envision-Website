@@ -1,5 +1,5 @@
 .latest-projects-section {
-  background-color: #121212;
+  background-color: transparent; /* change to add different color in the bg*/
   color: #ddd;
   font-family: 'Orbitron', sans-serif;
   text-align: center;
@@ -117,6 +117,7 @@
 }
 
 .toggle-details-btn {
+  display: none; /* uncomment to unhide this button*/
   background-color: transparent;
   border: 2px solid #15fa34;
   color: #15fa34;

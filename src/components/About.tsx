@@ -3,7 +3,10 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import "../styles/about.css";
 
-const images = ["/images/pic1.jpg", "/images/pic2.jpg", "/images/pic3.jpg"];
+const images = ["/images/about-us/pic (1).jpg", 
+                "/images/about-us/pic (2).jpg", 
+                "/images/about-us/pic (3).jpg",
+                "/images/about-us/pic (4).jpg"];
 
 export function About() {
   const [currentIndex, setCurrentIndex] = useState(0);

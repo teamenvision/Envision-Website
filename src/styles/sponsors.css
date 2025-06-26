@@ -1,6 +1,6 @@
 .sponsors-page {
   padding: 2rem;
-  background-color: #121212;
+  background-color: #121212; /* change to add different color in the bg*/
   color: white;
   font-family: 'Orbitron', sans-serif;
 }

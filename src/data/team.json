@@ -1,0 +1,146 @@
+{
+  "executives": [
+    {
+      "name": "Subhan",
+      "role": "Team Lead",
+      "image": "/images/team/ali.jpg",
+      "description": "no comments"
+    },
+    {
+      "name": "Sadus",
+      "role": "Team Manager",
+      "image": "/images/team/ali.jpg",
+      "description": "no comments"
+    }
+  ],
+  "secondary": [
+    {
+      "name": "Maaz ul Haque",
+      "role": "Technical Lead",
+      "image": "/images/team/ali.jpg",
+      "description": "Supervises Mechanical and Electrical departments and R&D."
+    },
+    {
+      "name": "Hamdan Ahmed Qazi",
+      "role": "Operations Lead",
+      "image": "/images/team/ali.jpg",
+      "description": "Sindhi"
+    },
+    {
+      "name": "Osman",
+      "role": "Mentor",
+      "image": "/images/team/ali.jpg",
+      "description": "procurement dept"
+    },
+    {
+      "name": "Haider",
+      "role": "Mentor",
+      "image": "/images/team/ali.jpg",
+      "description": "procurement dept"
+    }
+  ],
+  "departmentLeads": [
+    {
+      "name": "Saad",
+      "role": "Mechanical Lead",
+      "image": "/images/team/ali.jpg",
+      "color": "#00bcd4",
+      "description": "Mechanical department works on chassis, powertrain, and vehicle dynamics for optimized performance.",
+      "departmentImage": "/images/departments/mechanical.jpg",
+      "subDepartments": {
+        "Vehicle Dynamics": {
+          "description": "Vehicle dynamics team focuses on suspension and handling.",
+          "image": "/images/departments/vehicle_dynamics.jpg",
+          "members": [
+            { "name": "Zain", "image": "/images/team/ali.jpg" },
+            { "name": "Umama", "image": "/images/team/ali.jpg" },
+            { "name": "Hammad", "image": "/images/team/ali.jpg" },
+            { "name": "Usman", "image": "/images/team/ali.jpg" }  
+          ]
+        },
+        "Powertrain": {
+          "description": "Powertrain team manages engine and drivetrain components.",
+          "image": "/images/departments/powertrain.jpg",
+          "members": [
+            { "name": "Sohaib", "image": "/images/team/ali.jpg" },
+            { "name": "Abdullah", "image": "/images/team/ali.jpg" }
+          ]
+        },
+        "Chassis / Structure / Body": {
+          "description": "Team responsible for chassis design and body structure.",
+          "image": "/images/departments/chassis.jpg",
+          "members": [
+            { "name": "Abuzar", "image": "/images/team/ali.jpg" },
+            { "name": "Ammar", "image": "/images/team/ali.jpg" },
+            { "name": "Ahad", "image": "/images/team/ali.jpg" },
+            { "name": "Arsalan", "image": "/images/team/ali.jpg" } 
+          ]
+        }
+      }
+    },
+    {
+      "name": "Kumail",
+      "role": "Electrical Lead",
+      "image": "/images/team/ali.jpg",
+      "color": "#f44336",
+      "description": "Electrical department works on wiring, controls, telemetry, and power systems.",
+      "departmentImage": "/images/departments/electrical.jpg",
+      "subDepartments": {
+        "LV": {
+          "description": "Low Voltage systems team.",
+          "image": "/images/departments/lv.jpg",
+          "members": [
+            { "name": "Abdullah", "image": "/images/team/ali.jpg" }
+          ]
+        },
+        "HV": {
+          "description": "High Voltage systems team.",
+          "image": "/images/departments/hv.jpg",
+          "members": [
+            { "name": "Yaseen", "image": "/images/team/ali.jpg" }
+          ]
+        },
+        "Data & Telemetry": {
+          "description": "Data collection and telemetry systems.",
+          "image": "/images/departments/data_telemetry.jpg",
+          "members": [
+            { "name": "Javeria", "image": "/images/team/ali.jpg" },
+            { "name": "Anas", "image": "/images/team/ali.jpg" }
+          ]
+        },
+        "Controls": {
+          "description": "Vehicle controls and ECUs.",
+          "image": "/images/departments/controls.jpg",
+          "members": [
+            { "name": "Fatima Zaidi", "image": "/images/team/ali.jpg" },
+            { "name": "Sibtain", "image": "/images/team/ali.jpg" },
+            { "name": "Neelam", "image": "/images/team/ali.jpg" },
+            { "name": "Sumayyah", "image": "/images/team/ali.jpg" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Yousuf",
+      "role": "Marketing Lead",
+      "image": "/images/team/ali.jpg",
+      "color": "#ffc107",
+      "description": "Marketing department manages branding, outreach and social media.",
+      "members": [
+        { "name": "Mujtaba", "image": "/images/team/ali.jpg" },
+        { "name": "Amna", "image": "/images/team/ali.jpg" }
+      ]
+    },
+    {
+      "name": "Ahzam",
+      "role": "Communication Lead",
+      "image": "/images/team/ali.jpg",
+      "color": "#4caf50",
+      "description": "Communication department handles press, media, and public relations.",
+      "members": [
+        { "name": "Mujtaba", "image": "/images/team/ali.jpg" },
+        { "name": "Fatima Asif", "image": "/images/team/ali.jpg" }
+      ]
+    }
+  ]
+}
