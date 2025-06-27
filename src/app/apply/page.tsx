@@ -1,6 +1,6 @@
 "use client";
-import { useState } from "react";
-import formFields from "../../data/applyFields.json";
+
+import { useEffect, useState } from "react";
 import "../../styles/apply.css";
 
 type Field = {
@@ -15,36 +15,76 @@ type Field = {
   };
   dependsOn?: string;
   optionsMap?: Record<string, string[]>;
-
   requiredWhen?: {
     field: string;
     notValues: string[];
   };
+};
 
+type FormFieldsJson = {
+  fields: Field[];
 };
 
 export default function ApplyForm() {
   const isApplyEnabled = process.env.NEXT_PUBLIC_APPLY_ENABLED === "true";
   const [formData, setFormData] = useState<Record<string, string>>({});
   const [status, setStatus] = useState("");
+  const [fields, setFields] = useState<Field[]>([]);
 
-  
-  
-  const fields: Field[] = formFields.fields;
-  
+  // Load form field JSON at runtime
+  useEffect(() => {
+    const loadFields = async () => {
+      try {
+        const res = await fetch("/data/applyFields.json");
+        const json: FormFieldsJson = await res.json();
+        setFields(json.fields);
+      } catch (err) {
+        console.error("Failed to load applyFields.json", err);
+      }
+    };
+    loadFields();
+  }, []);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-  
+
+  const isRequired = (field: Field): boolean => {
+    if (field.requiredWhen) {
+      const current = formData[field.requiredWhen.field];
+      return !field.requiredWhen.notValues?.includes(current);
+    }
+    return !!field.required;
+  };
+
+  const shouldDisable = (field: Field): boolean => {
+    if (field.condition) {
+      const current = formData[field.condition.field];
+      return field.condition.notValues?.includes(current) ?? false;
+    }
+    if (field.dependsOn && !formData[field.dependsOn]) return true;
+    return false;
+  };
+
+  const getOptions = (field: Field): string[] => {
+    if (field.options) return field.options;
+    if (field.optionsMap && field.dependsOn) {
+      const depValue = formData[field.dependsOn];
+      return field.optionsMap[depValue] || [];
+    }
+    return [];
+  };
+
   const validate = (): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^[0-9]{10,15}$/;
-    
+
     if (!emailRegex.test(formData.email || "")) {
       setStatus("Please enter a valid email address.");
       return false;
     }
+
     if (!phoneRegex.test(formData.phone || "")) {
       setStatus("Please enter a valid phone number.");
       return false;
@@ -56,19 +96,21 @@ export default function ApplyForm() {
         return false;
       }
     }
+
     return true;
   };
-  
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
-    
+
     setStatus("Submitting...");
+
     try {
       const response = await fetch("/api/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
 
       const result = await response.json();
@@ -79,38 +121,11 @@ export default function ApplyForm() {
         setStatus(`Error: ${result.message || "Submission failed."}`);
       }
     } catch (err) {
-      console.log(err)
+      console.error(err);
       setStatus("Error: Network or server issue.");
     }
   };
-  
-  const shouldDisable = (field: Field): boolean => {
-    if (field.condition) {
-      const current = formData[field.condition.field];
-      return field.condition.notValues?.includes(current) ?? false;
-    }
-    if (field.dependsOn && !formData[field.dependsOn]) return true;
-    return false;
-  };
-  
-  
-  const getOptions = (field: Field): string[] => {
-    if (field.options) return field.options;
-    if (field.optionsMap && field.dependsOn) {
-      const depValue = formData[field.dependsOn];
-      return field.optionsMap[depValue] || [];
-    }
-    return [];
-  };
-  const isRequired = (field: Field): boolean => {
-    if (field.requiredWhen) {
-      const current = formData[field.requiredWhen.field];
-      return !field.requiredWhen.notValues?.includes(current);
-    }
-    return !!field.required;
-  };
-  
-  
+
   if (!isApplyEnabled) {
     return (
       <section className="apply-section">
@@ -118,17 +133,15 @@ export default function ApplyForm() {
       </section>
     );
   }
-  
+
   return (
     <section className="apply-section">
       <h2>Apply Now</h2>
       <form className="apply-form" onSubmit={handleSubmit}>
         {fields.map((field) => {
-          
           const disabled = shouldDisable(field);
           const value = formData[field.name] || "";
           const requiredMark = isRequired(field) ? " *" : "";
-
 
           return (
             <label key={field.name}>
@@ -161,7 +174,6 @@ export default function ApplyForm() {
             </label>
           );
         })}
-
         <button type="submit">Submit</button>
         <p className="status">{status}</p>
       </form>
