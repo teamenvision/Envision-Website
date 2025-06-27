@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import formFields from "../../data/applyFields.json";
 import "../../styles/apply.css";
 
