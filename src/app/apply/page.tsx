@@ -79,6 +79,7 @@ export default function ApplyForm() {
         setStatus(`Error: ${result.message || "Submission failed."}`);
       }
     } catch (err) {
+      console.log(err)
       setStatus("Error: Network or server issue.");
     }
   };
