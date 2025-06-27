@@ -76,7 +76,7 @@ export function Awards() {
         className="awards-slider-mobile awards-slider-inner"
         onScroll={() => handleScroll(".awards-slider-mobile", "award")}
       >
-        {awardsData.map((award, idx) => (
+        {awardsData.map((award) => (
           <div className="award-card" key={award.title + award.year}>
             {award.image && (
               <div className="award-img">
@@ -113,7 +113,7 @@ export function Awards() {
 
       {/* === Desktop Awards Grid === */}
       <div className="awards-cards-container">
-        {awardsData.map((award, idx) => (
+        {awardsData.map((award) => (
           <div className="award-card" key={award.title + award.year + "-desktop"}>
             {award.image && (
               <div className="award-img">
@@ -144,7 +144,7 @@ export function Awards() {
         className="achievements-slider-container achievements-slider-inner"
         onScroll={() => handleScroll(".achievements-slider-container", "achievement")}
       >
-        {achievementsData.map((ach, idx) => (
+        {achievementsData.map((ach) => (
           <div className="achievement-card" key={ach.title + ach.year}>
             <h4>{ach.title}</h4>
             <p>{ach.event} - {ach.location}</p>
