@@ -1,0 +1,43 @@
+{
+  "fields": [
+    { "name": "name", "label": "Name", "type": "text", "required": true },
+    { "name": "email", "label": "Email Address", "type": "email", "required": true },
+    { "name": "phone", "label": "Phone Number", "type": "tel", "required": true },
+    { "name": "college", "label": "College Name", "type": "text", "required": true },
+    {
+      "name": "enrolledDepartment",
+      "label": "Department Enrolled in College",
+      "type": "select",
+      "options": ["Mechanical", "Electrical", "Naval Architecture", "Computer Science"],
+      "required": true
+    },
+    {
+    "name": "year",
+    "label": "Year",
+    "type": "select",
+    "options": ["1", "2", "3"],
+    "requiredWhen": {
+        "field": "enrolledDepartment",
+        "notValues": ["Computer Science"]
+    }
+    },
+    {
+      "name": "joinDepartment",
+      "label": "Department to Join in Team",
+      "type": "select",
+      "options": ["Mechanical", "Electrical", "Marketing", "Communication"],
+      "required": true
+    },
+    {
+      "name": "subDepartment",
+      "label": "Sub-Department",
+      "type": "select",
+      "optionsMap": {
+        "Mechanical": ["Vehicle Dynamics", "Powertrain", "Structure"],
+        "Electrical": ["HV", "LV", "Telemetry"]
+      },
+      "dependsOn": "joinDepartment",
+      "required": false
+    }
+  ]
+}
