@@ -1,7 +1,7 @@
 "use client";
-
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
+import teamData from "../../data/team.json";
 import "../../styles/team.css";
 import React from "react";
 
@@ -27,33 +27,11 @@ type DepartmentLead = {
   members?: Member[];
 };
 
-type TeamData = {
-  executives: { name: string; role: string; image: string; description: string }[];
-  secondary: { name: string; role: string; image: string; description: string }[];
-  departmentLeads: DepartmentLead[];
-};
-
 export default function Team() {
-  const [teamData, setTeamData] = useState<TeamData | null>(null);
   const [expandedDept, setExpandedDept] = useState<string | null>(null);
   const [mobileExpandedIndex, setMobileExpandedIndex] = useState<number | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  useEffect(() => {
-    const loadTeamData = async () => {
-      const res = await fetch("/data/team.json");
-      const data = await res.json();
-      setTeamData(data);
-    };
-    loadTeamData();
-  }, []);
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   const toggleExpand = (leadName: string, index: number) => {
     if (isMobile) {
@@ -63,8 +41,6 @@ export default function Team() {
     }
   };
 
-  if (!teamData) return <p style={{ textAlign: "center", color: "white" }}>Loading Team...</p>;
-
   return (
     <section className="team-page">
       <h2 className="section-title">Our Team</h2>
@@ -72,7 +48,7 @@ export default function Team() {
       {/* Executives */}
       <div className="row executives">
         {teamData.executives.map((member, idx) => (
-          <div className="lead-card" key={`${member.name}-${idx}`}>
+          <div className="lead-card" key={idx}>
             <Image src={member.image} alt={member.name} width={160} height={160} className="profile-img" />
             <h3>{member.name}</h3>
             <p className="role">{member.role}</p>
@@ -84,7 +60,7 @@ export default function Team() {
       {/* Secondary */}
       <div className="row secondary">
         {teamData.secondary.map((member, idx) => (
-          <div className="lead-card" key={`${member.name}-${idx}`}>
+          <div className="lead-card" key={idx}>
             <Image src={member.image} alt={member.name} width={160} height={160} className="profile-img" />
             <h3>{member.name}</h3>
             <p className="role">{member.role}</p>
@@ -95,10 +71,11 @@ export default function Team() {
 
       {/* Department Leads */}
       <div className="row department-leads">
-        {teamData.departmentLeads.map((lead, idx) => (
-          <div key={`${lead.name}-${idx}`}>
+        {teamData.departmentLeads.map((lead: DepartmentLead, idx) => (
+          <React.Fragment key={lead.name}>
             <div
               className="lead-card department-lead-card"
+              key={idx}
               style={{ borderColor: lead.color, boxShadow: `0 0 10px ${lead.color}` }}
             >
               <Image src={lead.image} alt={lead.name} width={160} height={160} className="profile-img" />
@@ -115,19 +92,19 @@ export default function Team() {
               </button>
             </div>
 
-            {/* Mobile-only expansion below same card */}
+            {/* Mobile-only expansion below the same card */}
             {isMobile && mobileExpandedIndex === idx && (
               <ExpandedDepartment lead={lead} />
             )}
-          </div>
+          </React.Fragment>
         ))}
       </div>
 
-      {/* Desktop-only expanded section */}
+      {/* Desktop-only: expand section below all cards */}
       {!isMobile && expandedDept && (
         <div className="department-overview-container">
           {teamData.departmentLeads
-            .filter((lead) => lead.name === expandedDept)
+            .filter((lead: DepartmentLead) => lead.name === expandedDept)
             .map((lead) => (
               <ExpandedDepartment key={lead.name} lead={lead} />
             ))}
@@ -142,7 +119,6 @@ function ExpandedDepartment({ lead }: { lead: DepartmentLead }) {
     <div className="department-overview" style={{ borderColor: lead.color, boxShadow: `0 0 12px ${lead.color}` }}>
       <h2 style={{ color: lead.color }}>{lead.role.split(" ")[0]} Department Overview</h2>
       <p className="dept-description">{lead.description}</p>
-
       {lead.departmentImage && (
         <div className="dept-image-wrapper">
           <Image src={lead.departmentImage} alt={`${lead.name} Dept`} width={600} height={300} />

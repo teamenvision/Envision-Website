@@ -2,7 +2,11 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const googleAppsScriptURL = "https://script.google.com/macros/s/AKfycbxMvJl6SlNShRDW4Z6KXa9dYGuVgv6ZusBaSHlks7EoRJ2YfpHU0jsjWf7CbdJbRUDX/exec";
+    const googleAppsScriptURL = process.env.GOOGLE_APPS_SCRIPT_URL;
+
+    if (!googleAppsScriptURL) {
+      throw new Error("Missing environment variable: GOOGLE_APPS_SCRIPT_URL");
+    }
 
     const response = await fetch(googleAppsScriptURL, {
       method: "POST",
@@ -17,7 +21,7 @@ export async function POST(req: Request) {
       headers: { "Content-Type": "application/json" },
     });
   } catch (err) {
-    console.error("Submission failed:", err); // <-- SEE THE ERROR HERE
+    console.error("Submission failed:", err);
     return new Response(JSON.stringify({ message: "Failed to submit", error: String(err) }), {
       status: 500,
       headers: { "Content-Type": "application/json" },

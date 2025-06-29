@@ -1,0 +1,111 @@
+[
+  {
+    "name": "Subuk",
+    "year": 2009,
+    "location": "Germany",
+    "image": "/images/projects/2009-Urban-Subuq.png",
+    "description": "Team Envision’s journey began in 2009 with their debut urban concept car, Subuk, competing at Shell Eco-marathon Europe in Germany. Built entirely from scratch, Subuk was a gasoline-powered internal combustion vehicle. Despite being their first attempt, it impressed judges and audiences alike for its simplicity and functionality. The project laid the groundwork for what would become a decade-spanning pursuit of automotive efficiency and design precision."
+
+  },
+  {
+    "name": "Burraq",
+    "year": 2010,
+    "location": "Malaysia",
+    "image": "/images/projects/2010-Urban-Burraq.png",
+    "description": "In 2010, the team introduced Burraq at the inaugural Shell Eco-marathon Asia in Malaysia. This second-generation urban ICE car reflected a significant leap in mechanical refinement and system control. Though developed by a young team, Burraq demonstrated tight engineering and improved fuel efficiency compared to its predecessor. This competition marked the start of the team’s presence in the Asia-Pacific circuit."
+
+  },
+  {
+    "name": "Ballista",
+    "year": 2011,
+    "location": "Malaysia",
+    "image": "/images/projects/2011-Prototype-Ballista.png",
+    "description": "Alongside Burraq 2.0, 2011 also saw the debut of Ballista, the team’s first entry in the prototype category. Powered by an ICE, Ballista prioritized aerodynamic profiling and minimal weight. Its introduction signaled Team Envision's intent to challenge in multiple categories and expand its design capabilities."
+  },
+  {
+    "name": "Burraq 2.0",
+    "year": 2011,
+    "location": "Malaysia",
+    "image": "/images/projects/2011-Urban-Burraq-2.0.png",
+    "description": "2011 was pivotal—Team Envision returned with Burraq 2.0, a newly built urban ICE car that refined the design and system integration of the previous version. The team applied lessons learned to produce a more reliable and efficient vehicle, laying down the framework for future urban concepts."
+
+  },
+  {
+    "name": "Ballista 2.0",
+    "year": 2012,
+    "location": "Malaysia",
+    "image": "/images/projects/2012-Prototype-Ballista-2.0.png",
+    "description": "In 2012, Ballista 2.0 made its appearance, again as a prototype ICE car. Although sharing the name with its predecessor, this was an all-new model, streamlined for efficiency. It continued the focus on prototyping excellence within the team."
+
+  },
+  {
+    "name": "Burraq 3.0",
+    "year": 2012,
+    "location": "Malaysia",
+    "image": "/images/projects/2012-Urban-Burraq-3.0.png",
+    "description": "The urban concept Burraq 3.0 represented yet another clean-sheet build, designed with refined packaging and further reduced mechanical losses. It reflected the team's persistent effort to evolve vehicle architecture each year instead of relying on incremental tweaks."
+  },
+  {
+    "name": "Ballista 3.0",
+    "year": 2014,
+    "location": "Philippines",
+    "image": "/images/projects/2014-Prototype-Ballista-3.0.png",
+    "description": "Re-entering the competition with upgrades, Ballista returned in 2014 with improved internals. Competing in the prototype ICE category again, the car embodied lessons from previous campaigns while targeting higher efficiency and system reliability."
+  },
+  {
+    "name": "Bolt",
+    "year": 2014,
+    "location": "Philippines",
+    "image": "/images/projects/2014-Urban-Bolt.png",
+    "description": "At the 2014 event in the Philippines, Bolt made its debut as a new urban ICE concept. Designed with enhanced ergonomics and aesthetics, Bolt also marked a milestone for the team in public recognition, as they secured their first Communications Award that year."
+  },
+  {
+    "name": "Ballista Revotron",
+    "year": 2015,
+    "location": "Philippines",
+    "image": "/images/projects/2015-Prototype-Ballista-Revotron.png",
+    "description": "Alongside Rebolt, Ballista Revotron entered as a redesigned prototype ICE car. The “Revotron” designation hinted at a more experimental and performance-oriented engine platform, featuring reworked combustion dynamics."
+  },
+    {
+    "name": "Rebolt",
+    "year": 2015,
+    "location": "Philippines",
+    "image": "/images/projects/2015-Urban-Rebolt.png",
+    "description": "Rebolt, an urban ICE vehicle, was launched in 2015 with a distinctive identity. The chassis and mechanical systems were designed to achieve tighter integration and smoother performance. The team’s communications and presentation again stood out at the event."
+  },
+    {
+    "name": "Rebolt 2.0",
+    "year": 2017,
+    "location": "Singapore",
+    "image": "/images/projects/2017-Urban-Rebolt-2.0.png",
+    "description": "In 2017, the team brought Rebolt 2.0 to Singapore. This iteration was a streamlined, lightweight urban ICE vehicle that demonstrated attention to both aesthetics and performance. That year, the team was once again honored with a Communications Award."
+  },
+  {
+    "name": "Gallant",
+    "year": 2018,
+    "location": "Singapore",
+    "image": "/images/projects/2018-Prototype-Gallant.png",
+    "description": "Gallant marked a shift in Team Envision’s technical direction—it was their first battery electric prototype vehicle. With sleek bodywork and an efficient electric drivetrain, Gallant exemplified the team’s transition toward electric mobility."
+  },
+    {
+    "name": "Mile-X",
+    "year": 2019,
+    "location": "Malaysia",
+    "image": "/images/projects/2019-Urban-Mile-X.png",
+    "description": "In 2019, Team Envision unveiled Mile-X, a fresh urban ICE car that focused on packaging, real-world ergonomics, and visual presentation. With substantial industry collaboration, the car was launched at a public venue to wide acclaim."
+  },
+    {
+    "name": "Qaswa",
+    "year": 2021,
+    "location": "Pakistan",
+    "image": "/images/projects/2021-Prototype-Qaswa.png",
+    "description": " Qaswa, a battery electric prototype, competed at the first-ever national edition of the Shell Eco-marathon held in Islamabad. Despite the local scope, it upheld Team Envision’s competitive legacy, finishing as runner-up and exemplifying resilience during pandemic recovery."
+  },
+  {
+    "name": "Evo-X",
+    "year": 2022,
+    "location": "Virtual",
+    "image": "/images/projects/2022-Prototype-EVO-X.png",
+    "description": "Evo-X, a battery electric prototype, competed in the 2022 virtual Shell Eco-marathon. With an advanced aerodynamic shell and optimized powertrain, it earned a runner-up finish in the Communications category, continuing the team’s tradition of excellence in both engineering and presentation."
+  }
+]

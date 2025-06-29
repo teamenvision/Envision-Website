@@ -49,7 +49,7 @@
       "results": "Cleared Technical and Safety Inspections in Shell Eco Marathon Asia Pacific and Middle East"
     },
     "technicalSpecs": {
-      "motor": "3.5 kW BLDC motor",
+      "motor": "1 kW DC motor",
       "battery": "48V, 30Ah Li-ion",
       "chassis": "Carbon fiber semi monocouqe",
       "aerodynamics": "Cd 0.17, CFD optimized",

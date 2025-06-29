@@ -1,49 +1,13 @@
 "use client";
-import { useEffect, useState } from "react";
-import Image from "next/image";
+import { useState } from "react";
 import "../styles/awards.css";
-
-type Award = {
-  title: string;
-  year: number;
-  competition: string;
-  location: string;
-  position: string;
-  prize: string;
-  image?: string;
-};
-
-type Achievement = {
-  title: string;
-  event: string;
-  location: string;
-  year: number;
-};
+import awardsData from "../data/awards.json";
+import achievementsData from "../data/achievements.json";
+import Image from "next/image";
 
 export function Awards() {
-  const [awardsData, setAwardsData] = useState<Award[]>([]);
-  const [achievementsData, setAchievementsData] = useState<Achievement[]>([]);
   const [awardsIndex, setAwardsIndex] = useState(0);
   const [achievementsIndex, setAchievementsIndex] = useState(0);
-
-  useEffect(() => {
-    const loadData = async () => {
-      try {
-        const awardsRes = await fetch("/data/awards.json");
-        const achievementsRes = await fetch("/data/achievements.json");
-        const [awards, achievements] = await Promise.all([
-          awardsRes.json(),
-          achievementsRes.json()
-        ]);
-        setAwardsData(awards);
-        setAchievementsData(achievements);
-      } catch (err) {
-        console.error("Error loading awards or achievements:", err);
-      }
-    };
-
-    loadData();
-  }, []);
 
   const scrollToIndex = (selector: string, index: number, type: "award" | "achievement") => {
     const container = document.querySelector(selector);
@@ -55,6 +19,7 @@ export function Awards() {
     }
   };
 
+  // Detect scroll for Awards
   const handleScroll = (selector: string, type: "award" | "achievement") => {
     const container = document.querySelector(selector);
     if (!container) return;
@@ -76,8 +41,8 @@ export function Awards() {
         className="awards-slider-mobile awards-slider-inner"
         onScroll={() => handleScroll(".awards-slider-mobile", "award")}
       >
-        {awardsData.map((award) => (
-          <div className="award-card" key={award.title + award.year}>
+        {awardsData.map((award, idx) => (
+          <div className="award-card" key={idx}>
             {award.image && (
               <div className="award-img">
                 <Image
@@ -104,7 +69,7 @@ export function Awards() {
       <div className="dots dots-mobile-only">
         {awardsData.map((_, idx) => (
           <span
-            key={`dot-${idx}`}
+            key={idx}
             className={`dot ${idx === awardsIndex ? "active" : ""}`}
             onClick={() => scrollToIndex(".awards-slider-mobile", idx, "award")}
           />
@@ -113,8 +78,8 @@ export function Awards() {
 
       {/* === Desktop Awards Grid === */}
       <div className="awards-cards-container">
-        {awardsData.map((award) => (
-          <div className="award-card" key={award.title + award.year + "-desktop"}>
+        {awardsData.map((award, idx) => (
+          <div className="award-card" key={idx}>
             {award.image && (
               <div className="award-img">
                 <Image
@@ -144,8 +109,8 @@ export function Awards() {
         className="achievements-slider-container achievements-slider-inner"
         onScroll={() => handleScroll(".achievements-slider-container", "achievement")}
       >
-        {achievementsData.map((ach) => (
-          <div className="achievement-card" key={ach.title + ach.year}>
+        {achievementsData.map((ach, idx) => (
+          <div className="achievement-card" key={idx}>
             <h4>{ach.title}</h4>
             <p>{ach.event} - {ach.location}</p>
             <p><strong>{ach.year}</strong></p>
@@ -155,7 +120,7 @@ export function Awards() {
       <div className="dots">
         {achievementsData.map((_, idx) => (
           <span
-            key={`ach-dot-${idx}`}
+            key={idx}
             className={`dot ${idx === achievementsIndex ? "active" : ""}`}
             onClick={() => scrollToIndex(".achievements-slider-container", idx, "achievement")}
           />

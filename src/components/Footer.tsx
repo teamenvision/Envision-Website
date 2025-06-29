@@ -1,31 +1,9 @@
 "use client";
-
-import { useEffect, useState } from "react";
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import "../styles/footer.css";
-
-type ContactData = {
-  whatsapp: { name: string; phone: string }[];
-  emails: string[];
-};
+import contactData from "../data/contact.json";
 
 export function Footer() {
-  const [contactData, setContactData] = useState<ContactData | null>(null);
-
-  useEffect(() => {
-    const loadData = async () => {
-      try {
-        const res = await fetch("/data/contact.json");
-        const data = await res.json();
-        setContactData(data);
-      } catch (error) {
-        console.error("Failed to load contact data:", error);
-      }
-    };
-
-    loadData();
-  }, []);
-
   return (
     <footer className="footer">
       <div className="footer-socials">
@@ -40,29 +18,27 @@ export function Footer() {
         </a>
       </div>
 
-      {contactData && (
-        <div className="footer-contacts">
-          <h4>Whatsapp</h4>
-          {contactData.whatsapp.map((lead, idx) => (
-            <p key={`${lead.name}-${idx}`}>
-              <FaWhatsapp />{" "}
-              <a href={`https://wa.me/${lead.phone.replace("+", "")}`} target="_blank" rel="noopener noreferrer">
-                {lead.name}
-              </a>
-            </p>
-          ))}
+      <div className="footer-contacts">
+        <h4>Whatsapp</h4>
+        {contactData.whatsapp.map((lead, idx) => (
+          <p key={idx}>
+            <FaWhatsapp />{" "}
+            <a href={`https://wa.me/${lead.phone.replace("+", "")}`} target="_blank" rel="noopener noreferrer">
+              {lead.name}
+            </a>
+          </p>
+        ))}
 
-          <h4>Email</h4>
-          {contactData.emails.map((email, idx) => (
-            <p key={`${email}-${idx}`}>
-              <a href={`mailto:${email}`}>{email}</a>
-            </p>
-          ))}
-        </div>
-      )}
+        <h4>Email</h4>
+        {contactData.emails.map((email, idx) => (
+          <p key={idx}>
+            <a href={`mailto:${email}`}>{email}</a>
+          </p>
+        ))}
+      </div>
 
       <div className="footer-trademark">
-        © 2025 Team Envision, NUST PNEC
+        © 2009-{new Date().getFullYear()} Team Envision, NUST PNEC
       </div>
     </footer>
   );

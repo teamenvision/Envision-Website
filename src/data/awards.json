@@ -1,21 +1,12 @@
 [
   {
-    "year": 2014,
+    "year": 2025,
     "title": "Communication Award",
     "competition": "Shell Eco-Marathon Asia",
-    "location": "Philippines",
-    "position": "1st",
-    "prize": "$2,000",
-    "image": "/images/awards/2014.jpg"
-  },
-  {
-    "year": 2017,
-    "title": "Communication Award",
-    "competition": "Shell Eco-Marathon Asia",
-    "location": "Singapore",
+    "location": "Qatar",
     "position": "1st",
     "prize": "$3,000",
-    "image": "/images/awards/2017.jpg"
+    "image": "/images/awards/2025.jpg"
   },
   {
     "year": 2022,
@@ -27,12 +18,21 @@
     "image": "/images/awards/2022.jpg"
   },
   {
-    "year": 2025,
+    "year": 2017,
     "title": "Communication Award",
     "competition": "Shell Eco-Marathon Asia",
-    "location": "Qatar",
+    "location": "Singapore",
     "position": "1st",
     "prize": "$3,000",
-    "image": "/images/awards/2025.jpg"
+    "image": "/images/awards/2017.jpg"
+  },
+  {
+    "year": 2014,
+    "title": "Communication Award",
+    "competition": "Shell Eco-Marathon Asia",
+    "location": "Philippines",
+    "position": "1st",
+    "prize": "$2,000",
+    "image": "/images/awards/2014.jpg"
   }
 ]

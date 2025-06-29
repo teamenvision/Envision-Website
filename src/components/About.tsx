@@ -42,36 +42,37 @@ export function About() {
 
   return (
     <section className="about-section">
-      <div className="about-text">
-        <h2>About Us</h2>
-        <p>
-          Team Envision was founded in 2009 at NUST-PNEC. We design ultra-efficient and electric vehicles for global competitions like Shell Eco-Marathon. Over the years, we&apos;ve built a legacy of innovation, winning multiple international awards and representing Pakistan with pride.
-        </p>
-      </div>
+      <div className="about-container">
+        <div className="about-text">
+          <div>
+            <h2>About Us</h2>
+            <p>
+              Team Envision, a student-led team from NUST-PNEC, is representing Pakistan globally since 2009, designing energy-efficient vehicles for competitions like Shell Eco-Marathon and Teknofest. After pioneering AZAAD-E, Pakistan’s first urban EV, we introduced a new Urban and a Prototype vehicle for Shell Eco-Marathon Qatar 2025. Over the years, our dedication has earned us multiple awards, with our latest achievement being the prestigious Communication Award at Shell Eco-Marathon 2025 Qatar.            </p>
+          </div>
+        </div>
 
-      <div className="vertical-divider" />
-
-      <div className="about-images">
-        <div className="image-wrapper">
-          <div
-            className="image-slider"
-            style={{
-              transform: `translateX(-${currentIndex * 100}%)`,
-              transition: isTransitioning ? "transform 0.6s ease-in-out" : "none",
-            }}
-          >
-            {extendedImages.map((src, idx) => (
-              <div className="image-frame" key={idx}>
-                <Image
-                  src={src}
-                  alt={`About image ${idx}`}
-                  width={600}
-                  height={400}
-                  className="carousel-image"
-                  priority={idx === 0}
-                />
-              </div>
-            ))}
+        <div className="about-images">
+          <div className="image-wrapper">
+            <div
+              className="image-slider"
+              style={{
+                transform: `translateX(-${currentIndex * 100}%)`,
+                transition: isTransitioning ? "transform 0.6s ease-in-out" : "none",
+              }}
+            >
+              {extendedImages.map((src, idx) => (
+                <div className="image-frame" key={idx}>
+                  <Image
+                    src={src}
+                    alt={`About image ${idx}`}
+                    width={600}
+                    height={400}
+                    className="carousel-image"
+                    priority={idx === 0}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
