@@ -1,0 +1,344 @@
+/* GENERAL */
+
+.logo-container {
+  display: inline-block;
+  justify-content: center;
+  transition: filter 0.3s ease;
+}
+
+/* Theme glow colors */
+.logo-container button.neon-yellow:hover {
+  box-shadow: none !important;
+  filter: drop-shadow(0 0 8px #ffcb00);
+}
+
+.logo-container button.neon-red:hover {
+  box-shadow: none !important;
+  filter: drop-shadow(0 0 8px #ff4d4d);
+}
+
+
+.logo-container button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.logo {
+  object-fit: contain;
+  height: auto;
+}
+
+.competitions-section {
+  padding: 2rem;
+  background: #121212;
+  color: white;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  position: relative;
+}
+
+.competitions-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* COMPETITION GRID */
+
+.competitions-grid {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* OVERLAY */
+
+.competition-slide-panel {
+  position: fixed;
+  align-content: center;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #ddd;
+  padding: 2rem 1.5rem;
+  animation: slideIn 0.3s ease-out;
+  overflow-y: auto;
+  font-family: 'Orbitron', sans-serif;
+  z-index: 9999;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.competition-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #ffcb00;
+  cursor: pointer;
+}
+
+/* OVERLAY LAYOUT */
+
+.competition-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  animation: fadeInOverlay 0.5s ease-in;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.competition-left {
+  animation: slideInLeft 1s ease-out;
+}
+
+.competition-center {
+  animation: scaleFadeIn 1s ease;
+}
+
+.competition-right {
+  animation: popIn 1s ease;
+}
+
+/* Animations */
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleFadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* BULLET LIST */
+
+.bullet-list {
+  margin-top: 1.5rem;
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  text-align: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bullet-list li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  transition: transform 0.3s ease, color 0.3s;
+  cursor: default;
+}
+
+.bullet-list li:hover {
+  transform: scale(1.1);
+  color: #15fa34;
+}
+
+.section-heading {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.section-heading:hover {
+  transform: scale(1.1);
+}
+
+/* Themed Titles */
+
+.neon-yellow {
+  color: #ffcb00;
+  text-shadow: 0 0 5px #ffcb00;
+  transition: transform 0.3s ease;
+}
+
+.neon-red {
+  color: #ff4d4d;
+  text-shadow: 0 0 6px #ff4d4d;
+  transition: transform 0.3s ease;
+}
+
+.neon-yellow:hover,
+.neon-red:hover {
+  transform: scale(1.1);
+}
+
+/* STATS CIRCLES */
+
+.circle-stat {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 2px solid currentColor;
+  animation: pulse 4s linear infinite;
+  width: 200px;
+  height: 200px;
+  margin: 1rem;
+  text-align: center;
+  z-index: 1;
+  transition: transform 0.4s ease;
+}
+
+.circle-stat::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border-radius: 50%;
+  border: 2px dashed currentColor;
+  animation: rotateDisc 10s linear infinite;
+  z-index: -1;
+}
+
+.circle-stat:hover {
+  transform: scale(1.1);
+}
+
+.circle-stat:hover::before {
+  animation-duration: 2s;
+}
+
+@keyframes rotateDisc {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px currentColor;
+  }
+  50% {
+    box-shadow: 0 0 20px currentColor, 0 0 30px currentColor;
+  }
+  100% {
+    box-shadow: 0 0 10px currentColor;
+  }
+}
+
+/* MAP IMAGE */
+
+.map-image {
+  max-width: 100%;
+  height: auto;
+  filter: brightness(1.1);
+  opacity: 0.85;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Yellow themed map glow */
+.map-image.neon-yellow-glow:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px #ffcb00);
+}
+
+/* Red themed map glow */
+.map-image.neon-red-glow:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px #ff4d4d);
+}
+
+
+/* Fade-in Map */
+@keyframes fadeIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE: MOBILE */
+
+@media (max-width: 768px) {
+  .competition-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .competition-center {
+    order: 1;
+  }
+
+  .competition-left {
+    order: 2;
+  }
+
+  .competition-right {
+    order: 3;
+  }
+
+  .map-image {
+    width: 90%;
+  }
+}

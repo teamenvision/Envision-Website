@@ -1,0 +1,44 @@
+[
+  {
+    "key": "shell",
+    "logo": "/images/shell-logo.png",
+    "name": "Shell Eco Marathon",
+    "title": "Asia's Premier Fuel Efficiency Challenge",
+    "map": "/images/asia-white.png",
+    "theme": "neon-yellow",
+    "stats": ["60+ Teams", "15+ Countries"],
+    "sections": [
+      {
+        "heading": "Fuel Categories",
+        "points": ["Battery Electric", "Hydrogen Fuel Cell", "Internal Combustion"]
+      },
+      {
+        "heading": "Design Categories",
+        "points": ["Prototype", "Urban Concept"]
+      },
+      {
+        "heading": "Off-track Awards",
+        "points": ["Communication", "Technical Innovation", "Vehicle Design"]
+      }
+    ]
+  },
+  {
+    "key": "teknofest",
+    "logo": "/images/teknofest-logo.png",
+    "name": "Teknofest",
+    "title": "World's Largest Technology Festival",
+    "map": "/images/turkey-white.png",
+    "theme": "neon-red",
+    "stats": ["200k+ Participants", "2M+ Visitors"],
+    "sections": [
+      {
+        "heading": "Fuel Categories",
+        "points": ["Battery Electric", "Hydrogen"]
+      },
+      {
+        "heading": "Award Categories",
+        "points": ["Off-track Awards", "Safety Award", "Innovation Award"]
+      }
+    ]
+  }
+]

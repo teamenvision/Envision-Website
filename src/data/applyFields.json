@@ -34,7 +34,7 @@
       "type": "select",
       "optionsMap": {
         "Mechanical": ["Vehicle Dynamics", "Powertrain", "Structure"],
-        "Electrical": ["HV", "LV", "Telemetry"]
+        "Electrical": ["HV", "LV", "Telemetry", "Controls"]
       },
       "dependsOn": "joinDepartment",
       "required": false

@@ -66,7 +66,6 @@ export function AboutNust() {
             </div>
         </div>
 
-        {/* Right: Text Block */}
         <div className="about-text">
             <h2>About NUST</h2>
             <ul>
