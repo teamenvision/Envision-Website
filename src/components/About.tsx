@@ -6,14 +6,19 @@ import "../styles/about.css";
 const images = ["/images/about-us/pic (1).jpg", 
                 "/images/about-us/pic (2).jpg", 
                 "/images/about-us/pic (3).jpg",
-                "/images/about-us/pic (4).jpg"];
+                "/images/about-us/pic (4).jpg",
+                "/images/about-us/pic (5).jpg", 
+                "/images/about-us/pic (6).jpg",
+                "/images/about-us/pic (7).jpg",
+                "/images/about-us/pic (8).jpg", 
+                "/images/about-us/pic (9).jpg",];
 
 export function About() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const extendedImages = [...images, images[0]]; // Clone first image
+  const extendedImages = [...images, images[0]];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -24,19 +29,18 @@ export function About() {
   }, []);
 
   useEffect(() => {
-    // At cloned image (index == images.length), reset to 0 without transition
     if (currentIndex === images.length) {
-      setIsTransitioning(true); // transition to clone
+      setIsTransitioning(true);
       timeoutRef.current = setTimeout(() => {
-        setIsTransitioning(false); // disable transition
-        setCurrentIndex(0);       // jump to real image 0
-      }, 600); // match CSS transition time
+        setIsTransitioning(false);
+        setCurrentIndex(0);
+      }, 600);
     } else {
-      // Resume transition for normal images
+
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
       timeoutRef.current = setTimeout(() => {
         setIsTransitioning(true);
-      }, 20); // tiny delay to re-enable
+      }, 20);
     }
   }, [currentIndex]);
 

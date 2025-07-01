@@ -22,4 +22,3 @@ fs.writeFileSync(
   path.join(process.cwd(), 'src/data/sponsors.json'),
   JSON.stringify(outData, null, 2)
 );
-console.log('✅ sponsors.json generated');

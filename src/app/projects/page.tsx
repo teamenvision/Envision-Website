@@ -1,94 +1,25 @@
-"use client";
-import { useState } from "react";
-import Image from "next/image";
-import projectData from "../../data/projects.json";
-import "../../styles/projects.css";
-import LatestProjects from "../../components/latestprojects"
+// app/projects/page.tsx
+import ProjectsClient from "./ProjectsClient";
+
+export const metadata = {
+  title: "Projects | Team Envision",
+  description: "Explore Team Envision's electric vehicles such as Azaade, Yasoob, and Doc Hudson with detailed specifications.",
+  openGraph: {
+    title: "Projects | Team Envision",
+    description: "Electric vehicle innovations by Team Envision including latest models and previous projects.",
+    url: "https://team-envision.vercel.app/projects",
+    images: ["/images/metadata/azaade.jpg"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Projects | Team Envision",
+    description: "Discover the specs and gallery of Team Envision’s latest and previous electric vehicles.",
+    images: ["/images/metadata/azaade.jpg"],
+  },
+};
 
 
-export default function Projects() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const [showPanel, setShowPanel] = useState(false);
-  const [panelContent, setPanelContent] = useState("");
-
-  const handleToggle = (index: number) => {
-    setActiveIndex(prev => (prev === index ? null : index));
-  };
-
-  const openPanel = (fullText: string) => {
-    setPanelContent(fullText);
-    setShowPanel(true);
-  };
-
-  const closePanel = () => {
-    setShowPanel(false);
-  };
-
-  return (
-    
-    <section className="projects-section">
-      <LatestProjects />
-
-      <h2>Previous Vehicles</h2>
-      <div className="project-grid">
-        {projectData.map((car, index) => {
-          const yearStr = car.year.toString();
-          const leftYear = yearStr.slice(0, 2);
-          const rightYear = yearStr.slice(2);
-          const isActive = activeIndex === index;
-
-          return (
-            <div className="project-card" key={index}>
-              <div className="car-image-wrapper">
-                <Image
-                  src={car.image}
-                  alt={car.name}
-                  width={300}
-                  height={200}
-                  className={`car-image ${isActive ? "darkened" : ""}`}
-                />
-                {isActive && (
-                  <div className="overlay-description">
-                    <div>
-                      {car.description.length > 150
-                        ? <>
-                            {car.description.slice(0, 140)}...
-                            <button
-                              className="read-more-btn"
-                              onClick={() => openPanel(car.description)}
-                            >
-                              Read More
-                            </button>
-                          </>
-                        : car.description}
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              <div
-                className="number-plate"
-                onClick={() => handleToggle(index)}
-              >
-                <span className="year-left">{leftYear}</span>
-                <div className="plate-center">
-                  <div className="car-name">{car.name}</div>
-                  <div className="car-location">{car.location}</div>
-                </div>
-                <span className="year-right">{rightYear}</span>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-
-      {/* === Slide Panel === */}
-      {showPanel && (
-        <div className="slide-panel">
-          <button className="close-btn" onClick={closePanel}>×</button>
-          <p>{panelContent}</p>
-        </div>
-      )}
-    </section>
-  );
+export default function ProjectsPage() {
+  return <ProjectsClient />;
 }
