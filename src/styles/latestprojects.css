@@ -1,7 +1,7 @@
 .latest-projects-section {
   background-color: transparent; /* change to add different color in the bg*/
   color: #ddd;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   align-items: center;
 }
@@ -124,7 +124,7 @@
   padding: 0.5rem 1rem;
   border-radius: 12px;
   cursor: pointer;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   transition: all 0.3s ease;
@@ -195,4 +195,9 @@
     font-size: 0.8rem;
     padding: 0.2rem 0.4rem;
   }
+}
+
+.latest-projects-grid.standalone {
+  justify-content: center;
+  margin-bottom: 4rem;
 }

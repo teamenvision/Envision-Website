@@ -70,7 +70,7 @@ export function AboutNust() {
             <h2>About NUST</h2>
             <ul>
             <li>
-                NUST is ranked 353<sup>rd</sup> globally, 60<sup>th</sup> in Asia, and 1<sup>st</sup> in Pakistan for the 7<sup>th</sup> year thanks to its highly qualified faculty and continuous improvement.
+                NUST is ranked 371<sup>st</sup> globally, 67<sup>th</sup> in Asia, and 1<sup>st</sup> in Pakistan for the 7<sup>th</sup> year thanks to its highly qualified faculty and continuous improvement.
             </li>
             <li>
                 NUST supports 15+ student teams globally, maintaining top standards in science, technology, and innovation, with strong academic, research, and industry ties.

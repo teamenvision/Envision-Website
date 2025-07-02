@@ -1,16 +1,17 @@
 "use client";
 
-import sponsorsData from '../../data/sponsors.json' assert { type: "json" };
+import sponsorsData from '@/data/sponsors.json' assert { type: "json" };
 const sponsors = sponsorsData as SponsorsByTier;
 
 import Image from "next/image";
 import { useState } from "react";
-import "../../styles/sponsors.css";
+import "@/styles/sponsors.css";
 
 type Sponsor = {
   name: string;
   tier: string;
   image: string;
+  link?: string | null; // link optional
 };
 
 type SponsorsByTier = {
@@ -41,10 +42,10 @@ export default function SponsorsPage() {
       setCurrentIndex((prev) => ({ ...prev, [tier]: index }));
     }
   };
-  console.log(sponsors.previous);
+
   return (
     <main className="sponsors-page">
-      {TIER_ORDER.map((tier) => (
+      {TIER_ORDER.map((tier) =>
         sponsors[tier]?.length ? (
           <section key={tier} className={`tier-section tier-${tier}`}>
             <h2 className="sponsors-title">{tier.toUpperCase()} Sponsors</h2>
@@ -55,12 +56,26 @@ export default function SponsorsPage() {
                   className={`sponsors-grid ${tier}-scroll`}
                   onScroll={(e) => handleScroll(tier, e)}
                 >
-                  {sponsors[tier].map((s, idx) => (
-                    <div className={`sponsor-card ${tier}`} key={idx}>
-                      <Image src={s.image} alt={s.name} fill className="sponsor-logo" />
-                      <div className="sponsor-overlay">{s.name}</div>
-                    </div>
-                  ))}
+                  {sponsors[tier].map((s, idx) => {
+                    const cardContent = (
+                      <div className={`sponsor-card ${tier}`} key={idx}>
+                        <Image src={s.image} alt={s.name} fill className="sponsor-logo" />
+                        <div className="sponsor-overlay">{s.name}</div>
+                      </div>
+                    );
+                    // Wrap in <a> if link exists
+                    return s.link ? (
+                      <a
+                        key={idx}
+                        href={s.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: "none" }}
+                      >
+                        {cardContent}
+                      </a>
+                    ) : cardContent;
+                  })}
                 </div>
                 <div>
                   {sponsors[tier].map((_, idx) => (
@@ -74,17 +89,31 @@ export default function SponsorsPage() {
               </>
             ) : (
               <div className="sponsors-grid stacked">
-                {sponsors[tier].map((s, idx) => (
-                  <div className={`sponsor-card ${tier}`} key={idx}>
-                    <Image src={s.image} alt={s.name} fill className="sponsor-logo" />
-                    <div className="sponsor-overlay">{s.name}</div>
-                  </div>
-                ))}
+                {sponsors[tier].map((s, idx) => {
+                  const cardContent = (
+                    <div className={`sponsor-card ${tier}`} key={idx}>
+                      <Image src={s.image} alt={s.name} fill className="sponsor-logo" />
+                      <div className="sponsor-overlay">{s.name}</div>
+                    </div>
+                  );
+                  return s.link ? (
+                    <a
+                      key={idx}
+                      href={s.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ textDecoration: "none" }}
+                    >
+                      {cardContent}
+                    </a>
+                  ) : cardContent;
+                })}
               </div>
             )}
           </section>
         ) : null
-      ))}
+      )}
+
       {sponsors.previous && sponsors.previous.length > 0 && (
         <section className="tier-section tier-previous">
           <h2 className="sponsors-title">Previous Sponsors</h2>
@@ -99,7 +128,6 @@ export default function SponsorsPage() {
           </div>
         </section>
       )}
-
     </main>
   );
 }

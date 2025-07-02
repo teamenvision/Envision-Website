@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import teamData from "../../data/team.json";
-import "../../styles/team.css";
+import teamData from "@/data/team.json";
+import "@/styles/team.css";
 import React from "react";
 
 type Member = {
@@ -44,6 +44,16 @@ export default function Team() {
   return (
     <section className="team-page">
       <h2 className="section-title">Our Team</h2>
+
+      {/* Faculty Advisor */}
+      <div className="row faculty">
+        <div className="lead-card">
+          <Image src={teamData.faculty.image} alt={teamData.faculty.name} width={160} height={160} className="profile-img" />
+          <h3>{teamData.faculty.name}</h3>
+          <p className="role">{teamData.faculty.role}</p>
+          <p className="desc">{teamData.faculty.description}</p>
+        </div>
+      </div>
 
       {/* Executives */}
       <div className="row executives">
@@ -117,7 +127,9 @@ export default function Team() {
 function ExpandedDepartment({ lead }: { lead: DepartmentLead }) {
   return (
     <div className="department-overview" style={{ borderColor: lead.color, boxShadow: `0 0 12px ${lead.color}` }}>
-      <h2 style={{ color: lead.color }}>{lead.role.split(" ")[0]} Department Overview</h2>
+      <h2 style={{ color: lead.color }}>
+        {lead.role === "Brand Manager" ? "Media Department Overview" : `${lead.role.split(" ")[0]} Department Overview`}
+      </h2>
       <p className="dept-description">{lead.description}</p>
       {lead.departmentImage && (
         <div className="dept-image-wrapper">

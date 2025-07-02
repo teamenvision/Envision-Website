@@ -1,9 +1,15 @@
 {
+  "faculty": {
+    "name": "Sereen Atif",
+    "role": "Faculty Advisor",
+    "image": "/images/team/ali.jpg",
+    "description": "Oversees the team and provides academic and strategic guidance."
+  },
   "executives": [
     {
       "name": "Subhan",
       "role": "Team Lead",
-      "image": "/images/team/ali.jpg",
+      "image": "/images/team/Subhan.jpg",
       "description": "no comments"
     },
     {
@@ -17,13 +23,13 @@
     {
       "name": "Maaz ul Haque",
       "role": "Technical Lead",
-      "image": "/images/team/ali.jpg",
+      "image": "/images/team/Maaz.jpg",
       "description": "Supervises Mechanical and Electrical departments and R&D."
     },
     {
       "name": "Hamdan Ahmed Qazi",
       "role": "Operations Lead",
-      "image": "/images/team/ali.jpg",
+      "image": "/images/team/Hamdan.jpg",
       "description": "Sindhi"
     },
     {
@@ -43,7 +49,7 @@
     {
       "name": "Saad",
       "role": "Mechanical Lead",
-      "image": "/images/team/ali.jpg",
+      "image": "/images/team/Saad.jpg",
       "color": "#00bcd4",
       "description": "Mechanical department works on chassis, powertrain, and vehicle dynamics for optimized performance.",
       "departmentImage": "/images/departments/mechanical.jpg",
@@ -62,7 +68,7 @@
           "description": "Powertrain team manages engine and drivetrain components.",
           "image": "/images/departments/powertrain.jpg",
           "members": [
-            { "name": "Sohaib", "image": "/images/team/ali.jpg" },
+            { "name": "Sohaib", "image": "/images/team/Sohaib.jpg" },
             { "name": "Abdullah", "image": "/images/team/ali.jpg" }
           ]
         },
@@ -70,9 +76,10 @@
           "description": "Team responsible for chassis design and body structure.",
           "image": "/images/departments/chassis.jpg",
           "members": [
-            { "name": "Abuzar", "image": "/images/team/ali.jpg" },
+            { "name": "Abuzar", "image": "/images/team/Abuzar.jpg" },
             { "name": "Ammar", "image": "/images/team/ali.jpg" },
-            { "name": "Ahad", "image": "/images/team/ali.jpg" },
+            { "name": "Ahad", "image": "/images/team/Ahad.jpg" },
+            { "name": "Abdul Sami", "image": "/images/team/ali.jpg" },
             { "name": "Arsalan", "image": "/images/team/ali.jpg" } 
           ]
         }
@@ -113,7 +120,7 @@
           "image": "/images/departments/controls.jpg",
           "members": [
             { "name": "Fatima Zaidi", "image": "/images/team/ali.jpg" },
-            { "name": "Sibtain", "image": "/images/team/ali.jpg" },
+            { "name": "Sibtain", "image": "/images/team/Sibtain.jpg" },
             { "name": "Neelam", "image": "/images/team/ali.jpg" },
             { "name": "Sumayyah", "image": "/images/team/ali.jpg" }
           ]
@@ -123,7 +130,7 @@
     {
       "name": "Yousuf",
       "role": "Marketing Lead",
-      "image": "/images/team/ali.jpg",
+      "image": "/images/team/Yousuf.jpg",
       "color": "#ffc107",
       "description": "Marketing department manages branding, outreach and social media.",
       "members": [
@@ -133,11 +140,12 @@
     },
     {
       "name": "Ahzam",
-      "role": "Communication Lead",
+      "role": "Brand Manager",
       "image": "/images/team/ali.jpg",
       "color": "#4caf50",
       "description": "Communication department handles press, media, and public relations.",
       "members": [
+        { "name": "Aniq", "image": "/images/team/Aniq.jpg" },
         { "name": "Mujtaba", "image": "/images/team/ali.jpg" },
         { "name": "Fatima Asif", "image": "/images/team/ali.jpg" }
       ]

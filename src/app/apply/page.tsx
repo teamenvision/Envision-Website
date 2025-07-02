@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import formFields from "../../data/applyFields.json";
-import "../../styles/apply.css";
+import formFields from "@/data/applyFields.json";
+import "@/styles/apply.css";
 
 type Field = {
   name: string;

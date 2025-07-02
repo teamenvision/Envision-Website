@@ -1,0 +1,157 @@
+.outreachPage {
+  background-color: #121212;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  padding: 3rem 1.5rem;
+  min-height: 100vh;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-shadow: 0 0 8px #0ff;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+
+.statsRow {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.circleStat {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid currentColor;
+  animation: pulse 2s infinite ease-in-out;
+  text-align: center;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px currentColor;
+  }
+  50% {
+    box-shadow: 0 0 20px currentColor, 0 0 30px currentColor;
+  }
+  100% {
+    box-shadow: 0 0 10px currentColor;
+  }
+}
+
+/* Neon Themes */
+.neonBlue { color: #00ffff; }
+.neonGreen { color: #00ff88; }
+.neonYellow { color: #ffcb00; }
+.stemcollaborations { color: #00ffff; }
+.plantationdrives { color: #00ff88; }
+.communityservices { color: #ffcb00; }
+.mallshows { color: #ff66cc; }
+.roadshows { color: #ffaa00; }
+.exhibitions { color: #ff4d4d; }
+.beachcleaning { color: #00bfff; }
+
+.categories {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.categorySection {
+  margin-bottom: 3rem;
+}
+
+.categoryTitle {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  text-shadow: 0 0 6px currentColor;
+}
+
+.eventGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+.card {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 0 10px #000;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px currentColor;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cardBody {
+  padding: 1rem;
+}
+
+.cardBody h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardBody p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #ccc;
+}
+
+.date {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .statsRow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eventGrid {
+    justify-content: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+}

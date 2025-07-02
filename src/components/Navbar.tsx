@@ -38,6 +38,8 @@ export function Navbar() {
           <Link href="/projects">Projects</Link>
           <Link href="/sponsors">Sponsors</Link>
           <Link href="/team">Team</Link>
+          <Link href="/alumni">Alumni</Link>
+          <Link href="/outreach">Outreach</Link>
           <Link href="/apply">Apply</Link>
         </div>
       </nav>
@@ -56,6 +58,8 @@ export function Navbar() {
             <Link href="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
             <Link href="/sponsors" onClick={() => setMenuOpen(false)}>Sponsors</Link>
             <Link href="/team" onClick={() => setMenuOpen(false)}>Team</Link>
+            <Link href="/alumni" onClick={() => setMenuOpen(false)}>Alumni</Link>
+            <Link href="/outreach" onClick={() => setMenuOpen(false)}>Outreach</Link>
             <Link href="/apply" onClick={() => setMenuOpen(false)}>Apply</Link>
           </div>
         </div>

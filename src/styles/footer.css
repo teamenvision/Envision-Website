@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  font-family: var(--font-primary, 'Orbitron', sans-serif); /* Global font applied */
+  font-family: var(--font-primary, 'Poppins', sans-serif); /* Global font applied */
 }
 
 /* === Socials === */
@@ -31,13 +31,13 @@
   font-weight: 600;
   font-size: 1rem;
   color: #fff;
-  font-family: var(--font-primary, 'Orbitron', sans-serif);
+  font-family: var(--font-primary, 'Poppins', sans-serif);
 }
 
 .footer-contacts p {
   margin: 0.25rem 0;
   font-size: 0.95rem;
-  font-family: var(--font-primary, 'Orbitron', sans-serif);
+  font-family: var(--font-primary, 'Poppins', sans-serif);
 }
 
 /* === Glowy Links === */

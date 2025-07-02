@@ -13,7 +13,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Orbitron', 'DM Sans', sans-serif;
+  font-family: 'Poppins', 'DM Sans', sans-serif;
   background-color: var(--color-bg-dark);
   color: var(--color-text);
   line-height: 1.6;
@@ -72,14 +72,14 @@ a:hover, button:hover, .clickable:hover {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Orbitron', 'DM Sans', sans-serif;
+  font-family: 'Poppins', 'DM Sans', sans-serif;
   letter-spacing: 0.5px;
   color: var(--color-accent);
   text-shadow: 0 0 3px rgba(0, 255, 170, 0.2);
 }
 
 p {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Poppins','DM Sans', sans-serif;
 }
 
 .scroll-to-top {

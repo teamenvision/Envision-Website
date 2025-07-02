@@ -3,257 +3,306 @@
     {
       "name": "PSO",
       "tier": "platinum",
-      "image": "/images/sponsors/platinum/PSO.png"
+      "image": "/images/sponsors/platinum/PSO.png",
+      "link": "https://psopk.com"
     }
   ],
   "diamond": [
     {
       "name": "FCI",
       "tier": "diamond",
-      "image": "/images/sponsors/diamond/FCI.png"
+      "image": "/images/sponsors/diamond/FCI.png",
+      "link": "https://fcicomposites.com"
     }
   ],
   "gold": [
     {
       "name": "14th Street Pizza",
       "tier": "gold",
-      "image": "/images/sponsors/gold/14th Street Pizza.png"
+      "image": "/images/sponsors/gold/14th Street Pizza.png",
+      "link": "https://www.14thstreetpizza.com"
     },
     {
       "name": "Atco",
       "tier": "gold",
-      "image": "/images/sponsors/gold/Atco.png"
+      "image": "/images/sponsors/gold/Atco.png",
+      "link": "https://www.atcolab.com"
     },
     {
       "name": "Hyundai Power Tools",
       "tier": "gold",
-      "image": "/images/sponsors/gold/Hyundai Power Tools.png"
+      "image": "/images/sponsors/gold/Hyundai Power Tools.png",
+      "link": "https://hyundaipowertools.com"
     },
     {
-      "name": "Nixor College ",
+      "name": "Nixor College",
       "tier": "gold",
-      "image": "/images/sponsors/gold/Nixor College .png"
+      "image": "/images/sponsors/gold/Nixor College .png",
+      "link": "https://www.nixorcollege.org"
     },
     {
       "name": "The Jacket Maker",
       "tier": "gold",
-      "image": "/images/sponsors/gold/The Jacket Maker.PNG"
+      "image": "/images/sponsors/gold/The Jacket Maker.PNG",
+      "link": "https://www.thejacketmaker.pk"
     }
   ],
   "silver": [
     {
       "name": "Broadpeak",
       "tier": "silver",
-      "image": "/images/sponsors/silver/Broadpeak.png"
+      "image": "/images/sponsors/silver/Broadpeak.png",
+      "link": "https://broadpeak-group.com"
     },
     {
       "name": "Descon",
       "tier": "silver",
-      "image": "/images/sponsors/silver/Descon.png"
+      "image": "/images/sponsors/silver/Descon.png",
+      "link": "https://www.descon.com"
     },
     {
       "name": "EIE",
       "tier": "silver",
-      "image": "/images/sponsors/silver/EIE.png"
+      "image": "/images/sponsors/silver/EIE.png",
+      "link": "https://eiengineering.pk"
     },
     {
-      "name": "Meri Gaari",
+      "name": "Meri Gari",
       "tier": "silver",
-      "image": "/images/sponsors/silver/Meri Gaari.png"
+      "image": "/images/sponsors/silver/Meri Gari.png",
+      "link": "https://merigari.com"
     }
   ],
   "bronze": [
     {
       "name": "Fabric8 3d",
       "tier": "bronze",
-      "image": "/images/sponsors/bronze/Fabric8 3d.png"
+      "image": "/images/sponsors/bronze/Fabric8 3d.png",
+      "link": "https://www.instagram.com/fabric8.3d/"
     },
     {
       "name": "MATS Towing",
       "tier": "bronze",
-      "image": "/images/sponsors/bronze/MATS Towing.png"
+      "image": "/images/sponsors/bronze/MATS Towing.png",
+      "link": "https://www.matstowing.com"
     },
     {
-      "name": "propakistani",
+      "name": "ProPakistani",
       "tier": "bronze",
-      "image": "/images/sponsors/bronze/propakistani.png"
+      "image": "/images/sponsors/bronze/ProPakistani.png",
+      "link": "https://propakistani.pk"
     },
     {
-      "name": "sac",
+      "name": "SAC",
       "tier": "bronze",
-      "image": "/images/sponsors/bronze/sac.png"
+      "image": "/images/sponsors/bronze/SAC.png",
+      "link": "https://www.instagram.com/saccardetailing/"
     },
     {
-      "name": "simapro",
+      "name": "SimaPro",
       "tier": "bronze",
-      "image": "/images/sponsors/bronze/simapro.png"
+      "image": "/images/sponsors/bronze/SimaPro.png",
+      "link": "https://simapro.com"
     }
   ],
   "previous": [
     {
       "name": "Adamjee",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Adamjee.png"
+      "image": "/images/sponsors/previous/Adamjee.png",
+      "link": null
     },
     {
       "name": "ARA Wraps",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/ARA Wraps.png"
+      "image": "/images/sponsors/previous/ARA Wraps.png",
+      "link": null
     },
     {
       "name": "Arena",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Arena.png"
+      "image": "/images/sponsors/previous/Arena.png",
+      "link": null
     },
     {
       "name": "BlueEX",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/BlueEX.png"
+      "image": "/images/sponsors/previous/BlueEX.png",
+      "link": null
     },
     {
       "name": "Britlite",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Britlite.png"
+      "image": "/images/sponsors/previous/Britlite.png",
+      "link": null
     },
     {
       "name": "Chartech",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Chartech.png"
+      "image": "/images/sponsors/previous/Chartech.png",
+      "link": null
     },
     {
       "name": "City FM",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/City FM.png"
+      "image": "/images/sponsors/previous/City FM.png",
+      "link": null
     },
     {
       "name": "Cocacola",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Cocacola.png"
+      "image": "/images/sponsors/previous/Cocacola.png",
+      "link": null
     },
     {
       "name": "DAWN",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/DAWN.png"
+      "image": "/images/sponsors/previous/DAWN.png",
+      "link": null
     },
     {
       "name": "Fasilite",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Fasilite.png"
+      "image": "/images/sponsors/previous/Fasilite.png",
+      "link": null
     },
     {
       "name": "Fauji Foods",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Fauji Foods.png"
+      "image": "/images/sponsors/previous/Fauji Foods.png",
+      "link": null
     },
     {
       "name": "FFC",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/FFC.png"
+      "image": "/images/sponsors/previous/FFC.png",
+      "link": null
     },
     {
       "name": "Global Pharm",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Global Pharm.png"
+      "image": "/images/sponsors/previous/Global Pharm.png",
+      "link": null
     },
     {
       "name": "Grit 3D",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Grit 3D.png"
+      "image": "/images/sponsors/previous/Grit 3D.png",
+      "link": null
     },
     {
       "name": "IAK",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/IAK.png"
+      "image": "/images/sponsors/previous/IAK.png",
+      "link": null
     },
     {
       "name": "Mc Donalds",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Mc Donalds.png"
+      "image": "/images/sponsors/previous/Mc Donalds.png",
+      "link": null
     },
     {
       "name": "MG Engineering",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/MG Engineering.png"
+      "image": "/images/sponsors/previous/MG Engineering.png",
+      "link": null
     },
     {
       "name": "Pakola",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Pakola.png"
+      "image": "/images/sponsors/previous/Pakola.png",
+      "link": null
     },
     {
       "name": "PMTF",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/PMTF.png"
+      "image": "/images/sponsors/previous/PMTF.png",
+      "link": null
     },
     {
       "name": "Portgrand",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Portgrand.png"
+      "image": "/images/sponsors/previous/Portgrand.png",
+      "link": null
     },
     {
       "name": "Searle",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Searle.png"
+      "image": "/images/sponsors/previous/Searle.png",
+      "link": null
     },
     {
       "name": "SGL",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/SGL.png"
+      "image": "/images/sponsors/previous/SGL.png",
+      "link": null
     },
     {
       "name": "Shell",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Shell.png"
+      "image": "/images/sponsors/previous/Shell.png",
+      "link": null
     },
     {
       "name": "Siddiq Sons",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Siddiq Sons.png"
+      "image": "/images/sponsors/previous/Siddiq Sons.png",
+      "link": null
     },
     {
       "name": "Sindh Bank",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Sindh Bank.png"
+      "image": "/images/sponsors/previous/Sindh Bank.png",
+      "link": null
     },
     {
       "name": "Stevta",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Stevta.png"
+      "image": "/images/sponsors/previous/Stevta.png",
+      "link": null
     },
     {
       "name": "Telemart",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Telemart.png"
+      "image": "/images/sponsors/previous/Telemart.png",
+      "link": null
     },
     {
       "name": "TGI Fridays",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/TGI Fridays.png"
+      "image": "/images/sponsors/previous/TGI Fridays.png",
+      "link": null
     },
     {
       "name": "The Pit Shop",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/The Pit Shop.png"
+      "image": "/images/sponsors/previous/The Pit Shop.png",
+      "link": null
     },
     {
       "name": "Toyota",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Toyota.png"
+      "image": "/images/sponsors/previous/Toyota.png",
+      "link": null
     },
     {
       "name": "UHU",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/UHU.png"
+      "image": "/images/sponsors/previous/UHU.png",
+      "link": null
     },
     {
       "name": "UMA",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/UMA.png"
+      "image": "/images/sponsors/previous/UMA.png",
+      "link": null
     },
     {
       "name": "Universal Cables",
       "tier": "previous sponsors",
-      "image": "/images/sponsors/previous/Universal Cables.png"
+      "image": "/images/sponsors/previous/Universal Cables.png",
+      "link": null
     }
   ]
 }

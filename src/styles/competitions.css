@@ -34,7 +34,7 @@
   background: #121212;
   color: white;
   text-align: center;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Poppins', sans-serif;
   position: relative;
 }
 
@@ -67,7 +67,7 @@
   padding: 2rem 1.5rem;
   animation: slideIn 0.3s ease-out;
   overflow-y: auto;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Poppins', sans-serif;
   z-index: 9999;
 }
 
