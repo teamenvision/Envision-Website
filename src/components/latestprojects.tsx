@@ -45,7 +45,7 @@ return (
     <div className="latest-projects-grid standalone">
       {latestProjectsData
         .filter((proj) => proj.name === "Azaade")
-        .map((proj: LatestProject, idx: number) => {
+        .map((proj: LatestProject) => {
           const index = latestProjectsData.findIndex(p => p.name === "Azaade");
           return (
             <div
@@ -111,7 +111,7 @@ return (
     <div className="latest-projects-grid">
       {latestProjectsData
         .filter((proj) => proj.name !== "Azaade")
-        .map((proj: LatestProject, idx: number) => {
+        .map((proj: LatestProject) => {
           const index = latestProjectsData.findIndex(p => p.name === proj.name);
           return (
             <div
