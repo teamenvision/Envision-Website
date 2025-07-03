@@ -11,7 +11,6 @@ export default function CommunityService() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
-    const container = document.querySelector(".mobile-scroll");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -79,7 +78,7 @@ export default function CommunityService() {
       {selectedImage && (
         <div className="modal" onClick={() => setSelectedImage(null)}>
           <span className="closeBtn">&times;</span>
-          <img src={selectedImage} alt="Full View" className="modalImage" />
+          <Image src={selectedImage} alt="Full View" className="modalImage" />
         </div>
       )}
     </section>

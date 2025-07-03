@@ -1,5 +1,5 @@
 "use client";
-import { FaInstagram, FaFacebookF, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import "../styles/footer.css";
 import contactData from "../data/contact.json";
 

@@ -2,10 +2,7 @@
 import { useEffect, useState } from "react";
 import alumniData from "@/data/alumni.json";
 import Image from "next/image";
-import { FaLinkedinIn } from "react-icons/fa";
 import "@/styles/alumni.css";
-
-const WORD_LIMIT = 100;
 
 export default function Alumni() {
   const [selectedYear, setSelectedYear] = useState<number | "all">("all");

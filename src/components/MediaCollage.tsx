@@ -49,7 +49,7 @@ export default function MediaCollage() {
         {selectedImage && (
           <div className="modal" onClick={() => setSelectedImage(null)}>
             <span className="closeBtn">&times;</span>
-            <img src={selectedImage} alt="Full View" className="modalImage" />
+            <Image src={selectedImage} alt="Full View" className="modalImage" />
           </div>
         )}
       </div>
