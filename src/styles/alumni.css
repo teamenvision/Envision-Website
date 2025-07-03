@@ -30,11 +30,12 @@
 }
 
 .alumni-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
 }
+
 
 .alumni-card {
   background: #1a1a1a;

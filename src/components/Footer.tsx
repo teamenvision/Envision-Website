@@ -19,7 +19,7 @@ export function Footer() {
       </div>
 
       <div className="footer-contacts">
-        <h4>Whatsapp</h4>
+        {/* <h4>Whatsapp</h4>
         {contactData.whatsapp.map((lead, idx) => (
           <p key={idx}>
             <FaWhatsapp />{" "}
@@ -27,7 +27,7 @@ export function Footer() {
               {lead.name}
             </a>
           </p>
-        ))}
+        ))} */}
 
         <h4>Email</h4>
         {contactData.emails.map((email, idx) => (

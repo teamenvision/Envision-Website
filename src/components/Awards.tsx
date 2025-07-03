@@ -112,7 +112,6 @@ export function Awards() {
         {achievementsData.map((ach, idx) => (
           <div className="achievement-card" key={idx}>
             <h4>{ach.title}</h4>
-            <p>{ach.event} - {ach.location}</p>
             <p><strong>{ach.year}</strong></p>
           </div>
         ))}

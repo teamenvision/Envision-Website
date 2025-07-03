@@ -1,0 +1,127 @@
+/* General Section */
+.community-section {
+  padding: 4rem 2rem;
+  background: #0d0d0d;
+  color: #fff;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.community-heading {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+/* Desktop Grid */
+.community-gallery.desktop-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* This will center items on each row */
+  gap: 1.2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* Image Style */
+.community-img {
+  width: 180px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.community-img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modalImage {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px black;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Mobile Horizontal Scroll */
+.mobile-gallery {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .community-gallery.desktop-gallery{
+    display: none;
+  }
+
+  .community-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+   }
+  .mobile-gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding: 1rem 0;
+    scroll-padding: 0 1rem;
+  }
+
+  .mobile-slide {
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+    position: relative;
+  }
+
+  .mobile-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 8px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #555;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+
+  .dot.active {
+    background-color: #00ffcc;
+    box-shadow: 0 0 6px #00ffcc;
+  }
+}

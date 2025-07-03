@@ -55,21 +55,19 @@ export default function Alumni() {
               />
             </div>
             <div className="alumni-info">
-              <h2>{alumnus.name}</h2>
-              <p className="alumni-year">{alumnus.year}</p>
-              {alumnus.linkedin && (
+              {alumnus.linkedin ? (
                 <a
                   href={alumnus.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="linkedin-icon"
+                  className="alumni-name-link"
                 >
-                  <FaLinkedinIn />
+                  <h2>{alumnus.name}</h2>
                 </a>
+              ) : (
+                <h2>{alumnus.name}</h2>
               )}
-              <p className="alumni-bio">
-                {alumnus.bio.split(" ").slice(0, WORD_LIMIT).join(" ")}
-              </p>
+              <p className="alumni-year">{alumnus.year}</p>
             </div>
           </div>
         ))}

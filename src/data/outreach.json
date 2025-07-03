@@ -1,82 +1,62 @@
 {
-  "STEM Collaborations": [
-    {
-      "title": "Robotics Workshop",
-      "description": "Hands-on robotics programming with high school students.",
-      "image": "/images/outreach/stem1.jpg",
-      "date": "2024-02-20",
-      "category": "STEM Collaborations"
-    },
-    {
-      "title": "Robotics Workshop",
-      "description": "Hands-on robotics programming with high school students.",
-      "image": "/images/outreach/stem1.jpg",
-      "date": "2024-02-20",
-      "category": "STEM Collaborations"
-    },
-    {
-      "title": "Robotics Workshop",
-      "description": "Hands-on robotics programming with high school students.",
-      "image": "/images/outreach/stem1.jpg",
-      "date": "2024-02-20",
-      "category": "STEM Collaborations"
-    },
-    {
-      "title": "Robotics Workshop",
-      "description": "Hands-on robotics programming with high school students.",
-      "image": "/images/outreach/stem1.jpg",
-      "date": "2024-02-20",
-      "category": "STEM Collaborations"
-    }
+  "stem": [
+    "/images/outreach/stem/img1.jpg",
+    "/images/outreach/stem/img2.jpg",
+    "/images/outreach/stem/img3.jpg",
+    "/images/outreach/stem/img4.jpg",
+    "/images/outreach/stem/img5.jpg",
+    "/images/outreach/stem/img6.jpg",
+    "/images/outreach/stem/img7.jpg",
+    "/images/outreach/stem/img8.jpg",
+    "/images/outreach/stem/img9.jpg",
+    "/images/outreach/stem/img8.jpg",
+    "/images/outreach/stem/img9.jpg",
+    "/images/outreach/stem/img9.jpg",
+    "/images/outreach/stem/img8.jpg"
   ],
-  "Plantation Drives": [
-    {
-      "title": "Green NUST Initiative",
-      "description": "Planted over 100 trees in partnership with the Environment Club.",
-      "image": "/images/outreach/plantation1.jpg",
-      "date": "2024-03-10",
-      "category": "Plantation Drives"
-    }
+  "exhibition": [
+    "/images/outreach/exhibition/img9.jpg",
+    "/images/outreach/exhibition/img8.jpg",
+    "/images/outreach/exhibition/img6.jpg",
+    "/images/outreach/exhibition/img5.jpg",
+    "/images/outreach/exhibition/img4.jpg",
+    "/images/outreach/exhibition/img7.jpg",
+    "/images/outreach/exhibition/img3.jpg",
+    "/images/outreach/exhibition/img2.jpg",
+    "/images/outreach/exhibition/img1.jpg",
+    "/images/outreach/exhibition/img8.jpg",
+    "/images/outreach/exhibition/img9.jpg",
+    "/images/outreach/exhibition/img9.jpg",
+    "/images/outreach/exhibition/img8.jpg"
   ],
-  "Community Services": [
-    {
-      "title": "Orphanage Visit",
-      "description": "Engaging activities and donations provided to local orphanages.",
-      "image": "/images/outreach/service1.jpg",
-      "date": "2023-12-05",
-      "category": "Community Services"
-    }
+  "mallshow/roadshow": [
+    "/images/outreach/mallshow-roadshow/img1.jpg",
+    "/images/outreach/mallshow-roadshow/img2.jpg",
+    "/images/outreach/mallshow-roadshow/img3.jpg",
+    "/images/outreach/mallshow-roadshow/img4.jpg",
+    "/images/outreach/mallshow-roadshow/img5.jpg",
+    "/images/outreach/mallshow-roadshow/img6.jpg",
+    "/images/outreach/mallshow-roadshow/img7.jpg",
+    "/images/outreach/mallshow-roadshow/img8.jpg",
+    "/images/outreach/mallshow-roadshow/img7.jpg",
+    "/images/outreach/mallshow-roadshow/img8.jpg",
+    "/images/outreach/mallshow-roadshow/img7.jpg",
+    "/images/outreach/mallshow-roadshow/img8.jpg",
+    "/images/outreach/mallshow-roadshow/img9.jpg"
   ],
-  "Mall Shows": [
-    {
-      "title": "Tech Demo at Dolmen Mall",
-      "description": "Displayed our electric vehicle prototype at a tech expo.",
-      "image": "/images/outreach/mall1.jpg",
-      "category": "Mall Shows"
-    }
-  ],
-  "Road Shows": [
-    {
-      "title": "Electric Car Showcase",
-      "description": "Public showcase and Q&A about our EV project.",
-      "image": "/images/outreach/road1.jpg",
-      "category": "Road Shows"
-    }
-  ],
-  "Exhibitions": [
-    {
-      "title": "TechFest Exhibition",
-      "description": "Part of Pakistan’s largest inter-university tech exhibition.",
-      "image": "/images/outreach/exhibit1.jpg",
-      "category": "Exhibitions"
-    }
-  ],
-  "Beach Cleaning": [
-    {
-      "title": "Clifton Beach Cleanup",
-      "description": "Volunteers helped remove over 300 kg of waste from the beach.",
-      "image": "/images/outreach/beach1.jpg",
-      "category": "Beach Cleaning"
-    }
+  "community": [
+    "/images/outreach/community/img9.jpg",
+    "/images/outreach/community/img8.jpg",
+    "/images/outreach/community/img6.jpg",
+    "/images/outreach/community/img5.jpg",
+    "/images/outreach/community/img4.jpg",
+    "/images/outreach/community/img7.jpg",
+    "/images/outreach/community/img3.jpg",
+    "/images/outreach/community/img2.jpg",
+    "/images/outreach/community/img1.jpg",
+    "/images/outreach/community/img8.jpg",
+    "/images/outreach/community/img9.jpg",
+    "/images/outreach/community/img9.jpg",
+    "/images/outreach/community/img8.jpg"
   ]
 }
