@@ -1,0 +1,191 @@
+.apply-section {
+  padding: 2rem;
+  color: white;
+  background: #121212;
+  font-family: 'Poppins', sans-serif;
+  max-width: 600px;
+  margin: auto;
+}
+
+.apply-form {
+  display: block;
+  gap: 1rem;
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid #15fa34;
+}
+
+.apply-form label {
+  display: block;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.apply-form input,
+.apply-form select,
+.apply-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 1rem;
+}
+
+.apply-form button {
+  background-color: #15fa34;
+  color: #121212;
+  font-weight: 600;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.apply-form button:hover {
+  background-color: #12d62d;
+}
+
+.status {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.apply-form label {
+  position: relative;
+}
+
+.step-title {
+  font-size: 1.4rem;
+  color: #15fa34;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid #15fa34;
+  padding-bottom: 0.5rem;
+}
+
+.multiselect-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.multiselect-options label {
+  display: flex;
+  justify-content: left;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.multiselect-options input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+
+input[type="file"] {
+  background-color: transparent;
+  border: 1px dashed #444;
+  padding: 0.6rem;
+  color: #ccc;
+}
+
+.step-indicator {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #00ffcc;
+}
+
+.form-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.apply-form h4 {
+  margin-top: 1rem;
+  color: #15fa34;
+}
+
+.req {
+  color: red;
+}
+
+.intro-text {
+  font-size: 0.95rem;
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px dashed #15fa34;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.apply-form label:has(input[type="checkbox"]) {
+  display: flex;
+  flex-direction: row;
+}
+
+.apply-form input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.apply-form button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+  color: #333;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 2px solid #15fa34;
+  text-align: center;
+  color: white;
+  max-width: 400px;
+}
+
+.modal h3 {
+  color: #15fa34;
+  margin-bottom: 1rem;
+}
+
+.modal button {
+  background-color: #15fa34;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: black;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #12d62d;
+}
