@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
 import teamData from "@/data/team.json";
@@ -28,8 +29,16 @@ type DepartmentLead = {
 };
 
 export default function Team() {
+  const router = useRouter();
+
   const [expandedDept, setExpandedDept] = useState<string | null>(null);
   const [mobileExpandedIndex, setMobileExpandedIndex] = useState<number | null>(null);
+
+  const handleApply = (dept: string, subDept?: string) => {
+    const params = new URLSearchParams({ dept });
+    if (subDept) params.set("subDept", subDept);
+    router.push(`/apply/recruitment?${params.toString()}`);
+  };
 
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
@@ -80,12 +89,11 @@ export default function Team() {
       </div>
 
       {/* Department Leads */}
-      <div className="row department-leads">
+       <div className="row department-leads" id="department-leads">
         {teamData.departmentLeads.map((lead: DepartmentLead, idx) => (
           <React.Fragment key={lead.name}>
             <div
               className="lead-card department-lead-card"
-              key={idx}
               style={{ borderColor: lead.color, boxShadow: `0 0 10px ${lead.color}` }}
             >
               <Image src={lead.image} alt={lead.name} width={160} height={160} className="profile-img" />
@@ -96,27 +104,25 @@ export default function Team() {
                 style={{ borderColor: lead.color, color: lead.color }}
                 onClick={() => toggleExpand(lead.name, idx)}
               >
-                {(isMobile ? mobileExpandedIndex === idx : expandedDept === lead.name)
-                  ? "Collapse Department"
-                  : "Expand Department"}
+                {isMobile
+                  ? mobileExpandedIndex === idx ? "Collapse Department" : "Expand Department"
+                  : expandedDept === lead.name ? "Collapse Department" : "Expand Department"}
               </button>
             </div>
 
-            {/* Mobile-only expansion below the same card */}
             {isMobile && mobileExpandedIndex === idx && (
-              <ExpandedDepartment lead={lead} />
+              <ExpandedDepartment lead={lead} handleApply={handleApply} />
             )}
           </React.Fragment>
         ))}
       </div>
 
-      {/* Desktop-only: expand section below all cards */}
       {!isMobile && expandedDept && (
         <div className="department-overview-container">
           {teamData.departmentLeads
-            .filter((lead: DepartmentLead) => lead.name === expandedDept)
+            .filter((lead) => lead.name === expandedDept)
             .map((lead) => (
-              <ExpandedDepartment key={lead.name} lead={lead} />
+              <ExpandedDepartment key={lead.name} lead={lead} handleApply={handleApply} />
             ))}
         </div>
       )}
@@ -124,18 +130,13 @@ export default function Team() {
   );
 }
 
-function ExpandedDepartment({ lead }: { lead: DepartmentLead }) {
+function ExpandedDepartment({ lead, handleApply }: { lead: DepartmentLead; handleApply: (dept: string, subDept?: string) => void }) {
   return (
     <div className="department-overview" style={{ borderColor: lead.color, boxShadow: `0 0 12px ${lead.color}` }}>
       <h2 style={{ color: lead.color }}>
-        {lead.role === "Brand Manager" ? "Media Department Overview" : `${lead.role.split(" ")[0]} Department Overview`}
+        {lead.role.includes("Brand Manager") ? "Media Department Overview" : `${lead.role.split(" ")[0]} Department Overview`}
       </h2>
       <p className="dept-description">{lead.description}</p>
-      {lead.departmentImage && (
-        <div className="dept-image-wrapper">
-          <Image src={lead.departmentImage} alt={`${lead.name} Dept`} width={600} height={300} />
-        </div>
-      )}
 
       {lead.subDepartments ? (
         Object.entries(lead.subDepartments).map(([subDeptName, subDept]) => (
@@ -154,7 +155,11 @@ function ExpandedDepartment({ lead }: { lead: DepartmentLead }) {
                   </div>
                 ))}
               </div>
-              <button className="apply-btn" style={{ borderColor: lead.color, color: lead.color }}>
+              <button
+                className="apply-btn"
+                style={{ borderColor: lead.color, color: lead.color }}
+                onClick={() => handleApply(lead.role.split(' ')[0], subDeptName)}
+              >
                 Apply Now
               </button>
             </div>
@@ -170,7 +175,11 @@ function ExpandedDepartment({ lead }: { lead: DepartmentLead }) {
               </div>
             ))}
           </div>
-          <button className="apply-btn" style={{ borderColor: lead.color, color: lead.color }}>
+          <button
+            className="apply-btn"
+            style={{ borderColor: lead.color, color: lead.color }}
+            onClick={() => handleApply(lead.role === "Brand Manager" ? "Media" : lead.role.split(" ")[0])}
+          >
             Apply Now
           </button>
         </>
@@ -178,3 +187,4 @@ function ExpandedDepartment({ lead }: { lead: DepartmentLead }) {
     </div>
   );
 }
+

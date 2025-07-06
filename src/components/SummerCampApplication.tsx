@@ -7,6 +7,15 @@ export default function SummerCampApplication() {
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [step, setStep] = useState(1);
+
+  const [emailStatus, setEmailStatus] = useState<"available" | "duplicate" | "checking" | null>(null);
+  const [emailCheckTimer, setEmailCheckTimer] = useState<NodeJS.Timeout | null>(null);
+
+  const [cnicStatus, setCnicStatus] = useState<"available" | "duplicate" | "checking" | null>(null);
+  const [cnicCheckTimer, setCnicCheckTimer] = useState<NodeJS.Timeout | null>(null);
+
+  const isApplyEnabled = process.env.NEXT_PUBLIC_SUMMERCAMP_OPEN === "true";
+  
   const [formData, setFormData] = useState({
     name: "",
     age: "",
@@ -36,14 +45,70 @@ export default function SummerCampApplication() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type, checked, files } = e.target as HTMLInputElement;
+
     if (type === "checkbox") {
       setFormData((prev) => ({ ...prev, [name]: checked }));
     } else if (type === "file" && files) {
       setFormData((prev) => ({ ...prev, paymentScreenshot: files[0] }));
     } else {
       setFormData((prev) => ({ ...prev, [name]: value }));
+
+      if (name === "email") {
+        setEmailStatus("checking");
+        if (emailCheckTimer) clearTimeout(emailCheckTimer);
+
+        const timer = setTimeout(async () => {
+          try {
+            const res = await fetch("/api/summer-camp-check-email", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ email: value }),
+            });
+            const result = await res.json();
+            console.log(result)
+            if (result.exists) {
+              setEmailStatus("duplicate");
+            } else {
+              setEmailStatus("available");
+            }
+          } catch (err) {
+            setEmailStatus(null);
+            console.error("Email check failed", err);
+          }
+        }, 500); // debounce delay
+
+        setEmailCheckTimer(timer);
+      }
+      
+      if (name === "cnic") {
+        setCnicStatus("checking");
+        if (cnicCheckTimer) clearTimeout(cnicCheckTimer);
+
+        const timer = setTimeout(async () => {
+          try {
+            const res = await fetch("/api/summer-camp-check-cnic", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ cnic: value }),
+            });
+            const result = await res.json();
+            console.log(result)
+            if (result.exists) {
+              setCnicStatus("duplicate");
+            } else {
+              setCnicStatus("available");
+            }
+          } catch (err) {
+            setCnicStatus(null);
+            console.error("Cnic check failed", err);
+          }
+        }, 500); // debounce delay
+
+        setCnicCheckTimer(timer);
+      }
     }
   };
+
 
   const handleCourseToggle = (course: string) => {
     setFormData((prev) => {
@@ -73,6 +138,12 @@ export default function SummerCampApplication() {
       }
       if (!emailRegex.test(formData.email)) {
         return setStatus("Invalid email format."), false;
+      }
+      if (emailStatus === "duplicate") {
+        return setStatus("Email is already registered."), false;
+      }
+      if (emailStatus === "checking") {
+        return setStatus("Please wait while we verify the email..."), false;
       }
       if (isGroup && formData.groupMembers.some(m => !m.name || !m.cnic || !m.contact)) {
         return setStatus("Fill all group member details."), false;
@@ -133,6 +204,14 @@ export default function SummerCampApplication() {
     }
   };
 
+  if (!isApplyEnabled) {
+    return (
+      <section className="apply-section">
+        <h2>Applications are currently closed.</h2>
+      </section>
+    );
+  }
+  
   return (
     <section className="apply-section">
       <h2>NUST Summer Program - Powered by Team Envision</h2>
@@ -170,8 +249,31 @@ export default function SummerCampApplication() {
             </select>
 
             <label>CNIC<span className="req">*</span></label>
-            <input name="cnic" type="number" value={formData.cnic} onChange={handleInputChange} required />
-            
+            <input
+              name="cnic"
+              type="number"
+              value={formData.cnic}
+              onChange={handleInputChange}
+              required
+              style={{
+                borderColor:
+                  cnicStatus === "duplicate"
+                    ? "red"
+                    : cnicStatus === "available"
+                    ? "green"
+                    : undefined,
+              }}
+            />
+            {cnicStatus === "checking" && (
+              <span className="email-status">Checking...</span>
+            )}
+            {cnicStatus === "available" && (
+              <span className="email-status" style={{ color: "green" }}>✔ Available</span>
+            )}
+            {cnicStatus === "duplicate" && (
+              <span className="email-status" style={{ color: "red" }}>❌ Already used</span>
+            )}
+
             <label>Phone Number<span className="req">*</span></label>
             <input name="phone" type="number" value={formData.phone} onChange={handleInputChange} required />
             
@@ -182,7 +284,30 @@ export default function SummerCampApplication() {
             <input name="emergencyContact" type="number" value={formData.emergencyContact} onChange={handleInputChange} required />
             
             <label>Email Address<span className="req">*</span></label>
-            <input name="email" type="email" value={formData.email} onChange={handleInputChange} required />
+            <input
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  style={{
+                    borderColor:
+                      emailStatus === "duplicate"
+                        ? "red"
+                        : emailStatus === "available"
+                        ? "green"
+                        : undefined,
+                  }}
+              />
+                {emailStatus === "checking" && (
+                  <span className="email-status">Checking...</span>
+                )}
+                {emailStatus === "available" && (
+                  <span className="email-status" style={{ color: "green" }}>✔ Available</span>
+                )}
+                {emailStatus === "duplicate" && (
+                  <span className="email-status" style={{ color: "red" }}>❌ Already used</span>
+                )}
             
             <label>Applying as<span className="req">*</span></label>
             <select name="applyingAs" value={formData.applyingAs} onChange={handleInputChange}>
@@ -257,7 +382,15 @@ export default function SummerCampApplication() {
         <div className="form-nav">
           {step > 1 && <button type="button" onClick={() => setStep(step - 1)}>Back</button>}
           {step < 4 ? (
-            <button type="button" onClick={() => validateStep() && setStep(step + 1)}>Next</button>
+            <button
+              type="button"
+              onClick={async () => {
+                if (validateStep()) setStep(step + 1);
+              }}
+              disabled={step === 1 && (emailStatus === "checking" || emailStatus === "duplicate" || cnicStatus === "checking" || cnicStatus === "duplicate")}
+            >
+              {step === 1 && (emailStatus === "checking" || cnicStatus === "checking") ? "Checking..." : "Next"}
+            </button>
           ) : (
             <button type="submit" disabled={loading}>
               {loading ? "Submitting..." : "Submit"}

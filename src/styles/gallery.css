@@ -1,0 +1,169 @@
+/* === Base Styles === */
+.gallery-page {
+  padding: 2rem 1rem;
+  background: #121212;
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.viewer-container {
+  height: 500px;
+  max-width: 80%;
+  margin: auto;
+  border: 2px solid #15fa34;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.placeholder-text {
+  font-size: 1.2rem;
+  color: #15fa34;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+}
+
+.plate-scroll-container {
+  margin-top: 2rem;
+}
+
+/* === Plate List === */
+.plate-list {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  flex-wrap: wrap; /* Allow wrapping of plates */
+  scroll-snap-type: x mandatory; /* Enable snap scrolling for mobile */
+}
+
+.plate-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* === Number Plates === */
+.number-plate {
+  background-color: #222;
+  border: 2px solid #555;
+  border-radius: 10px;
+  color: white;
+  min-width: 240px;
+  max-width: 500px; /* Make all plates the same width */
+  height: 150px; /* Fixed height for uniformity */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 5px #000;
+  scroll-snap-align: start; /* Ensure the plates snap to the start */
+}
+
+.number-plate:hover,
+.number-plate.active {
+  border-color: #15fa34;
+  box-shadow: 0 0 8px rgba(21, 250, 52, 0.6);
+}
+
+.car-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.car-location {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.year-left,
+.year-right {
+  font-size: 1.1rem;
+  font-weight: bold;
+  width: 30px;
+  text-align: center;
+  color: #ffcb00;
+}
+
+.plate-center {
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* === Pagination Dots === */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 0.4rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #666;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.active-dot {
+  background: #15fa34;
+}
+
+/* === Desktop Layout === */
+@media (min-width: 768px) {
+  .plate-list {
+    flex-direction: row; /* Keep items horizontally stacked by default */
+    flex-wrap: wrap; /* Wrap when needed */
+    justify-content: center; /* Align to the left */
+    gap: 1rem;
+  }
+
+  .number-plate {
+    width: 300px; /* Fixed width for uniformity */
+    height: fit-content; /* Fixed height for uniformity */
+    flex-grow: 0; /* Plates will not grow */
+  }
+
+  .dots-container {
+    display: none; /* Hide pagination dots for desktop */
+  }
+
+  .viewer-container {
+    height: 500px;
+  }
+}
+
+/* === Mobile Layout === */
+@media (max-width: 767px) {
+  .viewer-container {
+    max-width: 90%;
+  }
+  .plate-list {
+    margin: 2rem;
+    flex-direction: row; /* Keep plates in a row for mobile */
+    flex-wrap: nowrap; /* Don't wrap items */
+    gap: 0;
+    scroll-snap-type: x mandatory; /* Enable snap scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling */
+  }
+
+  .number-plate {
+    min-width: 100%; /* Each plate takes up 100% width on mobile */
+    max-width: 100%; /* Ensure plate takes full width */
+    height: fit-content; /* Set a fixed height for consistency */
+  }
+
+  /* Adjust the dots container to fit mobile view */
+  .dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 0.4rem;
+  }
+}

@@ -7,6 +7,9 @@
   margin: auto;
 }
 
+.apply-section h2 {
+  text-align: center;
+}
 .apply-form {
   display: block;
   gap: 1rem;
@@ -188,4 +191,12 @@ input::-webkit-inner-spin-button {
 
 .modal button:hover {
   background-color: #12d62d;
+}
+
+.email-status {
+  position: relative;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
 }

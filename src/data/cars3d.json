@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Subuk",
+    "year": 2009,
+    "location": "Germany",
+    "modelPath": "/models/car.glb"
+  },
+  {
+    "name": "Burraq",
+    "year": 2010,
+    "location": "Malaysia",
+    "modelPath": "/models/car2.glb"
+  },
+  {
+    "name": "Ballista",
+    "year": 2011,
+    "location": "Malaysia",
+    "modelPath": "/models/car.glb"  
+},
+  {
+    "name": "Burraq 2.0",
+    "year": 2011,
+    "location": "Malaysia",
+    "modelPath": "/models/car.glb"
+},
+  {
+    "name": "Ballista 2.0",
+    "year": 2012,
+    "location": "Malaysia",
+    "modelPath": "/models/car.glb"
+  },
+  {
+    "name": "Burraq 3.0",
+    "year": 2012,
+    "location": "Malaysia",
+    "modelPath": "/models/car.glb"
+  },
+  {
+    "name": "Ballista 3.0",
+    "year": 2014,
+    "location": "Philippines",
+    "modelPath": "/models/car.glb"
+  },
+  {
+    "name": "Bolt",
+    "year": 2014,
+    "location": "Philippines",
+    "modelPath": "/models/car.glb"
+  },
+  {
+    "name": "Ballista Revotron",
+    "year": 2015,
+    "location": "Philippines",
+    "modelPath": "/models/car.glb"
+  },
+    {
+    "name": "Rebolt",
+    "year": 2015,
+    "location": "Philippines",
+    "modelPath": "/models/car.glb"
+  },
+    {
+    "name": "Rebolt 2.0",
+    "year": 2017,
+    "location": "Singapore",
+    "modelPath": "/models/car.glb"
+  },
+  {
+    "name": "Gallant",
+    "year": 2018,
+    "location": "Singapore",
+    "modelPath": "/models/car.glb"
+  },
+    {
+    "name": "Mile-X",
+    "year": 2019,
+    "location": "Malaysia",
+    "modelPath": "/models/car.glb"
+  },
+    {
+    "name": "Qaswa",
+    "year": 2021,
+    "location": "Pakistan",
+    "modelPath": "/models/car.glb"
+  },
+  {
+    "name": "Evo-X",
+    "year": 2022,
+    "location": "Virtual",
+    "modelPath": "/models/car.glb"
+  }
+]
