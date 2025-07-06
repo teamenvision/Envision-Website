@@ -1,11 +1,11 @@
 "use client";
 
-
 import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import "@/styles/recruitment.css";
 
-export default function ApplyForm() {
+
+export default function RecruitmentApplication() {
   const params = useSearchParams();
   const dept = params?.get("dept") || "";
   const subDept = params?.get("subDept") || "";

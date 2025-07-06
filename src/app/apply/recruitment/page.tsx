@@ -1,5 +1,10 @@
 import RecruitmentApplication from "@/components/RecruitmentApplication";
+import { Suspense } from 'react';
 
 export default function RecruitmentPage() {
-  return <RecruitmentApplication />;
+  return (
+  <Suspense fallback={<div>Loading...</div>}>
+    <RecruitmentApplication />
+  </Suspense>
+  );
 }
