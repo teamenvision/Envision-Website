@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://teamenvision.pk
+
+# Sitemaps
+Sitemap: https://teamenvision.pk/sitemap.xml
