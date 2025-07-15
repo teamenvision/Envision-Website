@@ -7,10 +7,7 @@ import Script from 'next/script'
 
 
 export const metadata = {
-  title: "Team Envision",
-  // icons: {
-  //   icon: "",
-  // },
+  title: "Team Envision"
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

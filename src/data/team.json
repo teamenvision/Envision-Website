@@ -119,6 +119,7 @@
           "description": "Vehicle controls and ECUs.",
           "image": "/images/departments/controls.jpg",
           "members": [
+            { "name": "Omer", "image": "/images/team/ali.jpg" },
             { "name": "Fatima Zaidi", "image": "/images/team/ali.jpg" },
             { "name": "Sibtain", "image": "/images/team/Sibtain.jpg" },
             { "name": "Neelam", "image": "/images/team/ali.jpg" },
