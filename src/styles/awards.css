@@ -32,8 +32,9 @@
   background-color: #15fa34;
 }
 
-/* === Awards: Mobile Scroll Slider === */
-.awards-slider-mobile {
+/* === Awards & Achievements: Mobile Scroll Slider === */
+.awards-slider-mobile,
+.achievements-slider-mobile {
   display: block;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -42,24 +43,28 @@
   margin-bottom: 0.5rem;
 }
 
-.awards-slider-mobile::-webkit-scrollbar {
+.awards-slider-mobile::-webkit-scrollbar,
+.achievements-slider-mobile::-webkit-scrollbar {
   display: none;
 }
 
-.awards-slider-inner {
+.awards-slider-inner,
+.achievements-slider-inner {
   display: flex;
   gap: 1rem;
 }
 
-.awards-slider-inner > .award-card {
+.awards-slider-inner > .award-card,
+.achievements-slider-inner > .achievement-card {
   scroll-snap-align: center;
   flex-shrink: 0;
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
 }
 
-/* === Awards: Desktop Grid === */
-.awards-cards-container {
+/* === Desktop Grid === */
+.awards-cards-container,
+.achievements-cards-container {
   display: none;
   flex-wrap: wrap;
   justify-content: center;
@@ -67,17 +72,19 @@
   margin-top: 1rem;
 }
 
-.award-card {
+.award-card,
+.achievement-card {
   background-color: #2e2e2e;
   border-radius: 12px;
   padding: 1rem;
   width: 300px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   text-align: left;
   transition: transform 0.3s ease;
 }
 
-.award-card:hover {
+.award-card:hover,
+.achievement-card:hover {
   transform: scale(1.03);
 }
 
@@ -88,43 +95,7 @@
   margin-bottom: 0.5rem;
 }
 
-/* === Achievements: Mobile & Desktop Scroll === */
-.achievements-slider-container {
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  margin-top: 1.5rem;
-}
-
-.achievements-slider-container::-webkit-scrollbar {
-  display: none;
-}
-
-.achievements-slider-inner {
-  display: flex;
-  gap: 1rem;
-  padding: 0 1rem;
-  width: 100%;
-}
-
-.achievements-slider-inner > .achievement-card {
-  scroll-snap-align: center;
-  flex-shrink: 0;
-  width: 25vw;
-  background-color: #333;
-  border-radius: 8px;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 0 6px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease;
-}
-
-.achievement-card:hover {
-  transform: scale(1.02);
-}
-
-/* === Responsive: Mobile Adjustments === */
+/* === Responsive === */
 @media (max-width: 768px) {
   .awards-section h2 {
     font-size: 2rem;
@@ -134,63 +105,21 @@
   .achievement-card p {
     font-size: 0.95rem;
   }
-
-  .award-card,
-  .achievement-card {
-    width: 90vw;
-  }
-
-  .awards-cards-container {
-    display: none;
-  }
 }
 
-/* === Responsive: Desktop Adjustments === */
 @media (min-width: 769px) {
-  .awards-slider-mobile {
+  .awards-slider-mobile,
+  .achievements-slider-mobile {
     display: none;
   }
 
-  .awards-cards-container {
+  .awards-cards-container,
+  .achievements-cards-container {
     display: flex;
   }
 
-  .achievements-slider-container {
-    overflow-x: auto;
-    padding: 1rem 0;
-  }
-
-  .achievements-slider-inner {
-    gap: 1.5rem;
-    justify-content: flex-start;
-    width: fit-content;
-    min-width: 100%;
-  }
-
-  .achievements-slider-inner > .achievement-card {
-    width: calc((100% - 4.5rem) / 4); /* show 4 cards with 3 gaps between */
-    flex-shrink: 0;
-  }
-
   .dots {
-    justify-content: center;
-    margin-top: 1rem;
-  }
-}
-
-/* Mobile-specific card sizing */
-@media (max-width: 768px) {
-  .awards-slider-inner > .award-card,
-  .achievements-slider-inner > .achievement-card {
-    width: 100vw;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding: 1rem;
-  }
-
-  .award-card,
-  .achievement-card {
-    margin: 0 auto;
+    display: none;
   }
 }
 

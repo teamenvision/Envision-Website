@@ -42,6 +42,7 @@ export default function PlantationStats() {
               ) : (
                 0
               )}
+              <span> +</span>
             </div>
             <div className="stat-label">{stat.label}</div>
           </div>

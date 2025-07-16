@@ -19,7 +19,6 @@ export function Awards() {
     }
   };
 
-  // Detect scroll for Awards
   const handleScroll = (selector: string, type: "award" | "achievement") => {
     const container = document.querySelector(selector);
     if (!container) return;
@@ -34,7 +33,7 @@ export function Awards() {
 
   return (
     <section className="awards-section">
-      <h2>Awards & Achievements</h2>
+      <h2>Awards</h2>
 
       {/* === Mobile Awards Slider === */}
       <div
@@ -87,7 +86,7 @@ export function Awards() {
                   alt={award.title}
                   width={200}
                   height={120}
-                  objectFit="cover"
+                  style={{ objectFit: "cover" }}
                 />
               </div>
             )}
@@ -103,11 +102,13 @@ export function Awards() {
         ))}
       </div>
 
-      {/* === Achievements Scroll === */}
-      <h3 style={{ marginTop: "2rem" }}>Achievements</h3>
+      {/* === Achievements Section === */}
+      <h2 style={{ marginTop: "3rem" }}>Achievements</h2>
+
+      {/* === Mobile Achievements Slider === */}
       <div
-        className="achievements-slider-container achievements-slider-inner"
-        onScroll={() => handleScroll(".achievements-slider-container", "achievement")}
+        className="achievements-slider-mobile achievements-slider-inner"
+        onScroll={() => handleScroll(".achievements-slider-mobile", "achievement")}
       >
         {achievementsData.map((ach, idx) => (
           <div className="achievement-card" key={idx}>
@@ -116,13 +117,24 @@ export function Awards() {
           </div>
         ))}
       </div>
-      <div className="dots">
+
+      <div className="dots dots-mobile-only">
         {achievementsData.map((_, idx) => (
           <span
             key={idx}
             className={`dot ${idx === achievementsIndex ? "active" : ""}`}
-            onClick={() => scrollToIndex(".achievements-slider-container", idx, "achievement")}
+            onClick={() => scrollToIndex(".achievements-slider-mobile", idx, "achievement")}
           />
+        ))}
+      </div>
+
+      {/* === Desktop Achievements Grid === */}
+      <div className="achievements-cards-container">
+        {achievementsData.map((ach, idx) => (
+          <div className="achievement-card" key={idx}>
+            <h4>{ach.title}</h4>
+            <p><strong>{ach.year}</strong></p>
+          </div>
         ))}
       </div>
     </section>
