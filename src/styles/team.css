@@ -230,3 +230,14 @@
   background-color: currentColor;
   color: #121212;
 }
+
+.featured-project {
+  margin-top: 3rem;
+  padding: 2rem;
+  border-top: 2px solid #444;
+}
+
+.featured-project .section-title {
+  color: #e0e0e0;
+  text-shadow: 0 0 8px #9c27b0;
+}

@@ -148,8 +148,20 @@
       "members": [
         { "name": "Aniq", "image": "/images/team/Aniq.jpg" },
         { "name": "Mujtaba", "image": "/images/team/ali.jpg" },
-        { "name": "Fatima Asif", "image": "/images/team/ali.jpg" }
+        { "name": "Fatima Asif", "image": "/images/team/ali.jpg" },
+        { "name": "Daniyal", "image": "/images/team/ali.jpg" }
       ]
     }
-  ]
+  ],
+
+  "autonomousProject": {
+    "description": "The Autonomous team developed a self-driving prototype to participate in the Shell SEM Autonomous Challenge, focusing on embedded systems, sensor fusion, and path planning.",
+    "color": "#9c27b0",
+    "image": "/images/departments/autonomous.jpg",
+    "members": [
+      { "name": "Maaz", "image": "/images/team/Maaz.jpg" },
+      { "name": "Omer", "image": "/images/team/ali.jpg" },
+      { "name": "Alishba", "image": "/images/team/ali.jpg" }
+    ]
+  }
 }

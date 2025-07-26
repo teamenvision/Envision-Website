@@ -125,7 +125,38 @@ export default function Team() {
               <ExpandedDepartment key={lead.name} lead={lead} handleApply={handleApply} />
             ))}
         </div>
-      )}
+      )}{/* Featured R&D Project: Autonomous */}
+  {teamData.autonomousProject && (
+  <section className="row featured-project">
+    <h2 className="section-title">Featured R&D Project: Autonomous</h2>
+    <div
+      className="department-overview"
+      style={{
+        borderColor: teamData.autonomousProject.color,
+        boxShadow: `0 0 12px ${teamData.autonomousProject.color}`,
+      }}
+    >
+      <p className="dept-description">{teamData.autonomousProject.description}</p>
+      <div className="dept-image-wrapper">
+        <Image
+          src={teamData.autonomousProject.image}
+          alt="Autonomous Project"
+          width={400}
+          height={200}
+        />
+      </div>
+      <div className="member-grid">
+        {teamData.autonomousProject.members.map((m: Member) => (
+          <div key={m.name} className="member-card" style={{ borderColor: teamData.autonomousProject.color }}>
+            <Image src={m.image} alt={m.name} width={120} height={120} className="profile-img" />
+            <p>{m.name}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
     </section>
   );
 }
