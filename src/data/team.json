@@ -119,7 +119,6 @@
           "description": "Vehicle controls and ECUs.",
           "image": "/images/departments/controls.jpg",
           "members": [
-            { "name": "Omer", "image": "/images/team/ali.jpg" },
             { "name": "Fatima Zaidi", "image": "/images/team/ali.jpg" },
             { "name": "Sibtain", "image": "/images/team/Sibtain.jpg" },
             { "name": "Neelam", "image": "/images/team/ali.jpg" },
@@ -155,12 +154,13 @@
   ],
 
   "autonomousProject": {
-    "description": "The Autonomous team developed a self-driving prototype to participate in the Shell SEM Autonomous Challenge, focusing on embedded systems, sensor fusion, and path planning.",
+    "description": "The Autonomous team participated in the Shell SEM Autonomous Programming Competition, with a long-term goal of developing a fully autonomous urban vehicle. Our work focuses on embedded systems, sensor fusion, and path planning.",
     "color": "#9c27b0",
     "image": "/images/departments/autonomous.jpg",
     "members": [
       { "name": "Maaz", "image": "/images/team/Maaz.jpg" },
       { "name": "Omer", "image": "/images/team/ali.jpg" },
+      { "name": "Aamna", "image": "/images/team/ali.jpg" },
       { "name": "Alishba", "image": "/images/team/ali.jpg" }
     ]
   }
