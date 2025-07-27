@@ -59,7 +59,7 @@
           "image": "/images/departments/vehicle_dynamics.jpg",
           "members": [
             { "name": "Zain", "image": "/images/team/ali.jpg" },
-            { "name": "Umama", "image": "/images/team/ali.jpg" },
+            { "name": "Umama", "image": "/images/team/Umama.jpg" },
             { "name": "Hammad", "image": "/images/team/ali.jpg" },
             { "name": "Usman", "image": "/images/team/ali.jpg" }  
           ]
@@ -88,7 +88,7 @@
     {
       "name": "Kumail",
       "role": "Electrical Lead",
-      "image": "/images/team/ali.jpg",
+      "image": "/images/team/Kumail.jpg",
       "color": "#f44336",
       "description": "Electrical department works on wiring, controls, telemetry, and power systems.",
       "departmentImage": "/images/departments/electrical.jpg",
@@ -122,7 +122,7 @@
             { "name": "Fatima Zaidi", "image": "/images/team/ali.jpg" },
             { "name": "Sibtain", "image": "/images/team/Sibtain.jpg" },
             { "name": "Neelam", "image": "/images/team/ali.jpg" },
-            { "name": "Sumayyah", "image": "/images/team/ali.jpg" }
+            { "name": "Sumayyah", "image": "/images/team/Sumayyah.jpg" }
           ]
         }
       }
@@ -141,7 +141,7 @@
     {
       "name": "Ahzam",
       "role": "Brand Manager",
-      "image": "/images/team/ali.jpg",
+      "image": "/images/team/Ahzam.jpg",
       "color": "#4caf50",
       "description": "Communication department handles press, media, and public relations.",
       "members": [
