@@ -35,6 +35,12 @@
       "link": "https://hyundaipower.com.pk"
     },
     {
+      "name": "National Foods",
+      "tier": "gold",
+      "image": "/images/sponsors/gold/National Foods.png",
+      "link": "https://www.nfoods.com"
+    },
+    {
       "name": "Nixor College",
       "tier": "gold",
       "image": "/images/sponsors/gold/Nixor College .png",
@@ -93,6 +99,12 @@
       "link": "https://propakistani.pk"
     },
     {
+      "name": "Ressichem",
+      "tier": "bronze",
+      "image": "/images/sponsors/bronze/Ressichem.png",
+      "link": "https://ressichem.com/"
+    },
+    {
       "name": "SAC",
       "tier": "bronze",
       "image": "/images/sponsors/bronze/SAC.png",
@@ -103,6 +115,12 @@
       "tier": "bronze",
       "image": "/images/sponsors/bronze/SimaPro.png",
       "link": "https://simapro.com"
+    },
+    {
+      "name": "SolidWorks",
+      "tier": "bronze",
+      "image": "/images/sponsors/bronze/SolidWorks.png",
+      "link": "http://solidworks.com/"
     }
   ],
   "previous": [
