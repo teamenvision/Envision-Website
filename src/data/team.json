@@ -55,7 +55,7 @@
       "departmentImage": "/images/departments/mechanical.jpg",
       "subDepartments": {
         "Chassis / Structure / Body": {
-          "description": "Team responsible for chassis design and body structure.",
+          "description": "The Structure division designs lightweight, aerodynamically efficient, and structurally robust body and chassis systems, balancing performance, safety, and manufacturability.",
           "image": "/images/departments/chassis.jpg",
           "members": [
             { "name": "Abuzar", "image": "/images/team/Abuzar.jpg" },
@@ -66,7 +66,7 @@
           ]
         },
         "Powertrain": {
-          "description": "Powertrain team manages engine and drivetrain components.",
+          "description": "The Powertrain division develops and integrates both internal combustion and electric propulsion systems, focusing on efficiency, reliability, and optimal energy transfer.",
           "image": "/images/departments/powertrain.jpg",
           "members": [
             { "name": "Sohaib", "image": "/images/team/Sohaib.jpg" },
@@ -74,7 +74,7 @@
           ]
         },
         "Vehicle Dynamics": {
-          "description": "Vehicle dynamics team focuses on suspension and handling.",
+          "description": "The Vehicle Dynamics team works on steering, braking, suspension and overall handling to ensure control, stability, and a smooth driving experience.",
           "image": "/images/departments/vehicle_dynamics.jpg",
           "members": [
             { "name": "Zain", "image": "/images/team/ali.jpg" },
