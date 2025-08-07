@@ -10,39 +10,39 @@
       "name": "Subhan",
       "role": "Team Lead",
       "image": "/images/team/Subhan.jpg",
-      "description": "no comments"
+      "description": "Big vision, bigger crises — still wondering what exactly a lead does."
     },
     {
       "name": "Sadus",
       "role": "Team Manager",
       "image": "/images/team/ali.jpg",
-      "description": "no comments"
+      "description": "Juggles tasks, people, and deadlines — still unsure if it’s management or damage control."
     }
   ],
   "secondary": [
     {
-      "name": "Maaz ul Haque",
+      "name": "Maaz",
       "role": "Technical Lead",
       "image": "/images/team/Maaz.jpg",
-      "description": "Supervises Mechanical and Electrical departments and R&D."
+      "description": "Manages mechanical, electrical, and R&D — always busy, never caught working."
     },
     {
-      "name": "Hamdan Ahmed Qazi",
+      "name": "Hamdan",
       "role": "Operations Lead",
       "image": "/images/team/Hamdan.jpg",
-      "description": "Sindhi"
+      "description": "Operations handles the behind-the-scenes herapheri — the chaos no one else wants."
     },
     {
       "name": "Osman",
       "role": "Mentor",
       "image": "/images/team/ali.jpg",
-      "description": "procurement dept"
+      "description": "Always around with a nod of approval, keeps the team in check with quiet wisdom (or so he think)."
     },
     {
       "name": "Haider",
       "role": "Mentor",
       "image": "/images/team/ali.jpg",
-      "description": "procurement dept"
+      "description": "Always agrees with everything — the most supportive bystander we could ask for."
     }
   ],
   "departmentLeads": [
@@ -51,27 +51,9 @@
       "role": "Mechanical Lead",
       "image": "/images/team/Saad.jpg",
       "color": "#00bcd4",
-      "description": "Mechanical department works on chassis, powertrain, and vehicle dynamics for optimized performance.",
+      "description": "Meet Saad - our Mechanical Lead and the mastermind behind everything that moves. From the tyres to the chassis, every mechanical component is built under his command. His department goes head-to-head for technical awards in the competitions, where performance, precision, and innovation take the spotlight.\n\n Funfact: His department's people are often called the garage mechanics.",
       "departmentImage": "/images/departments/mechanical.jpg",
       "subDepartments": {
-        "Vehicle Dynamics": {
-          "description": "Vehicle dynamics team focuses on suspension and handling.",
-          "image": "/images/departments/vehicle_dynamics.jpg",
-          "members": [
-            { "name": "Zain", "image": "/images/team/ali.jpg" },
-            { "name": "Umama", "image": "/images/team/Umama.jpg" },
-            { "name": "Hammad", "image": "/images/team/ali.jpg" },
-            { "name": "Usman", "image": "/images/team/ali.jpg" }  
-          ]
-        },
-        "Powertrain": {
-          "description": "Powertrain team manages engine and drivetrain components.",
-          "image": "/images/departments/powertrain.jpg",
-          "members": [
-            { "name": "Sohaib", "image": "/images/team/Sohaib.jpg" },
-            { "name": "Abdullah", "image": "/images/team/ali.jpg" }
-          ]
-        },
         "Chassis / Structure / Body": {
           "description": "Team responsible for chassis design and body structure.",
           "image": "/images/departments/chassis.jpg",
@@ -82,6 +64,24 @@
             { "name": "Abdul Sami", "image": "/images/team/ali.jpg" },
             { "name": "Arsalan", "image": "/images/team/ali.jpg" } 
           ]
+        },
+        "Powertrain": {
+          "description": "Powertrain team manages engine and drivetrain components.",
+          "image": "/images/departments/powertrain.jpg",
+          "members": [
+            { "name": "Sohaib", "image": "/images/team/Sohaib.jpg" },
+            { "name": "Abdullah", "image": "/images/team/ali.jpg" }
+          ]
+        },
+        "Vehicle Dynamics": {
+          "description": "Vehicle dynamics team focuses on suspension and handling.",
+          "image": "/images/departments/vehicle_dynamics.jpg",
+          "members": [
+            { "name": "Zain", "image": "/images/team/ali.jpg" },
+            { "name": "Umama", "image": "/images/team/Umama.jpg" },
+            { "name": "Hammad", "image": "/images/team/ali.jpg" },
+            { "name": "Usman", "image": "/images/team/ali.jpg" }  
+          ]
         }
       }
     },
@@ -90,7 +90,7 @@
       "role": "Electrical Lead",
       "image": "/images/team/Kumail.jpg",
       "color": "#f44336",
-      "description": "Electrical department works on wiring, controls, telemetry, and power systems.",
+      "description": "Meet Kumail - our Electrical Lead and the one powering everything behind the scenes. From wiring up the motor to managing the battery systems and control circuits, every electrical component runs through him. His department competes for technical awards in the competitions, where efficiency and reliability can make all the difference.\n\nFunfact: His department's people are of coure often called the electricians - (lights are the best thing they can make work)",
       "departmentImage": "/images/departments/electrical.jpg",
       "subDepartments": {
         "LV": {
@@ -132,7 +132,7 @@
       "role": "Marketing Lead",
       "image": "/images/team/Yousuf.jpg",
       "color": "#ffc107",
-      "description": "Marketing department manages branding, outreach and social media.",
+      "description": "Meet Yousuf - our Marketing Lead. His department is the one chasing down sponsors, partnerships, and everything in between to keep the team running - from funds to essential services. \n\nWhile there’s no shiny award for marketing at our competitions, without their hustle, we will not be able to make it to the start line. his department also handles team's official LinkedIn. \n\nFunfact: The most doubted department - do they even work if they dont bring any sponsor huh?",
       "members": [
         { "name": "Mujtaba", "image": "/images/team/ali.jpg" },
         { "name": "Amna", "image": "/images/team/ali.jpg" }
@@ -143,7 +143,7 @@
       "role": "Brand Manager",
       "image": "/images/team/Ahzam.jpg",
       "color": "#4caf50",
-      "description": "Communication department handles press, media, and public relations.",
+      "description": "Meet Ahzam - our Brand Manager and Communications Lead. He’s the brain behind our social media, the guy steering our media team, and the reason our work looks as good online as it performs on track.\n\nUnder his lead, the communications department is actively competing for the Shell Eco-marathon Communications Award - aiming to bring home recognition for our storytelling and outreach.\n\nFunfact: His people are either praised or mocked for making awesome/cringe content",
       "members": [
         { "name": "Aniq", "image": "/images/team/Aniq.jpg" },
         { "name": "Mujtaba", "image": "/images/team/ali.jpg" },
@@ -154,9 +154,8 @@
   ],
 
   "autonomousProject": {
-    "description": "The Autonomous team participated in the Shell SEM Autonomous Programming Competition, with a long-term goal of developing a fully autonomous urban vehicle. Our work focuses on embedded systems, sensor fusion, and path planning.",
+    "description": "Our Autonomous Project is where innovation meets intelligence. Focused on building self-driving, energy-efficient vehicles.  It's our leap into the future of mobility, where the car doesn’t just move - it thinks. Very much visionary stuff yk! \n\n Funfact: they recently made history by being the first participation from Pakistan in an autonomous vehicle competition",
     "color": "#9c27b0",
-    "image": "/images/departments/autonomous.jpg",
     "members": [
       { "name": "Maaz", "image": "/images/team/Maaz.jpg" },
       { "name": "Omer", "image": "/images/team/ali.jpg" },

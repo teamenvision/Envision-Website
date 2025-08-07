@@ -7,8 +7,13 @@ import Script from 'next/script'
 
 
 export const metadata = {
-  title: "Team Envision"
+  metadataBase: new URL("https://teamenvision.pk"),
+  title: {
+    default: "Team Envision",
+  },
+  description: "Official website of Team Envision - NUST Pakistan",
 };
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
