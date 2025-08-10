@@ -35,7 +35,7 @@
     {
       "name": "Osman",
       "role": "Mentor",
-      "image": "/images/team/ali.jpg",
+      "image": "/images/team/Osman.jpg",
       "description": "Always around with a nod of approval, keeps the team in check with quiet wisdom (or so he think)."
     },
     {
@@ -70,14 +70,14 @@
           "image": "/images/departments/powertrain.jpg",
           "members": [
             { "name": "Sohaib", "image": "/images/team/Sohaib.jpg" },
-            { "name": "Abdullah", "image": "/images/team/ali.jpg" }
+            { "name": "Abdullah K", "image": "/images/team/Abdullah K.jpg" }
           ]
         },
         "Vehicle Dynamics": {
           "description": "The Vehicle Dynamics team works on steering, braking, suspension and overall handling to ensure control, stability, and a smooth driving experience.",
           "image": "/images/departments/vehicle_dynamics.jpg",
           "members": [
-            { "name": "Zain", "image": "/images/team/ali.jpg" },
+            { "name": "Zain", "image": "/images/team/Zain.jpg" },
             { "name": "Umama", "image": "/images/team/Umama.jpg" },
             { "name": "Hammad", "image": "/images/team/ali.jpg" },
             { "name": "Usman", "image": "/images/team/ali.jpg" }  
@@ -97,7 +97,7 @@
           "description": "Low Voltage systems team.",
           "image": "/images/departments/lv.jpg",
           "members": [
-            { "name": "Abdullah", "image": "/images/team/ali.jpg" }
+            { "name": "Abdullah KK", "image": "/images/team/Abdullah KK.jpg" }
           ]
         },
         "HV": {
@@ -134,8 +134,8 @@
       "color": "#ffc107",
       "description": "Meet Yousuf - our Marketing Lead. His department is the one chasing down sponsors, partnerships, and everything in between to keep the team running - from funds to essential services. \n\nWhile there’s no shiny award for marketing at our competitions, without their hustle, we will not be able to make it to the start line. his department also handles team's official LinkedIn. \n\nFunfact: The most doubted department - do they even work if they dont bring any sponsor huh?",
       "members": [
-        { "name": "Mujtaba", "image": "/images/team/ali.jpg" },
-        { "name": "Amna", "image": "/images/team/ali.jpg" }
+        { "name": "Mujtaba", "image": "/images/team/Mujtaba.jpg" },
+        { "name": "Aamna", "image": "/images/team/Aamna.jpg" }
       ]
     },
     {
@@ -146,7 +146,7 @@
       "description": "Meet Ahzam - our Brand Manager and Communications Lead. He’s the brain behind our social media, the guy steering our media team, and the reason our work looks as good online as it performs on track.\n\nUnder his lead, the communications department is actively competing for the Shell Eco-marathon Communications Award - aiming to bring home recognition for our storytelling and outreach.\n\nFunfact: His people are either praised or mocked for making awesome/cringe content",
       "members": [
         { "name": "Aniq", "image": "/images/team/Aniq.jpg" },
-        { "name": "Mujtaba", "image": "/images/team/ali.jpg" },
+        { "name": "Mujtaba", "image": "/images/team/Mujtaba.jpg" },
         { "name": "Fatima Asif", "image": "/images/team/ali.jpg" },
         { "name": "Daniyal", "image": "/images/team/ali.jpg" }
       ]
@@ -159,7 +159,7 @@
     "members": [
       { "name": "Maaz", "image": "/images/team/Maaz.jpg" },
       { "name": "Omer", "image": "/images/team/ali.jpg" },
-      { "name": "Aamna", "image": "/images/team/ali.jpg" },
+      { "name": "Aamna", "image": "/images/team/Aamna.jpg" },
       { "name": "Alishba", "image": "/images/team/ali.jpg" }
     ]
   }

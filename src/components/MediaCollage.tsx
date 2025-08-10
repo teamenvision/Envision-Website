@@ -6,7 +6,7 @@ import collageData from "@/data/outreach.json";
 import "../styles/mediacollage.css";
 
 type Category = keyof typeof collageData;
-const categories: Category[] = ["stem", "exhibition", "mallshow/roadshow"];
+const categories: Category[] = ["stem", "exhibition", "mallshow-roadshow"];
 
 export default function MediaCollage() {
   const [selectedCategory, setSelectedCategory] = useState<Category>("stem");
