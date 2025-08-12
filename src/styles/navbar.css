@@ -53,6 +53,7 @@
   display: inline-block;
 }
 .navbar-links a:hover {
+  box-shadow: none;
   color: #15fa34;
   transform: scale(1.1);
 }
