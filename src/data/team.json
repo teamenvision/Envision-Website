@@ -15,7 +15,7 @@
     {
       "name": "Sadus",
       "role": "Team Manager",
-      "image": "/images/team/ali.jpg",
+      "image": "/images/team/Sadus.jpg",
       "description": "Juggles tasks, people, and deadlines — still unsure if it’s management or damage control."
     }
   ],
@@ -111,7 +111,7 @@
           "description": "Data collection and telemetry systems.",
           "image": "/images/departments/data_telemetry.jpg",
           "members": [
-            { "name": "Javeria", "image": "/images/team/ali.jpg" },
+            { "name": "Javeria", "image": "/images/team/Javeria.jpg" },
             { "name": "Anas", "image": "/images/team/ali.jpg" }
           ]
         },
@@ -119,7 +119,7 @@
           "description": "Vehicle controls and ECUs.",
           "image": "/images/departments/controls.jpg",
           "members": [
-            { "name": "Fatima Zaidi", "image": "/images/team/ali.jpg" },
+            { "name": "Syeda Fatima", "image": "/images/team/Syeda Fatima.jpg" },
             { "name": "Sibtain", "image": "/images/team/Sibtain.jpg" },
             { "name": "Neelam", "image": "/images/team/ali.jpg" },
             { "name": "Sumayyah", "image": "/images/team/Sumayyah.jpg" }
@@ -147,7 +147,7 @@
       "members": [
         { "name": "Aniq", "image": "/images/team/Aniq.jpg" },
         { "name": "Mujtaba", "image": "/images/team/Mujtaba.jpg" },
-        { "name": "Fatima Asif", "image": "/images/team/ali.jpg" },
+        { "name": "Fatima Asif", "image": "/images/team/Fatima Asif.jpg" },
         { "name": "Daniyal", "image": "/images/team/ali.jpg" }
       ]
     }
