@@ -61,7 +61,7 @@ export default function MediaCollage() {
                 key={`${selectedCategory}-${idx}`}
                 src={src}
                 alt={`image-${idx}`}
-                className="image flip-in"
+                className="image"
                 width={300}
                 height={300}
                 onClick={() => setSelectedImage(src)}

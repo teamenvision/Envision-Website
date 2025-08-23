@@ -21,7 +21,7 @@ export default function CommunityService() {
         });
       },
       {
-        root: document.querySelector(".mobile-scroll"),
+        root: document.querySelector(".mobile-gallery"),
         threshold: 0.5,
       }
     );
@@ -51,7 +51,7 @@ export default function CommunityService() {
         ))}
       </div>
 
-      <div className="mobile-gallery mobile-scroll">
+      <div className="mobile-gallery">
         {images.map((src, idx) => (
           <div key={idx} className="mobile-slide" data-index={idx}>
             <Image
@@ -66,11 +66,11 @@ export default function CommunityService() {
         ))}
       </div>
 
-      <div className="mobile-dots">
+      <div className="mobile-community-dots">
         {images.map((_, idx) => (
           <span
             key={idx}
-            className={`dot ${currentSlide === idx ? "active" : ""}`}
+            className={`community-dot ${currentSlide === idx ? "active" : ""}`}
           />
         ))}
       </div>
