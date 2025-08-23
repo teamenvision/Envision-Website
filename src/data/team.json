@@ -41,7 +41,7 @@
     {
       "name": "Haider",
       "role": "Mentor",
-      "image": "/images/team/ali.jpg",
+      "image": "/images/team/Haider.jpg",
       "description": "Always agrees with everything — the most supportive bystander we could ask for."
     }
   ],
@@ -59,10 +59,10 @@
           "image": "/images/departments/chassis.jpg",
           "members": [
             { "name": "Abuzar", "image": "/images/team/Abuzar.jpg" },
-            { "name": "Ammar", "image": "/images/team/ali.jpg" },
+            { "name": "Ammar", "image": "/images/team/Ammar.jpg" },
             { "name": "Ahad", "image": "/images/team/Ahad.jpg" },
             { "name": "Abdul Sami", "image": "/images/team/ali.jpg" },
-            { "name": "Arsalan", "image": "/images/team/ali.jpg" } 
+            { "name": "Arsalan", "image": "/images/team/Arsalan.jpg" } 
           ]
         },
         "Powertrain": {
@@ -80,7 +80,7 @@
             { "name": "Zain", "image": "/images/team/Zain.jpg" },
             { "name": "Umama", "image": "/images/team/Umama.jpg" },
             { "name": "Hammad", "image": "/images/team/ali.jpg" },
-            { "name": "Usman", "image": "/images/team/ali.jpg" }  
+            { "name": "Usman", "image": "/images/team/Raja Usman.jpg" }  
           ]
         }
       }
@@ -112,7 +112,7 @@
           "image": "/images/departments/data_telemetry.jpg",
           "members": [
             { "name": "Javeria", "image": "/images/team/Javeria.jpg" },
-            { "name": "Anas", "image": "/images/team/ali.jpg" }
+            { "name": "Anas", "image": "/images/team/Anas.jpg" }
           ]
         },
         "Controls": {
@@ -121,7 +121,7 @@
           "members": [
             { "name": "Syeda Fatima", "image": "/images/team/Syeda Fatima.jpg" },
             { "name": "Sibtain", "image": "/images/team/Sibtain.jpg" },
-            { "name": "Neelam", "image": "/images/team/ali.jpg" },
+            { "name": "Neelam", "image": "/images/team/Neelam.jpg" },
             { "name": "Sumayyah", "image": "/images/team/Sumayyah.jpg" }
           ]
         }

@@ -23,7 +23,7 @@
 
 .apply-form label {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   font-size: 1rem;
   color: #ddd;
 }
@@ -143,4 +143,11 @@ input::-webkit-inner-spin-button {
 
 .helper-link a:hover {
   color: #12d62d;
+}
+
+.apply-form img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #444;
 }
