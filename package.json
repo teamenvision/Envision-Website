@@ -6,8 +6,9 @@
   "scripts": {
     "generate:sponsors": "node scripts/GenerateSponsorJSON.js",
     "generate:outreach": "node scripts/GenerateOutreachJSON.js",
-    "build": "npm run generate:sponsors && npm run generate:outreach && next build",
-    "dev": "npm run generate:sponsors && npm run generate:outreach && next dev",
+    "generate:stem": "node scripts/GenerateSTEMJSON.js",
+    "build": "npm run generate:sponsors && npm run generate:outreach && npm run generate:stem && next build",
+    "dev": "npm run generate:sponsors && npm run generate:outreach && npm run generate:stem && next dev",
     "start": "next start",
     "lint": "next lint"
   },

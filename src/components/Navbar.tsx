@@ -40,6 +40,7 @@ export function Navbar() {
           <Link href="/team">Team</Link>
           <Link href="/alumni">Alumni</Link>
           <Link href="/outreach">Outreach</Link>
+          <Link href="/stem">STEM</Link>
           <Link href="/apply">Apply</Link>
         </div>
       </nav>
@@ -60,6 +61,7 @@ export function Navbar() {
             <Link href="/team" onClick={() => setMenuOpen(false)}>Team</Link>
             <Link href="/alumni" onClick={() => setMenuOpen(false)}>Alumni</Link>
             <Link href="/outreach" onClick={() => setMenuOpen(false)}>Outreach</Link>
+            <Link href="/stem" onClick={() => setMenuOpen(false)}>STEM</Link>
             <Link href="/apply" onClick={() => setMenuOpen(false)}>Apply</Link>
           </div>
         </div>

@@ -198,6 +198,12 @@
   transform: scale(1.05);
 }
 
+.about-text a {
+  color: #15fa34;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
 /* Responsive layout */
 @media (max-width: 768px) {
   .about-section {

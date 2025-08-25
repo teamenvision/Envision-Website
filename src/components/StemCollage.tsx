@@ -2,18 +2,33 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import collageData from "@/data/outreach.json";
+import collageData from "@/data/stem.json";
 import "../styles/mediacollage.css";
 
 type Category = keyof typeof collageData;
-const categories: Category[] = ["stem", "exhibition", "mallshow-roadshow"];
+const categories: Category[] = ["go-kart", "shell-eco-marathon"];
 
-export default function MediaCollage() {
-  const [selectedCategory, setSelectedCategory] = useState<Category>("stem");
+// Add program details
+const programDetails: Record<Category, { title: string; description: string }> = {
+  "go-kart": {
+    title: "Go-Kart Program",
+    description:
+      "We also run a 6-month program with Nixor College that brings electric mobility to life through the design and fabrication of four electric go-karts each year. In this program, Team Envision guides and mentors students at every step, from mastering CAD/CAM software to hands-on fabrication, as they apply their engineering knowledge to build fully functional vehicles. The program culminates in Nixor’s annual inter-house event, Nixor Day!, where the go-karts compete, showcasing both technical innovation and team spirit. This initiative provides students with a unique opportunity to experience the full cycle of design, engineering, and competition while fostering creativity and sustainable thinking."
+  },
+  "shell-eco-marathon": {
+    title: "Shell Eco Marathon Program",
+    description:
+      "We run a year-round STEM program in collaboration with Nixor College, where Team Envision directly teaches and mentors students, immersing them in real-world engineering and innovation. Alongside technical training, we also guide them in non-technical domains such as communications, marketing, and media design, giving them a holistic understanding of how large-scale engineering projects come to life. Through the program, they gain extensive exposure to CAD/CAM software, advanced design techniques, and hands-on fabrication, enabling them to transform classroom learning into practical applications. The journey leads to the Shell Eco-marathon Asia 2025, where these young engineers put their skills to the test, competing for both on-track performance and off-track awards. This initiative not only mentors students toward one of the world’s most prestigious energy efficiency competitions but also lays the foundation for redefining the future of sustainable mobility."
+  }
+};
+
+export default function StemCollage() {
+  const [selectedCategory, setSelectedCategory] = useState<Category>("go-kart");
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const images = collageData[selectedCategory];
+  const { title, description } = programDetails[selectedCategory];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -40,6 +55,7 @@ export default function MediaCollage() {
 
   return (
     <section>
+      {/* Tabs */}
       <div className="tabs">
         {categories.map((cat) => (
           <button
@@ -53,6 +69,12 @@ export default function MediaCollage() {
       </div>
 
       <div className="container">
+        {/* Heading + Paragraph */}
+        <div className="program-info">
+          <h2 className="program-title">{title}</h2>
+          <p className="program-description">{description}</p>
+        </div>
+
         {/* Desktop Gallery */}
         <div className="desktop-gallery">
           <div key={selectedCategory} className="gallery flip-in">

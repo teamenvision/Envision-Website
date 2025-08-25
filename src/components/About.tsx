@@ -51,7 +51,11 @@ export function About() {
           <div>
             <h2>About Us</h2>
             <p>
-              Team Envision, a student-led team from NUST-PNEC, is representing Pakistan globally since 2009, designing energy-efficient vehicles for competitions like Shell Eco-Marathon and Teknofest. After pioneering AZAAD-E, Pakistan’s first urban EV, we introduced a new Urban and a Prototype vehicle for Shell Eco-Marathon Qatar 2025. Over the years, our dedication has earned us multiple awards, with our latest achievement being the prestigious Communication Award at Shell Eco-Marathon 2025 Qatar.            </p>
+              Team Envision, a student-led team from NUST-PNEC, is representing Pakistan globally since 2009, designing energy-efficient vehicles for competitions like Shell Eco-Marathon and Teknofest. After pioneering AZAAD-E, Pakistan’s first urban EV, we introduced a new Urban and a Prototype vehicle for Shell Eco-Marathon Qatar 2025. Over the years, our dedication has earned us multiple awards, with our latest achievement being the prestigious Communication Award at Shell Eco-Marathon 2025 Qatar.<br></br>
+              We also work closely throughout the year with STEM partners, conducting hands-on training and workshops across schools and colleges.
+              <br></br>
+              <a href="/stem">Check out our STEM Programs</a>.
+            </p>
           </div>
         </div>
 

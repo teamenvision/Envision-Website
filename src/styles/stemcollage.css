@@ -138,20 +138,21 @@
   }
 
   .mobile-slide {
-    flex: 0 0 80%;              /* takes 80% of screen width */
-    width: 90%;                 /* ensures consistent sizing */
-    max-width: 90vw;            /* safety cap */
-    height: 200px;              /* fixed canvas height */
+    flex: 0 0 80%;          /* each slide takes ~80% of screen */
+    width: 80%;             /* consistent with flex-basis */
+    max-width: 90vw;        /* safety cap */
+    height: 200px;          /* fixed canvas height */
     scroll-snap-align: center;
     position: relative;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #111;     /* acts as frame */
+    background-color: #111;
     border-radius: 10px;
     overflow: hidden;
   }
+
 
   .mobile-slide .image {
     width: 100%;

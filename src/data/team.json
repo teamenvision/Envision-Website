@@ -1,10 +1,18 @@
 {
-  "faculty": {
-    "name": "Sereen Atif",
-    "role": "Faculty Advisor",
-    "image": "/images/team/ali.jpg",
-    "description": "Oversees the team and provides academic and strategic guidance."
-  },
+  "faculty": [
+    {
+      "name": "Sereen Atif",
+      "role": "Faculty Advisor",
+      "image": "/images/team/ali.jpg",
+      "description": "Oversees the team and provides academic and strategic guidance."
+    },
+    {
+      "name": "Envisio",
+      "role": "Mascot",
+      "image":"/images/team/Enviso.jpg",
+      "description": "Makes safety and innovation fun—turning serious messages into stories everyone loves."
+    }
+  ],
   "executives": [
     {
       "name": "Subhan",
@@ -94,21 +102,21 @@
       "departmentImage": "/images/departments/electrical.jpg",
       "subDepartments": {
         "LV": {
-          "description": "Low Voltage systems team.",
+          "description": "The Low Voltage division manages the vehicle’s electronics, sensors, and wiring systems, ensuring seamless communication, safety, and reliability across all subsystems.",
           "image": "/images/departments/lv.jpg",
           "members": [
             { "name": "Abdullah KK", "image": "/images/team/Abdullah KK.jpg" }
           ]
         },
         "HV": {
-          "description": "High Voltage systems team.",
+          "description": "The High Voltage division powers the vehicle through advanced battery and energy systems, focusing on efficiency, safety, and sustainable performance.",
           "image": "/images/departments/hv.jpg",
           "members": [
             { "name": "Yaseen", "image": "/images/team/ali.jpg" }
           ]
         },
         "Data & Telemetry": {
-          "description": "Data collection and telemetry systems.",
+          "description": "The Data & Telemetry division collects, transmits, and analyzes real-time vehicle data, enabling performance optimization, diagnostics, and informed decision-making.",
           "image": "/images/departments/data_telemetry.jpg",
           "members": [
             { "name": "Javeria", "image": "/images/team/Javeria.jpg" },
@@ -116,7 +124,7 @@
           ]
         },
         "Controls": {
-          "description": "Vehicle controls and ECUs.",
+          "description": "The Controls division develops precise control systems and algorithms, integrating powertrain, braking, and steering for smooth, safe, and efficient vehicle operation.",
           "image": "/images/departments/controls.jpg",
           "members": [
             { "name": "Syeda Fatima", "image": "/images/team/Syeda Fatima.jpg" },

@@ -56,12 +56,14 @@ export default function Team() {
 
       {/* Faculty Advisor */}
       <div className="row faculty">
-        <div className="lead-card">
-          <Image src={teamData.faculty.image} alt={teamData.faculty.name} width={160} height={160} className="profile-img" />
-          <h3>{teamData.faculty.name}</h3>
-          <p className="role">{teamData.faculty.role}</p>
-          <p className="desc">{teamData.faculty.description}</p>
-        </div>
+        {teamData.faculty.map((member, idx) => (
+          <div className="lead-card" key={idx}>
+            <Image src={member.image} alt={member.name} width={160} height={160} className="profile-img" />
+            <h3>{member.name}</h3>
+            <p className="role">{member.role}</p>
+            <p className="desc">{member.description}</p>
+          </div>
+        ))}
       </div>
 
       {/* Executives */}
