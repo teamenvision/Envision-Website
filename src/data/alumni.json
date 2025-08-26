@@ -26,7 +26,7 @@
   {
     "name": "Wasifa Umer",
     "year": 2025,
-    "image": "/images/alumni/placeholder.jpg",
+    "image": "/images/alumni/Wasifa Umer.jpg",
     "linkedin": "https://www.linkedin.com/in/wasifa-umer/"
   },
   {
@@ -34,5 +34,29 @@
     "year": 2024,
     "image": "/images/alumni/Arham Khalil.jpg",
     "linkedin": "https://www.linkedin.com/in/arhum-k-07ab95136/"
+  },
+    {
+    "name": "Muhammad Ehsan",
+    "year": 2024,
+    "image": "/images/alumni/Muhammad Ehsan.jpg",
+    "linkedin": "https://www.linkedin.com/in/muhammadehsanawan/"
+  },
+  {
+    "name": "Muhammad Saad",
+    "year": 2024,
+    "image": "/images/alumni/Muhammad Saad.jpg",
+    "linkedin": "https://www.linkedin.com/in/muhammad-saad-352a62182/"
+  },
+    {
+    "name": "Talha Siyal",
+    "year": 2023,
+    "image": "/images/alumni/Talha Siyal.jpg",
+    "linkedin": "https://www.linkedin.com/in/talha-siyal-9a4484199/"
+  },
+  {
+    "name": "Muhammad Osama",
+    "year": 2023,
+    "image": "/images/alumni/Muhammad Osama.jpg",
+    "linkedin": "https://www.linkedin.com/in/muhammad-osama-487682128/"
   }
 ]

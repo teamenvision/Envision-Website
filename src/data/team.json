@@ -3,14 +3,14 @@
     {
       "name": "Sereen Atif",
       "role": "Faculty Advisor",
-      "image": "/images/team/ali.jpg",
+      "image": "/images/team/Ma'am Sereen.jpg",
       "description": "Oversees the team and provides academic and strategic guidance."
     },
     {
-      "name": "Envisio",
+      "name": "Enviso",
       "role": "Mascot",
       "image":"/images/team/Enviso.jpg",
-      "description": "Makes safety and innovation fun—turning serious messages into stories everyone loves."
+      "description": "Makes safety and innovation fun, turning serious messages into stories everyone loves."
     }
   ],
   "executives": [
@@ -18,13 +18,13 @@
       "name": "Subhan",
       "role": "Team Lead",
       "image": "/images/team/Subhan.jpg",
-      "description": "Big vision, bigger crises — still wondering what exactly a lead does."
+      "description": "Big vision, bigger crises, still wondering what exactly a lead does."
     },
     {
       "name": "Sadus",
       "role": "Team Manager",
       "image": "/images/team/Sadus.jpg",
-      "description": "Juggles tasks, people, and deadlines — still unsure if it’s management or damage control."
+      "description": "Juggles tasks, people, and deadlines, still unsure if it’s management or damage control."
     }
   ],
   "secondary": [
@@ -32,13 +32,13 @@
       "name": "Maaz",
       "role": "Technical Lead",
       "image": "/images/team/Maaz.jpg",
-      "description": "Manages mechanical, electrical, and R&D — always busy, never caught working."
+      "description": "Manages mechanical, electrical, and R&D, always busy, never caught working."
     },
     {
       "name": "Hamdan",
       "role": "Operations Lead",
       "image": "/images/team/Hamdan.jpg",
-      "description": "Operations handles the behind-the-scenes herapheri — the chaos no one else wants."
+      "description": "Operations handles the behind-the-scenes herapheri, the chaos no one else wants."
     },
     {
       "name": "Osman",
@@ -50,7 +50,7 @@
       "name": "Haider",
       "role": "Mentor",
       "image": "/images/team/Haider.jpg",
-      "description": "Always agrees with everything — the most supportive bystander we could ask for."
+      "description": "Always agrees with everything, the most supportive bystander we could ask for."
     }
   ],
   "departmentLeads": [
@@ -94,11 +94,11 @@
       }
     },
     {
-      "name": "Kumail",
+      "name": "Yaseen",
       "role": "Electrical Lead",
-      "image": "/images/team/Kumail.jpg",
+      "image": "/images/team/Yaseen.jpg",
       "color": "#f44336",
-      "description": "Meet Kumail - our Electrical Lead and the one powering everything behind the scenes. From wiring up the motor to managing the battery systems and control circuits, every electrical component runs through him. His department competes for technical awards in the competitions, where efficiency and reliability can make all the difference.\n\nFunfact: His department's people are of coure often called the electricians - (lights are the best thing they can make work)",
+      "description": "Meet Yaseen - our Electrical Lead and the one powering everything behind the scenes. From wiring up the motor to managing the battery systems and control circuits, every electrical component runs through him. His department competes for technical awards in the competitions, where efficiency and reliability can make all the difference.\n\nFunfact: His department's people are of coure often called the electricians - (lights are the best thing they can make work)",
       "departmentImage": "/images/departments/electrical.jpg",
       "subDepartments": {
         "LV": {
@@ -112,7 +112,7 @@
           "description": "The High Voltage division powers the vehicle through advanced battery and energy systems, focusing on efficiency, safety, and sustainable performance.",
           "image": "/images/departments/hv.jpg",
           "members": [
-            { "name": "Yaseen", "image": "/images/team/ali.jpg" }
+            { "name": "Kumail", "image": "/images/team/Kumail.jpg" }
           ]
         },
         "Data & Telemetry": {
@@ -154,6 +154,7 @@
       "description": "Meet Ahzam - our Brand Manager and Communications Lead. He’s the brain behind our social media, the guy steering our media team, and the reason our work looks as good online as it performs on track.\n\nUnder his lead, the communications department is actively competing for the Shell Eco-marathon Communications Award - aiming to bring home recognition for our storytelling and outreach.\n\nFunfact: His people are either praised or mocked for making awesome/cringe content",
       "members": [
         { "name": "Aniq", "image": "/images/team/Aniq.jpg" },
+        { "name": "Hafsan", "image": "/images/team/Hafsan.jpg" },
         { "name": "Mujtaba", "image": "/images/team/Mujtaba.jpg" },
         { "name": "Fatima Asif", "image": "/images/team/Fatima Asif.jpg" },
         { "name": "Daniyal", "image": "/images/team/ali.jpg" }
