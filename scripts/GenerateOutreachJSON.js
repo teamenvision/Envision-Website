@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const categories = ['stem', 'exhibition', 'mallshow-roadshow', 'community'];
+const categories = ['exhibition', 'mallshow-roadshow', 'community'];
 const outData = {};
 
 categories.forEach(category => {

@@ -6,10 +6,10 @@ import collageData from "@/data/outreach.json";
 import "../styles/mediacollage.css";
 
 type Category = keyof typeof collageData;
-const categories: Category[] = ["stem", "exhibition", "mallshow-roadshow"];
+const categories: Category[] = ["exhibition", "mallshow-roadshow"];
 
 export default function OutreachCollage() {
-  const [selectedCategory, setSelectedCategory] = useState<Category>("stem");
+  const [selectedCategory, setSelectedCategory] = useState<Category>("exhibition");
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 

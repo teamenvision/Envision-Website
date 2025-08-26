@@ -6,7 +6,7 @@ import collageData from "@/data/stem.json";
 import "../styles/mediacollage.css";
 
 type Category = keyof typeof collageData;
-const categories: Category[] = ["go-kart", "shell-eco-marathon"];
+const categories: Category[] = ["go-kart", "shell-eco-marathon", "school-drives"];
 
 // Add program details
 const programDetails: Record<Category, { title: string; description: string }> = {
@@ -19,6 +19,12 @@ const programDetails: Record<Category, { title: string; description: string }> =
     title: "Shell Eco Marathon Program",
     description:
       "We run a year-round STEM program in collaboration with Nixor College, where Team Envision directly teaches and mentors students, immersing them in real-world engineering and innovation. Alongside technical training, we also guide them in non-technical domains such as communications, marketing, and media design, giving them a holistic understanding of how large-scale engineering projects come to life. Through the program, they gain extensive exposure to CAD/CAM software, advanced design techniques, and hands-on fabrication, enabling them to transform classroom learning into practical applications. The journey leads to the Shell Eco-marathon Asia 2025, where these young engineers put their skills to the test, competing for both on-track performance and off-track awards. This initiative not only mentors students toward one of the world’s most prestigious energy efficiency competitions but also lays the foundation for redefining the future of sustainable mobility."
+  },
+
+  "school-drives": {
+    title: "School Drives",
+    description:
+      "As part of our mission to inspire the next generation of innovators, Team Envision conducts School Drives, dynamic outreach sessions, held across various schools throughout the year. These drives are designed to spark curiosity and introduce students to the world of STEM, sustainable engineering, and electric mobility. Through interactive presentations, hands-on activities, and live demonstrations, we give students a first-hand look into cutting-edge technologies and real-world applications of classroom concepts. Our team shares insights from projects like the Shell Eco-marathon and the Go-Kart program, offering young minds a glimpse into the exciting possibilities of engineering and innovation. More than just a showcase, School Drives aim to plant the seeds of curiosity, empowering students to think critically, ask bold questions, and envision themselves as future problem-solvers and change-makers in the world of sustainability and mobility."
   }
 };
 
