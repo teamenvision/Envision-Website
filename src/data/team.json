@@ -101,32 +101,21 @@
       "description": "Meet Yaseen - our Electrical Lead and the one powering everything behind the scenes. From wiring up the motor to managing the battery systems and control circuits, every electrical component runs through him. His department competes for technical awards in the competitions, where efficiency and reliability can make all the difference.\n\nFunfact: His department's people are of coure often called the electricians - (lights are the best thing they can make work)",
       "departmentImage": "/images/departments/electrical.jpg",
       "subDepartments": {
-        "LV": {
-          "description": "The Low Voltage division manages the vehicle’s electronics, sensors, and wiring systems, ensuring seamless communication, safety, and reliability across all subsystems.",
-          "image": "/images/departments/lv.jpg",
-          "members": [
-            { "name": "Abdullah KK", "image": "/images/team/Abdullah KK.jpg" }
-          ]
-        },
-        "HV": {
-          "description": "The High Voltage division powers the vehicle through advanced battery and energy systems, focusing on efficiency, safety, and sustainable performance.",
-          "image": "/images/departments/hv.jpg",
-          "members": [
-            { "name": "Kumail", "image": "/images/team/Kumail.jpg" }
-          ]
-        },
         "Data & Telemetry": {
           "description": "The Data & Telemetry division collects, transmits, and analyzes real-time vehicle data, enabling performance optimization, diagnostics, and informed decision-making.",
           "image": "/images/departments/data_telemetry.jpg",
           "members": [
-            { "name": "Javeria", "image": "/images/team/Javeria.jpg" },
-            { "name": "Anas", "image": "/images/team/Anas.jpg" }
+            { "name": "Kumail", "image": "/images/team/Kumail.jpg" },
+            { "name": "Abdullah KK", "image": "/images/team/Abdullah KK.jpg" },
+            { "name": "Javeria", "image": "/images/team/Javeria.jpg" }
           ]
         },
         "Controls": {
           "description": "The Controls division develops precise control systems and algorithms, integrating powertrain, braking, and steering for smooth, safe, and efficient vehicle operation.",
           "image": "/images/departments/controls.jpg",
           "members": [
+            { "name": "Kumail", "image": "/images/team/Kumail.jpg" },
+            { "name": "Anas", "image": "/images/team/Anas.jpg" },
             { "name": "Syeda Fatima", "image": "/images/team/Syeda Fatima.jpg" },
             { "name": "Sibtain", "image": "/images/team/Sibtain.jpg" },
             { "name": "Neelam", "image": "/images/team/Neelam.jpg" },

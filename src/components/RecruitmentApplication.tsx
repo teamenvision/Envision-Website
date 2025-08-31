@@ -141,7 +141,7 @@ export default function RecruitmentApplication() {
         <label>
           WhatsApp Number<span className="required-star">*</span>
         </label>
-        <input name="waNumber" type="text" value={formData.waNumber || ""} onChange={handleChange} className={errors.waNumber ? "input-error" : ""}/>
+        <input name="waNumber" type="number" value={formData.waNumber || ""} onChange={handleChange} className={errors.waNumber ? "input-error" : ""}/>
 
         <label>
           College Name<span className="required-star">*</span>
@@ -206,14 +206,12 @@ export default function RecruitmentApplication() {
                 <>
                   <option value="Vehicle Dynamics">Vehicle Dynamics</option>
                   <option value="Powertrain">Powertrain</option>
-                  <option value="Structure">Structure</option>
+                  <option value="Chassis / Structure / Body">Chassis / Structure / Body</option>
                 </>
               )}
               {formData.joinDepartment === "Electrical" && (
                 <>
-                  <option value="HV">HV</option>
-                  <option value="LV">LV</option>
-                  <option value="Telemetry">Telemetry</option>
+                  <option value="Data & Telemetry">Data & Telemetry</option>
                   <option value="Controls">Controls</option>
                 </>
               )}
