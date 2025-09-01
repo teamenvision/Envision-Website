@@ -8,14 +8,14 @@ export const metadata = {
     title: "Apply Now | Team Envision",
     description: "Come grow with us while building Pakistan's future.",
     url: "https://www.teamenvision.pk/apply/recruitment",
-    images: ["/images/Team-Envision-Logo.png"],
+    images: ["/images/Team-Envision-Logo-black.jpg"],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Apply Now | Team Envision",
     description: "Come grow with us while building Pakistan's future.",
-    images: ["/images/Team-Envision-Logo.png"],
+    images: ["/images/Team-Envision-Logo-black.jpg"],
   },
 };
 
