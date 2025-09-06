@@ -42,7 +42,7 @@ export default function RecruitmentApplication() {
     if (!emailRegex.test(formData.email || "")) newErrors.email = true;
     if (!phoneRegex.test(formData.phone || "")) newErrors.phone = true;
 
-    const requiredFields = ["name", "nustRegistration", "email", "phone", "waNumber", "college", "enrolledDepartment", "joinDepartment", "whyTeamEnvision", "significantAccomplishment", "stemThing", "vehiclePreference", "fuelEfficiencyExplain", "semKnowledge"];
+    const requiredFields = ["name", "nustRegistration", "email", "phone", "waNumber", "college", "enrolledDepartment", "joinDepartment", "whyTeamEnvision"];
     requiredFields.forEach((field) => {
       if (!formData[field]) newErrors[field] = true;
     });
@@ -247,8 +247,6 @@ export default function RecruitmentApplication() {
               )}
               {formData.secondaryDepartment === "Electrical" && (
                 <>
-                  <option value="HV">HV</option>
-                  <option value="LV">LV</option>
                   <option value="Telemetry">Telemetry</option>
                   <option value="Controls">Controls</option>
                 </>
@@ -258,44 +256,32 @@ export default function RecruitmentApplication() {
         )}
 
         <label>
-          What has been your significant accomplishment to date?<span className="required-star">*</span>
+          What has been your significant accomplishment to date? (Optional)
         </label>
         <textarea
           name="significantAccomplishment"
           value={formData.significantAccomplishment || ""}
           onChange={handleChange}
-          className={errors.significantAccomplishment ? "input-error" : ""}
         />
 
         <label>
-          Have you been part of any STEM project/team? If yes, tell us about it?<span className="required-star">*</span>
+          Have you been part of any STEM project/team? If yes, tell us about it? (Optional)
         </label>
         <textarea
           name="stemThing"
           value={formData.stemThing || ""}
           onChange={handleChange}
-          className={errors.stemThing ? "input-error" : ""}
         />
 
         <label>
-          What do you prefer the most in a vehicle?<span className="required-star">*</span>
+          What do you prefer the most in a vehicle? (Optional)
         </label>
-        <select name="vehiclePreference" value={formData.vehiclePreference || ""} onChange={handleChange} className={errors.vehiclePreference ? "input-error" : ""}>
+        <select name="vehiclePreference" value={formData.vehiclePreference || ""} onChange={handleChange}>
           <option value="">Select</option>
           <option value="Comfort">Comfort</option>
           <option value="Efficiency">Efficiency</option>
           <option value="Speed">Speed</option>
         </select>
-
-        <label>
-          How will you explain fuel efficiency to a 5th grader?<span className="required-star">*</span>
-        </label>
-        <textarea
-          name="fuelEfficiencyExplain"
-          value={formData.fuelEfficiencyExplain || ""}
-          onChange={handleChange}
-          className={errors.fuelEfficiencyExplain ? "input-error" : ""}
-        />
 
         <Image
           src={"/images/awards/2025.jpg"}
@@ -305,13 +291,12 @@ export default function RecruitmentApplication() {
         />
         
         <label>
-          What do you know about Shell Eco-Marathon?<span className="required-star">*</span>
+          What do you know about Shell Eco-Marathon? (Optional)
         </label>
         <textarea
           name="semKnowledge"
           value={formData.semKnowledge || ""}
           onChange={handleChange}
-          className={errors.semKnowledge ? "input-error" : ""}
         />
 
         <button type="submit" disabled={isSubmitting}>
