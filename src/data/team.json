@@ -1,16 +1,16 @@
 {
   "faculty": [
     {
-      "name": "Sereen Atif",
-      "role": "Faculty Advisor",
-      "image": "/images/team/Ma'am Sereen.jpg",
-      "description": "Oversees the team and provides academic and strategic guidance."
-    },
-    {
       "name": "Enviso",
       "role": "Mascot",
       "image":"/images/team/Enviso.jpg",
       "description": "Makes safety and innovation fun, turning serious messages into stories everyone loves."
+    },
+    {
+      "name": "Sereen Atif",
+      "role": "Faculty Advisor",
+      "image": "/images/team/Ma'am Sereen.jpg",
+      "description": "Oversees the team and provides academic and strategic guidance."
     }
   ],
   "executives": [
