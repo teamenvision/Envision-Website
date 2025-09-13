@@ -69,7 +69,6 @@
             { "name": "Abuzar", "image": "/images/team/Abuzar.jpg" },
             { "name": "Ammar", "image": "/images/team/Ammar.jpg" },
             { "name": "Ahad", "image": "/images/team/Ahad.jpg" },
-            { "name": "Abdul Sami", "image": "/images/team/ali.jpg" },
             { "name": "Arsalan", "image": "/images/team/Arsalan.jpg" } 
           ]
         },
@@ -155,7 +154,6 @@
     "color": "#9c27b0",
     "members": [
       { "name": "Maaz", "image": "/images/team/Maaz.jpg" },
-      { "name": "Omer", "image": "/images/team/ali.jpg" },
       { "name": "Aamna", "image": "/images/team/Aamna.jpg" },
       { "name": "Alishba", "image": "/images/team/ali.jpg" }
     ]
